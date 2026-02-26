@@ -18,24 +18,31 @@ unsigned char uart;
 // static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED0_NODE, gpios);
 // static const struct gpio_dt_spec btn = GPIO_DT_SPEC_GET(DT_ALIAS(sw0), gpios);
 
-static const struct pwm_dt_spec led = PWM_DT_SPEC_GET(DT_ALIAS(pwm_led0));
+
 const struct device *const uart_dev = DEVICE_DT_GET(DT_CHOSEN(zephyr_console));
+static const struct pwm_dt_spec motor = PWM_DT_SPEC_GET(DT_ALIAS(pwm_motor));
+
+static const struct gpio_dt_spec btn = GPIO_DT_SPEC_GET(DT_ALIAS(eStop), gpios);
+
+
+static struct gpio_callback button_cb_data;
+
 // void my_work_handler(struct k_work *work) {
 //     printk("Work processed\n");
 
 // }
 
-// void button_pressed(const struct device *dev, struct gpio_callback *cb,
-// 		    uint32_t pins)
-// {
-//         k_work_submit(&myWork);
-// }
+void button_pressed(const struct device *dev, struct gpio_callback *cb,
+		    uint32_t pins)
+{
+        k_work_submit(&pwm_work);
+}
 
 
 
-// static struct gpio_callback button_cb_data;
 void update_pwm_handler(struct k_work *work){
-	pwm_set_pulse_dt(&led, brightness); 
+	brightness = 
+	pwm_set_pulse_dt(&motor, brightness); 
 }
 
 int main(void)
@@ -43,33 +50,32 @@ int main(void)
 //    int ret;
 	printk("System started\n");
 
-	if (!device_is_ready(uart_dev)) {
-		
-		return 0;
-	}
-	if (!pwm_is_ready_dt(&led)) {
+	// task 2: device is ready checks
+	if (!device_is_ready(uart_dev) ||
+	    !pwm_is_ready_dt(&motor) ||
+	    !device_is_ready(btn.port)) {
 		return 0;
 	}
 	
 
 
-	// ret = gpio_pin_configure_dt(&btn, GPIO_INPUT);
+	ret = gpio_pin_configure_dt(&btn, GPIO_INPUT);
+	
 
-	// if (ret < 0) {
-	// 	return 0;
-	// }
+	if (ret < 0) {
+		return 0;
+	}
 
-    // ret = gpio_pin_interrupt_configure_dt(&btn, GPIO_INT_EDGE_TO_ACTIVE);
-    // if (ret < 0) {
-	// 	return 0;
-	// }
+    ret = gpio_pin_interrupt_configure_dt(&btn, GPIO_INT_EDGE_TO_ACTIVE);
+    if (ret < 0) {
+		return 0;
+	}
 
-    // gpio_init_callback(&button_cb_data, button_pressed, BIT(btn.pin));
-	// gpio_add_callback(btn.port, &button_cb_data);
-	// printk("Set up button at %s pin %d\n", btn.port->name, btn.pin);
+    gpio_init_callback(&button_cb_data, button_pressed, BIT(btn.pin));
+	gpio_add_callback(btn.port, &button_cb_data);
     
 	//uint32_t pulse = 1000;
-	    	k_work_init(&pwm_work, update_pwm_handler);
+	k_work_init(&pwm_work, update_pwm_handler);
 
 	while (1) {
 
