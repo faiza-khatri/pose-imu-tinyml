@@ -13,8 +13,6 @@ pwmleds {
 		};
 };
 
-
-};
 &timers3 {
     status = "okay";
     pwm3: pwm {
@@ -38,5 +36,6 @@ buttons {
     };
 };
 
-}
+};
+
 
