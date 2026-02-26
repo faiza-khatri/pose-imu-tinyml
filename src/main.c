@@ -12,7 +12,8 @@ static char rx_buf[8];
 #define SLEEP_MSEC   50
 #define DATA_SIZE sizeof(fifo_data)
 // struct k_work myWork;
-struct k_work pwm_work;
+// struct k_work pwm_work;
+
 int brightness =0;
 unsigned char uart;
 static int rx_idx =0;
@@ -31,7 +32,7 @@ K_THREAD_STACK_DEFINE(console_stack, CONSOLE_STACK);
 const struct device *const uart_dev = DEVICE_DT_GET(DT_CHOSEN(zephyr_console));
 static const struct pwm_dt_spec motor = PWM_DT_SPEC_GET(DT_ALIAS(pwm_motor));
 
-static const struct gpio_dt_spec btn = GPIO_DT_SPEC_GET(DT_ALIAS(eStop), gpios);
+static const struct gpio_dt_spec btn = GPIO_DT_SPEC_GET(DT_ALIAS(e_stop), gpios);
 
 
 static struct gpio_callback button_cb_data;
@@ -49,9 +50,41 @@ void button_pressed(const struct device *dev, struct gpio_callback *cb,
 
 
 
-void update_pwm_handler(struct k_work *work){
-	brightness = 
-	pwm_set_pulse_dt(&motor, brightness); 
+// void update_pwm_handler(struct k_work *work){
+// 	brightness = 
+// 	pwm_set_pulse_dt(&motor, brightness); 
+// }
+
+static void uart_fifo_callback(const struct device *dev, void *user_data)
+{	
+	uint8_t duty_cycle;
+	int fifo_ret;
+
+	if(!uart_irq_update(uart_dev)){
+		return 0;
+	}
+
+	if(!uart_irq_rx_ready(uart_dev) ){
+
+		return 0;
+	}
+
+	while(uart_fifo_read(uart_dev, &duty_cycle,1)==1){
+
+		uart_poll_out(uart_dev, duty_cycle);
+
+		if(duty_cycle == '\r' || duty_cycle == '\n'){
+
+			rx_buf[rx_idx] = '\0';
+			rx_idx=0;
+			k_msgq_put(uart_msgq, rx_buf, K_NO_WAIT);
+
+		}
+
+		else if (rx_idx < sizeof(rx_buf)-1){
+			rx_buf[rx_idx++] = duty_cycle;
+		}
+	}
 }
 
 static void uart_fifo_callback(const struct device *dev, void *user_data)
@@ -103,6 +136,7 @@ void console_thread(){
 			continue;
 		}
  //change brightness here
+		brightness = duty;
 		printk("duty cycle set to %d:\n", duty);
 
 	}
@@ -110,7 +144,7 @@ void console_thread(){
 }
 int main(void)
 {
-//    int ret;
+   int ret;
 	printk("System started\n");
 
 	console_init();
@@ -165,7 +199,7 @@ int main(void)
     //}
 
     k_sleep(K_MSEC(10));
-}
+	}
     
 
 	return 0;
