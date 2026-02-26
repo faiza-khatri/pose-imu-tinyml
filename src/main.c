@@ -5,6 +5,7 @@
 #include <zephyr/drivers/uart.h>
 #include <zephyr/device.h>
 #include <zephyr/console/console.h>
+#include <stdlib.h>
 
 static char rx_buf[8];
 #define CONSOLE_STACK 1024
