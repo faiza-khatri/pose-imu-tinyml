@@ -19,7 +19,7 @@ static char rx_buf[8];
 int brightness =0;
 unsigned char uart;
 static int rx_idx =0;
-
+volatile bool rx_ready = false; 
 /*
  * A build error on this line means your board is unsupported.
  * See the sample documentation for information on how to fix this. */
@@ -64,15 +64,14 @@ void button_pressed(const struct device *dev, struct gpio_callback *cb,
 static void uart_fifo_callback(const struct device *dev, void *user_data)
 {	
 	uint8_t duty_cycle;
-	int fifo_ret;
 
 	if(!uart_irq_update(uart_dev)){
-		return 0;
+		return;
 	}
 
 	if(!uart_irq_rx_ready(uart_dev) ){
 
-		return 0;
+		return ;
 	}
 
 	while(uart_fifo_read(uart_dev, &duty_cycle,1)==1){
@@ -83,7 +82,7 @@ static void uart_fifo_callback(const struct device *dev, void *user_data)
 
 			rx_buf[rx_idx] = '\0';
 			rx_idx=0;
-			k_msgq_put(uart_msgq, rx_buf, K_NO_WAIT);
+			// k_msgq_put(uart_msgq, rx_buf, K_NO_WAIT);
 
 		}
 
@@ -94,46 +93,51 @@ static void uart_fifo_callback(const struct device *dev, void *user_data)
 }
 
 
-void console_thread(){
-
-	char buffer[8];
-
+void console_thread(void *p1, void *p2, void *p3)   
+{
+	// char buffer[8];                              
 	printk("Enter duty cycle (0-100):\n");
 
 	while(1){
+		// k_msgq_get(&uart_msgq, buffer, K_FOREVER); 
 
-		k_msgq_get(&uart_msgq, buffer, K_FOREVER);
+		if(!rx_ready){                             
+			k_sleep(K_MSEC(10));
+			continue;
+		}
+		rx_ready = false;                         
 
-		if (strcmp(buffer, "RESET") == 0) {
-            motor_enabled = true;
-            printk("Motor reset. You can now set duty cycle.\n");
-            continue;
-        }
+		if (strcmp(rx_buf, "RESET") == 0) {
+			motor_enabled = true;
+			printk("Motor reset. You can now set duty cycle.\n");
+			continue;
+		}
 
-		int duty = atoi(buffer);
+		int duty = atoi(rx_buf);                   
 
-		if(duty <0 || duty > 100){
+		if(duty < 0 || duty > 100){
 			printk("invalid duty cycle\n");
 			continue;
 		}
- //change brightness here
+
+		//change brightness here
 		if(!motor_enabled){
-            printk("Motor disabled! Press RESET to enable.\n");
-            continue;
-        }
+			printk("Motor disabled! Press RESET to enable.\n");
+			continue;
+		}
 
-        brightness = duty;
-        printk("Duty cycle set to %d%%\n", duty);
-
+		brightness = duty;
+		printk("Duty cycle set to %d%%\n", duty);
 	}
-
 }
+
+
 int main(void)
 {
    int ret;
 	printk("System started\n");
 
-	console_init();
+	// console_init();
 
 	// task 2: device is ready checks
 	if (!device_is_ready(uart_dev) ||
