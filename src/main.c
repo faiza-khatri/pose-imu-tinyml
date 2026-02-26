@@ -12,7 +12,7 @@ static char rx_buf[8];
 #define CONSOLE_STACK 1024
 /* 1000 msec = 1 sec */
 #define SLEEP_MSEC   50
-#define DATA_SIZE sizeof(fifo_data)
+
 // struct k_work myWork;
 // struct k_work pwm_work;
 
@@ -50,7 +50,7 @@ void button_pressed(const struct device *dev, struct gpio_callback *cb,
 {
        motor_enabled = false;
 	   brightness = 0;
-	   pwm_set_pulse_dt(&motor, 0); 
+	   //pwm_set_pulse_dt(&motor, 0); 
 	   printk("E-Stop pressed! Motor stopped.\n");
 }
 
@@ -82,6 +82,7 @@ static void uart_fifo_callback(const struct device *dev, void *user_data)
 
 			rx_buf[rx_idx] = '\0';
 			rx_idx=0;
+			rx_ready = true;
 			// k_msgq_put(uart_msgq, rx_buf, K_NO_WAIT);
 
 		}
