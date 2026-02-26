@@ -1,41 +1,29 @@
-
 / {
     aliases {
-        pwm-motor = &motor_pwm;    
-        eStop = &user_button;
+        pwm-motor = &motor_pwm;
+        e-stop = &sw0;
     };
 
     pwmleds {
         compatible = "pwm-leds";
-        motor_pwm: pwm_motor_node {
-                pwms = <&pwm3 1 PWM_MSEC(20) PWM_POLARITY_NORMAL>;
-                label = "PWM Motor";
-            };
-    };
 
-    buttons {
-        compatible = "gpio-keys";
-        user_button: button_0 {
-            gpios = <&gpioi 11 GPIO_ACTIVE_HIGH>;
-            label = "User Button";
-            zephyr,code = <INPUT_KEY_0>;
+        motor_pwm: pwm_motor_node {
+            pwms = <&pwm3 1 PWM_MSEC(20) PWM_POLARITY_NORMAL>;
+            label = "PWM Motor";
         };
     };
-
 };
 
-&timers3 {
+&tim3 {
     status = "okay";
+
     pwm3: pwm {
         status = "okay";
-        pinctrl-0 = <&tim3_ch1_pb4>; // Mapping TIM3 Channel 1 to PB4
+        pinctrl-0 = <&tim3_ch1_pb4>;
         pinctrl-names = "default";
     };
 };
 
-
 &gpioi {
     status = "okay";
 };
-
-
