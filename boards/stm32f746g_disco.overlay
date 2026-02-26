@@ -1,28 +1,29 @@
 / {
     aliases {
-        pwm-motor = &motor_pwm;
-        e-stop = &sw0;
+        pwm-motor = &motor_pwm;    
+        e-stop = &user_button;
     };
 
     pwmleds {
         compatible = "pwm-leds";
-
         motor_pwm: pwm_motor_node {
-            pwms = <&pwm3 1 PWM_MSEC(20) PWM_POLARITY_NORMAL>;
-            label = "PWM Motor";
-        };
+                pwms = <&pwm3 1 PWM_MSEC(20) PWM_POLARITY_NORMAL>;
+                label = "PWM Motor";
+            };
     };
+
+
 };
 
-&tim3 {
+&timers3 {
     status = "okay";
-
     pwm3: pwm {
         status = "okay";
-        pinctrl-0 = <&tim3_ch1_pb4>;
+        pinctrl-0 = <&tim3_ch1_pb4>; // Mapping TIM3 Channel 1 to PB4
         pinctrl-names = "default";
     };
 };
+
 
 &gpioi {
     status = "okay";
