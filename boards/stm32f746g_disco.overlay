@@ -1,7 +1,7 @@
 
 / {
     aliases {
-        pwm_motor = &motor_pwm;    
+        pwm-motor = &motor_pwm;    
         eStop = &user_button;
     };
 
