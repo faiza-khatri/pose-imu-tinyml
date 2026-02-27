@@ -16,10 +16,6 @@ static char rx_buf[50];
 // struct k_work myWork;
 // struct k_work pwm_work;
 
-int brightness =0;
-unsigned char uart;
-static int rx_idx =0;
-volatile bool rx_ready = false; 
 /*
  * A build error on this line means your board is unsupported.
  * See the sample documentation for information on how to fix this. */
@@ -27,6 +23,11 @@ volatile bool rx_ready = false;
 
 // static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED0_NODE, gpios);
 // static const struct gpio_dt_spec btn = GPIO_DT_SPEC_GET(DT_ALIAS(sw0), gpios);
+
+int brightness =0;
+unsigned char uart;
+static int rx_idx =0;
+volatile bool rx_ready = false; 
 
 K_MSGQ_DEFINE(uart_msgq, 10, 4, 4);
 K_THREAD_STACK_DEFINE(console_stack, CONSOLE_STACK);
@@ -49,8 +50,7 @@ void button_pressed(const struct device *dev, struct gpio_callback *cb,
 		    uint32_t pins)
 {
        motor_enabled = false;
-	   brightness = 0;
-	   //pwm_set_pulse_dt(&motor, 0); 
+	   brightness = 0; 
 	  printk("Estop pressed! ENter RESEST to restart.\n");
 }
 
@@ -147,25 +147,22 @@ int main(void)
 		return 0;
 	}
 	
-
-
+	// configuring gpio
 	ret = gpio_pin_configure_dt(&btn, GPIO_INPUT);
-	
-
 	if (ret < 0) {
 		return 0;
 	}
 
+	// gpio ISR configure
     ret = gpio_pin_interrupt_configure_dt(&btn, GPIO_INT_EDGE_TO_ACTIVE);
     if (ret < 0) {
 		return 0;
 	}
 
+	// gpio callback functions
     gpio_init_callback(&button_cb_data, button_pressed, BIT(btn.pin));
 	gpio_add_callback(btn.port, &button_cb_data);
     
-	//uint32_t pulse = 1000;
-	// k_work_init(&pwm_work, update_pwm_handler);
 
 	uart_irq_callback_set(uart_dev, uart_fifo_callback);
 	uart_irq_rx_enable(uart_dev);
@@ -178,17 +175,6 @@ int main(void)
                     5, 0, K_NO_WAIT);
 
 	while (1) {
-
-
-    // if (uart_poll_in(uart_dev, &uart) == 0) {
-    //     printk("Received: %c\n", uart);
-
-    //     brightness = (uart - '0') * 2000;  // convert ASCII digit
-
-
-    //     k_work_submit(&pwm_work); //this will go in console thread function wahan change brightness acc to duty cycle and submit
-    //}
-	
 
 		if(motor_enabled){
             pwm_set_pulse_dt(&motor, brightness * motor.period / 100);
