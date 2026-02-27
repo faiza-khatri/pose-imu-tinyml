@@ -8,7 +8,7 @@
 #include <zephyr/console/console.h>
 
 
-static char rx_buf[8];
+static char rx_buf[50];
 #define CONSOLE_STACK 1024
 /* 1000 msec = 1 sec */
 #define SLEEP_MSEC   50
@@ -28,7 +28,7 @@ volatile bool rx_ready = false;
 // static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED0_NODE, gpios);
 // static const struct gpio_dt_spec btn = GPIO_DT_SPEC_GET(DT_ALIAS(sw0), gpios);
 
-K_MSGQ_DEFINE(uart_msgq, 8, 4, 4);
+K_MSGQ_DEFINE(uart_msgq, 10, 4, 4);
 K_THREAD_STACK_DEFINE(console_stack, CONSOLE_STACK);
 const struct device *const uart_dev = DEVICE_DT_GET(DT_CHOSEN(zephyr_console));
 static const struct pwm_dt_spec motor = PWM_DT_SPEC_GET(DT_ALIAS(pwm_motor));
@@ -51,7 +51,7 @@ void button_pressed(const struct device *dev, struct gpio_callback *cb,
        motor_enabled = false;
 	   brightness = 0;
 	   //pwm_set_pulse_dt(&motor, 0); 
-	   printk("E-Stop pressed! Motor stopped.\n");
+	  printk("Estop pressed! ENter RESEST to restart.\n");
 }
 
 
@@ -83,7 +83,7 @@ static void uart_fifo_callback(const struct device *dev, void *user_data)
 			rx_buf[rx_idx] = '\0';
 			rx_idx=0;
 			rx_ready = true;
-			// k_msgq_put(uart_msgq, rx_buf, K_NO_WAIT);
+			k_msgq_put(&uart_msgq, rx_buf, K_NO_WAIT);
 
 		}
 
@@ -96,11 +96,11 @@ static void uart_fifo_callback(const struct device *dev, void *user_data)
 
 void console_thread(void *p1, void *p2, void *p3)   
 {
-	// char buffer[8];                              
+	char buffer[50];                              
 	printk("Enter duty cycle (0-100):\n");
 
 	while(1){
-		// k_msgq_get(&uart_msgq, buffer, K_FOREVER); 
+		k_msgq_get(&uart_msgq, buffer, K_FOREVER); 
 
 		if(!rx_ready){                             
 			k_sleep(K_MSEC(10));
@@ -188,13 +188,15 @@ int main(void)
 
     //     k_work_submit(&pwm_work); //this will go in console thread function wahan change brightness acc to duty cycle and submit
     //}
+	
+
 		if(motor_enabled){
             pwm_set_pulse_dt(&motor, brightness * motor.period / 100);
         } else {
             pwm_set_pulse_dt(&motor, 0);
         }
 
-        k_sleep(K_MSEC(50));
+       k_sleep(K_MSEC(20));
 
 	}
     
