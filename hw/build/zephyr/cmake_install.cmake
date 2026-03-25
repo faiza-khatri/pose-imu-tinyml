@@ -39,346 +39,346 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/zephyr/arch/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/zephyr/arch/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/zephyr/lib/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/zephyr/lib/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/zephyr/soc/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/zephyr/soc/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/zephyr/boards/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/zephyr/boards/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/zephyr/subsys/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/zephyr/subsys/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/zephyr/drivers/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/zephyr/drivers/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/acpica/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/acpica/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/cmsis/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/cmsis/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/cmsis-dsp/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/cmsis-dsp/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/cmsis-nn/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/cmsis-nn/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/cmsis_6/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/cmsis_6/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/fatfs/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/fatfs/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/adi/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/adi/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/hal_afbr/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/hal_afbr/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/hal_ambiq/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/hal_ambiq/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/atmel/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/atmel/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/hal_bouffalolab/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/hal_bouffalolab/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/hal_espressif/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/hal_espressif/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/hal_ethos_u/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/hal_ethos_u/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/hal_gigadevice/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/hal_gigadevice/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/hal_infineon/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/hal_infineon/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/hal_intel/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/hal_intel/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/microchip/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/microchip/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/hal_nordic/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/hal_nordic/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/nuvoton/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/nuvoton/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/hal_nxp/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/hal_nxp/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/openisa/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/openisa/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/quicklogic/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/quicklogic/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/hal_realtek/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/hal_realtek/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/hal_renesas/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/hal_renesas/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/hal_rpi_pico/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/hal_rpi_pico/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/hal_sifli/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/hal_sifli/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/hal_silabs/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/hal_silabs/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/hal_st/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/hal_st/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/hal_stm32/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/hal_stm32/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/hal_tdk/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/hal_tdk/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/hal_telink/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/hal_telink/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/ti/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/ti/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/hal_wch/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/hal_wch/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/hal_wurthelektronik/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/hal_wurthelektronik/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/xtensa/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/xtensa/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/hostap/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/hostap/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/liblc3/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/liblc3/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/libmctp/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/libmctp/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/libmetal/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/libmetal/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/libsbc/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/libsbc/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/littlefs/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/littlefs/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/lora-basics-modem/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/lora-basics-modem/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/loramac-node/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/loramac-node/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/lvgl/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/lvgl/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/mbedtls/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/mbedtls/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/mcuboot/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/mcuboot/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/mipi-sys-t/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/mipi-sys-t/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/nanopb/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/nanopb/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/nrf_wifi/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/nrf_wifi/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/open-amp/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/open-amp/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/openthread/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/openthread/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/percepio/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/percepio/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/picolibc/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/picolibc/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/segger/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/segger/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/trusted-firmware-a/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/trusted-firmware-a/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/trusted-firmware-m/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/trusted-firmware-m/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/uoscore-uedhoc/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/uoscore-uedhoc/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/zcbor/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/zcbor/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/nrf_hw_models/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/nrf_hw_models/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/zephyr/kernel/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/zephyr/kernel/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/zephyr/cmake/flash/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/zephyr/cmake/flash/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/zephyr/cmake/usage/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/zephyr/cmake/usage/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/zephyr/cmake/reports/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/zephyr/cmake/reports/cmake_install.cmake")
 endif()
 

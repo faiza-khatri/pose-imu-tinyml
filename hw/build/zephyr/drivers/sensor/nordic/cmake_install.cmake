@@ -39,6 +39,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/zephyr/drivers/sensor/nordic/temp/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/zephyr/drivers/sensor/nordic/temp/cmake_install.cmake")
 endif()
 

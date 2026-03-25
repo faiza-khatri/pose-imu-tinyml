@@ -2,35 +2,40 @@
     aliases {
         pwm-motor = &motor_pwm;    
         e-stop = &user_button;
+        motor-in1 = &motor_in1_node;
+        motor-in2 = &motor_in2_node;
     };
 
     pwmleds {
         compatible = "pwm-leds";
         motor_pwm: pwm_motor_node {
-                pwms = <&pwm3 1 PWM_MSEC(20) PWM_POLARITY_NORMAL>;
-                label = "PWM Motor";
-            };
+            pwms = <&pwm3 1 PWM_MSEC(20) PWM_POLARITY_NORMAL>;
+            label = "PWM Motor";
+        };
     };
 
-
+    gpio_outs {
+        compatible = "gpio-leds";
+        motor_in1_node: motor_in1 {
+            gpios = <&gpioi 0 GPIO_ACTIVE_HIGH>;   /* PI0 — change pin to whatever you're using */
+            label = "Motor IN1";
+        };
+        motor_in2_node: motor_in2 {
+            gpios = <&gpioi 1 GPIO_ACTIVE_HIGH>;   /* PI1 — change pin to whatever you're using */
+            label = "Motor IN2";
+        };
+    };
 };
 
 &timers3 {
     status = "okay";
     pwm3: pwm {
         status = "okay";
-        pinctrl-0 = <&tim3_ch1_pb4>; // Mapping TIM3 Channel 1 to PB4
+        pinctrl-0 = <&tim3_ch1_pb4>;
         pinctrl-names = "default";
     };
 };
 
-
 &gpioi {
     status = "okay";
 };
-
-
-
-
-
-

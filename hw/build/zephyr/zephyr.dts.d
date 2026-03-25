@@ -39,4 +39,4 @@ empty_file.o: \
  /home/hijab-fatima-siddiqui/zephyrproject/zephyr/boards/st/stm32f746g_disco/arduino_r3_connector.dtsi \
  /home/hijab-fatima-siddiqui/zephyrproject/zephyr/include/zephyr/dt-bindings/gpio/arduino-header-r3.h \
  /home/hijab-fatima-siddiqui/zephyrproject/zephyr/include/zephyr/dt-bindings/input/input-event-codes.h \
- /home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/boards/stm32f746g_disco.overlay
+ /home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/boards/stm32f746g_disco.overlay

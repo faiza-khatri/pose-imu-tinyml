@@ -5687,22 +5687,34 @@ zephyr_udc0: &usbotg_fs {
  def-back-color-blue = <0xff>;
 };
 # 0 "<command-line>" 2
-# 1 "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/boards/stm32f746g_disco.overlay" 1
+# 1 "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/boards/stm32f746g_disco.overlay" 1
 / {
     aliases {
         pwm-motor = &motor_pwm;
         e-stop = &user_button;
+        motor-in1 = &motor_in1_node;
+        motor-in2 = &motor_in2_node;
     };
 
     pwmleds {
         compatible = "pwm-leds";
         motor_pwm: pwm_motor_node {
-                pwms = <&pwm3 1 (((20) * 1000UL) * 1000UL) (0 << 0)>;
-                label = "PWM Motor";
-            };
+            pwms = <&pwm3 1 (((20) * 1000UL) * 1000UL) (0 << 0)>;
+            label = "PWM Motor";
+        };
     };
 
-
+    gpio_outs {
+        compatible = "gpio-leds";
+        motor_in1_node: motor_in1 {
+            gpios = <&gpioi 0 (0 << 0)>;
+            label = "Motor IN1";
+        };
+        motor_in2_node: motor_in2 {
+            gpios = <&gpioi 1 (0 << 0)>;
+            label = "Motor IN2";
+        };
+    };
 };
 
 &timers3 {
@@ -5713,7 +5725,6 @@ zephyr_udc0: &usbotg_fs {
         pinctrl-names = "default";
     };
 };
-
 
 &gpioi {
     status = "okay";

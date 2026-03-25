@@ -39,6 +39,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/modules/hal_nxp/hal_nxp/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/modules/hal_nxp/hal_nxp/cmake_install.cmake")
 endif()
 

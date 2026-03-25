@@ -1,7 +1,7 @@
 cmake:
   application:
-    configuration-dir: '/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2'
-    source-dir: '/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2'
+    configuration-dir: '/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw'
+    source-dir: '/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw'
   board:
     name: 'stm32f746g_disco'
     path:
@@ -13,7 +13,7 @@ cmake:
      - '/home/hijab-fatima-siddiqui/zephyrproject/zephyr/dts/bindings'
     files:
      - '/home/hijab-fatima-siddiqui/zephyrproject/zephyr/boards/st/stm32f746g_disco/stm32f746g_disco.dts'
-     - '/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/boards/stm32f746g_disco.overlay'
+     - '/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/boards/stm32f746g_disco.overlay'
     include-dirs:
      - '/home/hijab-fatima-siddiqui/zephyrproject/modules/hal/ambiq/dts'
      - '/home/hijab-fatima-siddiqui/zephyrproject/modules/hal/atmel/include'
@@ -41,13 +41,13 @@ cmake:
      - '/home/hijab-fatima-siddiqui/zephyrproject/zephyr/dts/arc'
      - '/home/hijab-fatima-siddiqui/zephyrproject/zephyr/dts'
     user-files:
-     - '/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/boards/stm32f746g_disco.overlay'
+     - '/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/boards/stm32f746g_disco.overlay'
   kconfig:
     files:
      - '/home/hijab-fatima-siddiqui/zephyrproject/zephyr/boards/st/stm32f746g_disco/stm32f746g_disco_defconfig'
-     - '/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/prj.conf'
+     - '/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/prj.conf'
     user-files:
-     - '/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/prj.conf'
+     - '/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/prj.conf'
   toolchain:
     name: 'zephyr'
     path: '/home/hijab-fatima-siddiqui/zephyr-sdk-0.17.4'

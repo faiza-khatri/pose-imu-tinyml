@@ -39,11 +39,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/zephyr/subsys/logging/backends/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/zephyr/subsys/logging/backends/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/build/zephyr/subsys/logging/frontends/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/build/zephyr/subsys/logging/frontends/cmake_install.cmake")
 endif()
 
