@@ -1,0 +1,5 @@
+west:
+  command: /home/hijab-fatima-siddiqui/zephyrproject/.venv/bin/west build -p always
+    -b stm32f746g_disco
+  topdir: /home/hijab-fatima-siddiqui/zephyrproject
+  version: 1.5.0

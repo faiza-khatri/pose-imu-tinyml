@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "modules/libsbc",
+		"source" : "/home/faiza/zephyrproject/zephyr/modules/libsbc"
+	}
+}

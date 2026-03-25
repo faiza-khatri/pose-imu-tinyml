@@ -1,0 +1,87 @@
+{
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"zephyr_constants_library"
+		],
+		"files" : 
+		[
+			"/home/faiza/zephyrproject/zephyr/cmake/modules/extensions.cmake",
+			"/home/faiza/zephyrproject/zephyr/lib/heap/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 3,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 1955,
+				"parent" : 1
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"id" : "heap_constants::@44842610c1b40ba49875"
+		}
+	],
+	"id" : "heap_constants_h::@44842610c1b40ba49875",
+	"name" : "heap_constants_h",
+	"paths" : 
+	{
+		"build" : "zephyr/lib/heap",
+		"source" : "/home/faiza/zephyrproject/zephyr/lib/heap"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1,
+				2
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "build/zephyr/lib/heap/CMakeFiles/heap_constants_h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/zephyr/lib/heap/CMakeFiles/heap_constants_h.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/zephyr/include/generated/zephyr/heap_constants.h.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "modules/hal_renesas/drivers",
+		"source" : "/home/faiza/zephyrproject/modules/hal/renesas/drivers"
+	}
+}
