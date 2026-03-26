@@ -35,11 +35,11 @@
             label = "Motor IN2";
         };
         encoder_a_node: encoder_a {
-            gpios = <&gpioi 7 GPIO_ACTIVE_HIGH>;
+            gpios = <&gpioi 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
             label = "Encoder A";
         };
         encoder_b_node: encoder_b {
-            gpios = <&gpioi 6 GPIO_ACTIVE_HIGH>;
+            gpios = <&gpioi 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
             label = "Encoder B";
         };
     };
