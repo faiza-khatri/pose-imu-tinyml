@@ -4,6 +4,8 @@
         e-stop = &my_button;
         motor-in1 = &motor_in1_node;
         motor-in2 = &motor_in2_node;
+        encoder-a = &encoder_a_node;
+        encoder-b = &encoder_b_node;
     };
 
     pwmleds {
@@ -31,6 +33,14 @@
         motor_in2_node: motor_in2 {
             gpios = <&gpioi 1 GPIO_ACTIVE_HIGH>;   /* PI1 — change pin to whatever you're using */
             label = "Motor IN2";
+        };
+        encoder_a_node: encoder_a {
+            gpios = <&gpioi 7 GPIO_ACTIVE_HIGH>;
+            label = "Encoder A";
+        };
+        encoder_b_node: encoder_b {
+            gpios = <&gpioi 6 GPIO_ACTIVE_HIGH>;
+            label = "Encoder B";
         };
     };
 };
