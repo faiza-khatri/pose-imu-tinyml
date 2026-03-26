@@ -12,16 +12,16 @@ debug-runner: openocd
 
 # Common runner configuration values.
 config:
-  board_dir: /home/faiza/zephyrproject/zephyr/boards/st/stm32f746g_disco
+  board_dir: /home/hijab-fatima-siddiqui/zephyrproject/zephyr/boards/st/stm32f746g_disco
   # Build outputs:
   elf_file: zephyr.elf
   hex_file: zephyr.hex
   bin_file: zephyr.bin
   # Host tools:
-  gdb: /home/faiza/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-gdb
-  openocd: /home/faiza/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/bin/openocd
+  gdb: /home/hijab-fatima-siddiqui/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-gdb
+  openocd: /home/hijab-fatima-siddiqui/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/bin/openocd
   openocd_search:
-    - /home/faiza/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/share/openocd/scripts
+    - /home/hijab-fatima-siddiqui/zephyr-sdk-0.17.4/sysroots/x86_64-pokysdk-linux/usr/share/openocd/scripts
 
 # Runner specific arguments
 args:

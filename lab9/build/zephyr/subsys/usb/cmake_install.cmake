@@ -1,4 +1,4 @@
-# Install script for directory: /home/faiza/zephyrproject/zephyr/subsys/usb
+# Install script for directory: /home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/usb
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,11 +34,6 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/home/faiza/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-objdump")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/faiza/zephyrproject/zephyr/myProjects/lab9/build/zephyr/subsys/usb/common/cmake_install.cmake")
+  set(CMAKE_OBJDUMP "/home/hijab-fatima-siddiqui/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-objdump")
 endif()
 

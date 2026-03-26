@@ -1,4 +1,4 @@
-# Install script for directory: /home/faiza/zephyrproject/zephyr/lib
+# Install script for directory: /home/hijab-fatima-siddiqui/zephyrproject/zephyr/lib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,51 +34,51 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/home/faiza/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-objdump")
+  set(CMAKE_OBJDUMP "/home/hijab-fatima-siddiqui/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-objdump")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/faiza/zephyrproject/zephyr/myProjects/lab9/build/zephyr/lib/libc/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/zephyr/lib/libc/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/faiza/zephyrproject/zephyr/myProjects/lab9/build/zephyr/lib/posix/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/zephyr/lib/posix/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/faiza/zephyrproject/zephyr/myProjects/lab9/build/zephyr/lib/hash/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/zephyr/lib/hash/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/faiza/zephyrproject/zephyr/myProjects/lab9/build/zephyr/lib/heap/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/zephyr/lib/heap/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/faiza/zephyrproject/zephyr/myProjects/lab9/build/zephyr/lib/mem_blocks/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/zephyr/lib/mem_blocks/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/faiza/zephyrproject/zephyr/myProjects/lab9/build/zephyr/lib/midi2/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/zephyr/lib/midi2/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/faiza/zephyrproject/zephyr/myProjects/lab9/build/zephyr/lib/os/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/zephyr/lib/os/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/faiza/zephyrproject/zephyr/myProjects/lab9/build/zephyr/lib/utils/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/zephyr/lib/utils/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/faiza/zephyrproject/zephyr/myProjects/lab9/build/zephyr/lib/uuid/cmake_install.cmake")
+  include("/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/zephyr/lib/uuid/cmake_install.cmake")
 endif()
 
