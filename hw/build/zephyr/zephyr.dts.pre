@@ -5691,7 +5691,7 @@ zephyr_udc0: &usbotg_fs {
 / {
     aliases {
         pwm-motor = &motor_pwm;
-        e-stop = &user_button;
+        e-stop = &my_button;
         motor-in1 = &motor_in1_node;
         motor-in2 = &motor_in2_node;
     };
@@ -5701,6 +5701,14 @@ zephyr_udc0: &usbotg_fs {
         motor_pwm: pwm_motor_node {
             pwms = <&pwm3 1 (((20) * 1000UL) * 1000UL) (0 << 0)>;
             label = "PWM Motor";
+        };
+    };
+
+    buttons {
+        compatible = "gpio-keys";
+        my_button: my_button_0 {
+            gpios = <&gpioi 3 ((1 << 0) | (1 << 4))>;
+            label = "My Button";
         };
     };
 
