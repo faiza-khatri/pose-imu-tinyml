@@ -22,9 +22,19 @@ static char rx_buf[50];
 int brightness =0;
 int target_rpm;
 
+float end_time;
+float start_time;
+float total_time;
+
+
+const int PPR = 64;
+const int gear_ratio = 70;
+const int ppr = PPR * gear_ratio;
+
 unsigned char uart;
 static int rx_idx =0;
 volatile bool rx_ready = false;
+int ticks;
 /*
  * A build error on this line means your board is unsupported.
  * See the sample documentation for information on how to fix this. */
@@ -37,6 +47,9 @@ K_MSGQ_DEFINE(uart_msgq, 50, 4, 4);
 K_MSGQ_DEFINE(en_msgq, sizeof(int), 1, 4);
 
 K_MSGQ_DEFINE(rpm_msgq, sizeof(int), 1, 4);
+K_MSGQ_DEFINE(ticks_msgq, sizeof(float), 1, 4);
+
+K_MSGQ_DEFINE(measured_rpm_msgq, sizeof(float), 1, 4);
 
 K_MSGQ_DEFINE(btn_msgq, 38, 1, 4);
 
@@ -95,6 +108,19 @@ void ticks_isr(const struct device *dev, struct gpio_callback *cb, uint32_t pins
 
 
 		}
+
+}
+
+void consumer_ticks() {
+    float time_elapsed;
+    k_msgq_get(&ticks_msgq, &time_elapsed, K_FOREVER);
+
+    float f_pulse = 8/time_elapsed;
+
+    float measured_rpm = f_pulse * 60/ppr;
+
+    k_msgq_put(&measured_rpm_msgq, &measured_rpm, K_NO_WAIT);
+
 
 }
 
@@ -182,6 +208,10 @@ void console_thread(void *p1, void *p2, void *p3)
 
 		printk("Duty cycle set to %d%%\n", 100-duty);
         printk("RPM = %d\n", rpm);
+
+        float measured;
+        k_msgq_get(&measured_rpm_msgq, &measured, K_FOREVER);
+        printk("Measured RPM = %f\n", measured);
 
 
 	}
@@ -278,7 +308,7 @@ int main(void)
         int local_en = 0;
         k_msgq_get(&en_msgq, &local_en, K_NO_WAIT);
 
-        int local__target_rpm = 0;
+        int local_target_rpm = 0;
         k_msgq_get(&rpm_msgq, &local_target_rpm, K_NO_WAIT);
 
         bool local_enabled;
