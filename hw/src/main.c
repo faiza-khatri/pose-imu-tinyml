@@ -12,6 +12,7 @@
 static char rx_buf[50];
 
 #define CONSOLE_STACK 1024
+
 /* 1000 msec = 1 sec */
 #define SLEEP_MSEC   50
 
@@ -19,6 +20,8 @@ static char rx_buf[50];
 // struct k_work pwm_work;
 
 int brightness =0;
+int target_rpm;
+
 unsigned char uart;
 static int rx_idx =0;
 volatile bool rx_ready = false;
@@ -33,14 +36,22 @@ volatile bool rx_ready = false;
 K_MSGQ_DEFINE(uart_msgq, 50, 4, 4);
 K_MSGQ_DEFINE(en_msgq, sizeof(int), 1, 4);
 
+K_MSGQ_DEFINE(rpm_msgq, sizeof(int), 1, 4);
+
 K_MSGQ_DEFINE(btn_msgq, 38, 1, 4);
 
 K_THREAD_STACK_DEFINE(console_stack, CONSOLE_STACK);
+K_THREAD_STACK_DEFINE(consumer_stack, CONSOLE_STACK);
+
 const struct device *const uart_dev = DEVICE_DT_GET(DT_CHOSEN(zephyr_console));
 static const struct pwm_dt_spec motor = PWM_DT_SPEC_GET(DT_ALIAS(pwm_motor));
 static const struct gpio_dt_spec in1 = GPIO_DT_SPEC_GET(DT_ALIAS(motor_in1), gpios);
 static const struct gpio_dt_spec in2 = GPIO_DT_SPEC_GET(DT_ALIAS(motor_in2), gpios);
 static const struct gpio_dt_spec btn = GPIO_DT_SPEC_GET(DT_ALIAS(e_stop), gpios);
+
+static const struct gpio_dt_spec ena = GPIO_DT_SPEC_GET(DT_ALIAS(encoder_a), gpios);
+static const struct gpio_dt_spec enb = GPIO_DT_SPEC_GET(DT_ALIAS(encoder_b), gpios);
+
 
 K_SEM_DEFINE(rx_ready_sem, 0, 1);
 
@@ -49,6 +60,7 @@ K_MUTEX_DEFINE(motor_enabled_mutex);   // unchanged
 K_MUTEX_DEFINE(brightness_mutex);     // unchanged
 
 static struct gpio_callback button_cb_data;
+static struct gpio_callback encoder_cb_data;
 
 // void my_work_handler(struct k_work *work) {
 //     printk("Work processed\n");
@@ -64,6 +76,25 @@ void button_pressed(const struct device *dev, struct gpio_callback *cb,
 	   k_msgq_put(&en_msgq, &local, K_NO_WAIT);
 	   char printBuff[] = "ESTOP pressed! Enter RESET to enable.";
 	   k_msgq_put(&btn_msgq, printBuff, K_NO_WAIT);
+
+}
+
+void ticks_isr(const struct device *dev, struct gpio_callback *cb, uint32_t pins)
+{
+		
+		ticks++;
+
+		if(ticks==8) { 
+
+			end_time = k_cycle_get_32();
+			total_time = end_time - start_time;
+			start_time = end_time;
+			ticks=0;
+
+			k_msgq_put(&ticks_msgq, &total_time, K_FOREVER); 
+
+
+		}
 
 }
 
@@ -146,7 +177,9 @@ void console_thread(void *p1, void *p2, void *p3)
 			continue;
 		}
 
-	    k_msgq_put(&en_msgq, &duty, K_NO_WAIT);        
+	    k_msgq_put(&en_msgq, &duty, K_NO_WAIT);  
+	    k_msgq_put(&rpm_msgq, &rpm, K_NO_WAIT);  
+
 		printk("Duty cycle set to %d%%\n", 100-duty);
         printk("RPM = %d\n", rpm);
 
@@ -165,7 +198,11 @@ int main(void)
 	gpio_pin_configure_dt(&in1, GPIO_OUTPUT_ACTIVE);
 	gpio_pin_configure_dt(&in2, GPIO_OUTPUT_ACTIVE);
 
+    ret = gpio_pin_configure_dt(&ena, GPIO_INPUT);
+    if(ret < 0) return 0;
 
+    ret = gpio_pin_interrupt_configure_dt(&ena, GPIO_INT_EDGE_TO_ACTIVE);
+    if(ret < 0) return 0;
 
 	if (!device_is_ready(uart_dev) ||
 	    !pwm_is_ready_dt(&motor) ||
@@ -190,6 +227,10 @@ int main(void)
     gpio_init_callback(&button_cb_data, button_pressed, BIT(btn.pin));
 	gpio_add_callback(btn.port, &button_cb_data);
 
+    gpio_init_callback(&encoder_cb_data, ticks_isr, BIT(ena.pin));
+    gpio_add_callback(ena.port, &encoder_cb_data);
+
+
 	//uint32_t pulse = 1000;
 	// k_work_init(&pwm_work, update_pwm_handler);
 
@@ -203,6 +244,14 @@ int main(void)
                     console_thread, NULL, NULL, NULL,
                     5, 0, K_NO_WAIT);
 	
+    
+	struct k_thread consumer_thread_data;
+
+	k_thread_create(&consumer_thread_data, consumer_stack,
+                    K_THREAD_STACK_SIZEOF(consumer_stack),
+                    consumer_ticks, NULL, NULL, NULL,
+                    5, 0, K_NO_WAIT);
+
 	char printBuff[37];
 
 
@@ -229,6 +278,9 @@ int main(void)
         int local_en = 0;
         k_msgq_get(&en_msgq, &local_en, K_NO_WAIT);
 
+        int local__target_rpm = 0;
+        k_msgq_get(&rpm_msgq, &local_target_rpm, K_NO_WAIT);
+
         bool local_enabled;
         k_mutex_lock(&motor_enabled_mutex, K_FOREVER);   // CHANGE: added
         local_enabled = motor_enabled;
@@ -246,7 +298,5 @@ int main(void)
     //    k_sleep(K_MSEC(20));
 
 	}
-
-
 	return 0;
 }
