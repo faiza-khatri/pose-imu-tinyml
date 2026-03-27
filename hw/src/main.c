@@ -76,16 +76,16 @@ void button_pressed(const struct device *dev, struct gpio_callback *cb,
 
 static void uart_fifo_callback(const struct device *dev, void *user_data)
 {
-	uint8_t duty_cycle;
+	uint8_t c;
 
 	if(!uart_irq_update(uart_dev)) return;
     if(!uart_irq_rx_ready(uart_dev) ) return ;
 
-	while(uart_fifo_read(uart_dev, &duty_cycle,1)==1){
+	while(uart_fifo_read(uart_dev, &c,1)==1){
 
-		uart_poll_out(uart_dev, duty_cycle);
+		uart_poll_out(uart_dev, c);
 
-		if(duty_cycle == '\r' || duty_cycle == '\n'){
+		if(c == '\r' || c == '\n'){
 
 			rx_buf[rx_idx] = '\0';
 			rx_idx=0;
@@ -96,7 +96,7 @@ static void uart_fifo_callback(const struct device *dev, void *user_data)
 		}
 
 		else if (rx_idx < sizeof(rx_buf)-1){
-			rx_buf[rx_idx++] = duty_cycle;
+			rx_buf[rx_idx++] = c;
 		}
 	}
 }
@@ -105,10 +105,13 @@ static void uart_fifo_callback(const struct device *dev, void *user_data)
 void console_thread(void *p1, void *p2, void *p3)
 {
 	char buffer[50];
+    char duty_cycle[10], uart_rpm[10];
+
 	printk("Enter duty cycle (0-100):\n");
 	
 	while(1){
 		k_msgq_get(&uart_msgq, buffer, K_FOREVER);
+        sscanf(buffer, "%9s %9s", duty_cycle, uart_rpm);
         k_sem_take(&rx_ready_sem, K_FOREVER);
 
 		if (strcmp(buffer, "RESET") == 0) {
@@ -119,13 +122,19 @@ void console_thread(void *p1, void *p2, void *p3)
 			continue;
 		}
 
-		int duty = atoi(buffer);
+		int duty = atoi(duty_cycle);
+        int rpm = atoi(uart_rpm);
+
 		duty = 100 - duty;
 
 		if(duty < 0 || duty > 100){
 			printk("invalid duty cycle\n");
 			continue;
-		}
+		} 
+        if(rpm < 0 || rpm > 150) {
+            printk("Invalid rpm\n");
+            continue;
+        }
 
         k_mutex_lock(&motor_enabled_mutex, K_FOREVER);   // CHANGE: added
         bool enabled = motor_enabled;
@@ -139,6 +148,7 @@ void console_thread(void *p1, void *p2, void *p3)
 
 	    k_msgq_put(&en_msgq, &duty, K_NO_WAIT);        
 		printk("Duty cycle set to %d%%\n", 100-duty);
+        printk("RPM = %d\n", rpm);
 
 
 	}
