@@ -59,11 +59,9 @@ void button_pressed(const struct device *dev, struct gpio_callback *cb,
 		    uint32_t pins)
 {
     //    motor_enabled = false;
-	   brightness = 0;
+	   int local = 0;
 
-	   k_msgq_put(&en_msgq, &brightness, K_NO_WAIT);
-	   //pwm_set_pulse_dt(&motor, 0);
-	//    strcpy(printBuff, );
+	   k_msgq_put(&en_msgq, &local, K_NO_WAIT);
 	   char printBuff[] = "ESTOP pressed! Enter RESET to enable.";
 	   k_msgq_put(&btn_msgq, printBuff, K_NO_WAIT);
 
@@ -139,10 +137,7 @@ void console_thread(void *p1, void *p2, void *p3)
 			continue;
 		}
 
-        k_mutex_lock(&brightness_mutex, K_FOREVER);   // CHANGE: added
-        brightness = duty;
-        k_mutex_unlock(&brightness_mutex);            // CHANGE: added
-
+	    k_msgq_put(&en_msgq, &duty, K_NO_WAIT);        
 		printk("Duty cycle set to %d%%\n", 100-duty);
 
 
@@ -224,22 +219,16 @@ int main(void)
         int local_en = 0;
         k_msgq_get(&en_msgq, &local_en, K_NO_WAIT);
 
-        int local_brightness;
-        k_mutex_lock(&brightness_mutex, K_FOREVER);   // CHANGE: added
-        local_brightness = brightness;
-        k_mutex_unlock(&brightness_mutex);            // CHANGE: added
-
         bool local_enabled;
         k_mutex_lock(&motor_enabled_mutex, K_FOREVER);   // CHANGE: added
         local_enabled = motor_enabled;
         k_mutex_unlock(&motor_enabled_mutex);            // CHANGE: added
 
 
-
 		if(local_enabled){
 			gpio_pin_set_dt(&in1,0);
 			gpio_pin_set_dt(&in2, 1);
-            pwm_set_pulse_dt(&motor, local_brightness * motor.period / 100);
+            pwm_set_pulse_dt(&motor, local_en * motor.period / 100);
         } else {
             pwm_set_pulse_dt(&motor, 0);
         }

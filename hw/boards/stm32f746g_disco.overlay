@@ -27,19 +27,19 @@
     gpio_outs {
         compatible = "gpio-leds";
         motor_in1_node: motor_in1 {
-            gpios = <&gpioi 0 GPIO_ACTIVE_HIGH>;   /* PI0 — change pin to whatever you're using */
+            gpios = <&gpioi 0 GPIO_ACTIVE_HIGH>;   /* PI0 — D5 */
             label = "Motor IN1";
         };
         motor_in2_node: motor_in2 {
-            gpios = <&gpioi 1 GPIO_ACTIVE_HIGH>;   /* PI1 — change pin to whatever you're using */
+            gpios = <&gpioi 1 GPIO_ACTIVE_HIGH>;   /* PI1 — D13 */
             label = "Motor IN2";
         };
         encoder_a_node: encoder_a {
-            gpios = <&gpioi 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+            gpios = <&gpiog 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;  /* PG6 = D2 */
             label = "Encoder A";
         };
         encoder_b_node: encoder_b {
-            gpios = <&gpioi 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+            gpios = <&gpiog 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;  /* PG7 = D4 */
             label = "Encoder B";
         };
     };
@@ -55,5 +55,8 @@
 };
 
 &gpioi {
+    status = "okay";
+};
+&gpiog {
     status = "okay";
 };

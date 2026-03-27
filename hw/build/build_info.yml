@@ -1,0 +1,61 @@
+cmake:
+  application:
+    configuration-dir: '/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw'
+    source-dir: '/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw'
+  board:
+    name: 'stm32f746g_disco'
+    path:
+     - '/home/hijab-fatima-siddiqui/zephyrproject/zephyr/boards/st/stm32f746g_disco'
+    qualifiers: 'stm32f746xx'
+    revision: ''
+  devicetree:
+    bindings-dirs:
+     - '/home/hijab-fatima-siddiqui/zephyrproject/zephyr/dts/bindings'
+    files:
+     - '/home/hijab-fatima-siddiqui/zephyrproject/zephyr/boards/st/stm32f746g_disco/stm32f746g_disco.dts'
+     - '/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/boards/stm32f746g_disco.overlay'
+    include-dirs:
+     - '/home/hijab-fatima-siddiqui/zephyrproject/modules/hal/ambiq/dts'
+     - '/home/hijab-fatima-siddiqui/zephyrproject/modules/hal/atmel/include'
+     - '/home/hijab-fatima-siddiqui/zephyrproject/modules/hal/bouffalolab/include'
+     - '/home/hijab-fatima-siddiqui/zephyrproject/modules/hal/bouffalolab/include/zephyr'
+     - '/home/hijab-fatima-siddiqui/zephyrproject/modules/hal/gigadevice/include'
+     - '/home/hijab-fatima-siddiqui/zephyrproject/modules/hal/microchip/include'
+     - '/home/hijab-fatima-siddiqui/zephyrproject/modules/hal/microchip/dts'
+     - '/home/hijab-fatima-siddiqui/zephyrproject/modules/hal/nuvoton/dts'
+     - '/home/hijab-fatima-siddiqui/zephyrproject/modules/hal/nxp/dts'
+     - '/home/hijab-fatima-siddiqui/zephyrproject/modules/hal/stm32/dts'
+     - '/home/hijab-fatima-siddiqui/zephyrproject/modules/hal/ti/dts'
+     - '/home/hijab-fatima-siddiqui/zephyrproject/zephyr/include'
+     - '/home/hijab-fatima-siddiqui/zephyrproject/zephyr/include/zephyr'
+     - '/home/hijab-fatima-siddiqui/zephyrproject/zephyr/dts/common'
+     - '/home/hijab-fatima-siddiqui/zephyrproject/zephyr/dts/vendor'
+     - '/home/hijab-fatima-siddiqui/zephyrproject/zephyr/dts/rx'
+     - '/home/hijab-fatima-siddiqui/zephyrproject/zephyr/dts/x86'
+     - '/home/hijab-fatima-siddiqui/zephyrproject/zephyr/dts/xtensa'
+     - '/home/hijab-fatima-siddiqui/zephyrproject/zephyr/dts/sparc'
+     - '/home/hijab-fatima-siddiqui/zephyrproject/zephyr/dts/riscv'
+     - '/home/hijab-fatima-siddiqui/zephyrproject/zephyr/dts/posix'
+     - '/home/hijab-fatima-siddiqui/zephyrproject/zephyr/dts/arm64'
+     - '/home/hijab-fatima-siddiqui/zephyrproject/zephyr/dts/arm'
+     - '/home/hijab-fatima-siddiqui/zephyrproject/zephyr/dts/arc'
+     - '/home/hijab-fatima-siddiqui/zephyrproject/zephyr/dts'
+    user-files:
+     - '/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/boards/stm32f746g_disco.overlay'
+  kconfig:
+    files:
+     - '/home/hijab-fatima-siddiqui/zephyrproject/zephyr/boards/st/stm32f746g_disco/stm32f746g_disco_defconfig'
+     - '/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/prj.conf'
+    user-files:
+     - '/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/hw/prj.conf'
+  toolchain:
+    name: 'zephyr'
+    path: '/home/hijab-fatima-siddiqui/zephyr-sdk-0.17.4'
+  zephyr:
+    version: '4.3.99'
+    zephyr-base: '/home/hijab-fatima-siddiqui/zephyrproject/zephyr'
+version: '0.1.0'
+west:
+  command: '/home/hijab-fatima-siddiqui/zephyrproject/.venv/bin/west build -p always -b stm32f746g_disco'
+  topdir: '/home/hijab-fatima-siddiqui/zephyrproject'
+  version: '1.5.0'

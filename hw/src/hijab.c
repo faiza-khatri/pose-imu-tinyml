@@ -1,0 +1,401 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <zephyr/kernel.h>
+#include <zephyr/drivers/gpio.h>
+#include <zephyr/drivers/pwm.h>
+#include <zephyr/drivers/uart.h>
+#include <zephyr/device.h>
+#include <zephyr/console/console.h>
+#include <string.h>
+
+
+static char rx_buf[50];
+
+int freq = 0 ;
+int rpm=0;
+const int PPR = 64;
+const int gear_ratio = 70;
+const int ppr = PPR * gear_ratio;
+static int  target_rpm = 50; 
+
+#define CONSOLE_STACK 1024
+#define SLEEP_MSEC   50
+
+// struct k_work myWork;
+// struct k_work pwm_work;
+
+int brightness =0;
+unsigned char uart;
+static int rx_idx =0;
+volatile bool rx_ready = false;
+
+// static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED0_NODE, gpios);
+// static const struct gpio_dt_spec btn = GPIO_DT_SPEC_GET(DT_ALIAS(sw0), gpios);
+
+K_MSGQ_DEFINE(uart_msgq, 50, 4, 4);
+K_MSGQ_DEFINE(en_msgq, sizeof(int), 1, 4);
+
+K_MSGQ_DEFINE(btn_msgq, 38, 1, 4);
+//ticks
+K_MSGQ_DEFINE(ticks_msgq, 10, 1, 4);
+
+static int ticks=0;
+uint32_t start_time = 0;
+uint32_t end_time =0;
+uint32_t total_time=0;
+
+K_THREAD_STACK_DEFINE(console_stack, CONSOLE_STACK);
+const struct device *const uart_dev = DEVICE_DT_GET(DT_CHOSEN(zephyr_console));
+static const struct pwm_dt_spec motor = PWM_DT_SPEC_GET(DT_ALIAS(pwm_motor));
+static const struct gpio_dt_spec in1 = GPIO_DT_SPEC_GET(DT_ALIAS(motor_in1), gpios);
+static const struct gpio_dt_spec in2 = GPIO_DT_SPEC_GET(DT_ALIAS(motor_in2), gpios);
+static const struct gpio_dt_spec btn = GPIO_DT_SPEC_GET(DT_ALIAS(e_stop), gpios);
+
+// hw3 ---------------------------------------------------
+static const struct gpio_dt_spec ena = GPIO_DT_SPEC_GET(DT_ALIAS(encoder_a), gpios);
+static const struct gpio_dt_spec enb = GPIO_DT_SPEC_GET(DT_ALIAS(encoder_b), gpios);
+// -------------------------------------------------------
+
+K_SEM_DEFINE(rx_ready_sem, 0, 1);
+
+static bool motor_enabled = true;
+K_MUTEX_DEFINE(motor_enabled_mutex);  
+K_MUTEX_DEFINE(brightness_mutex); 
+K_MUTEX_DEFINE(target_rpm_mutex);   
+
+static struct gpio_callback button_cb_data;
+
+void button_pressed(const struct device *dev, struct gpio_callback *cb,
+		    uint32_t pins)
+{
+    //    motor_enabled = false;
+	int local=0;
+	   
+
+	   k_msgq_put(&en_msgq, &local, K_NO_WAIT);
+	   char printBuff[] = "ESTOP pressed! Enter RESET to enable.";
+	   k_msgq_put(&btn_msgq, printBuff, K_NO_WAIT);
+
+}
+
+void ticks_isr(const struct device *dev, struct gpio_callback *cb, uint32_t pins)
+{
+		
+		ticks++;
+
+		if(ticks==8) { 
+
+			end_time = k_cycle_get_32();
+			total_time = end_time - start_time;
+			start_time = end_time;
+			ticks=0;
+
+			k_msgq_put(&ticks_msgq, &total_time, K_FOREVER); 
+
+
+		}
+
+}
+
+static void uart_fifo_callback(const struct device *dev, void *user_data)
+{
+	uint8_t duty_cycle;
+	uint8_t uart_rpm;
+	uint8_t c;
+
+	if(!uart_irq_update(uart_dev)) return;
+    if(!uart_irq_rx_ready(uart_dev) ) return ;
+
+	while(uart_fifo_read(uart_dev, &c,1)==1){
+
+		uart_poll_out(uart_dev, duty_cycle);
+		uart_poll_out(uart_dev, uart_rpm);
+
+
+		if(c == '\r' || c == '\n'){
+
+			rx_buf[rx_idx] = '\0';
+			// if (sscanf(rx_buf, "%c %c", &duty_cycle, &uart_rpm) == 2) {
+			// 	printk("Received: duty cycle=%d, Var2=%d\n", duty_cycle, uart_rpm);
+            // }
+			
+			rx_idx=0;
+			// rx_ready = true;
+			k_msgq_put(&uart_msgq, rx_buf, K_NO_WAIT);
+            k_sem_give(&rx_ready_sem);   // CHANGE: signal after the put, not before
+
+		}
+
+		else if (rx_idx < sizeof(rx_buf)-1){
+			rx_buf[rx_idx++] = c;
+
+		}
+	}
+}
+
+
+void console_thread(void *p1, void *p2, void *p3)
+{
+	// char buffer[50];
+	char buffer_rpm[50];
+	printk("Enter target RPM or RESET:\n");
+
+	
+	while(1){
+		k_msgq_get(&uart_msgq, buffer_rpm, K_FOREVER);
+        k_sem_take(&rx_ready_sem, K_FOREVER);
+
+		if (strcmp(buffer_rpm, "RESET") == 0) {
+            k_mutex_lock(&motor_enabled_mutex, K_FOREVER);
+            motor_enabled = true;
+            k_mutex_unlock(&motor_enabled_mutex);
+            printk("Motor enabled.\n");
+            continue;
+        }
+
+		int rpm_init = atoi(buffer_rpm);
+
+        if (rpm_init <= 0 || rpm_init > 500) {
+            printk("Invalid RPM. Enter 1-500.\n");
+            continue;
+        }
+
+       k_mutex_lock(&motor_enabled_mutex, K_FOREVER);
+        bool enabled = motor_enabled;
+        k_mutex_unlock(&motor_enabled_mutex);
+
+        if (!enabled) {
+            printk("Motor disabled! Send RESET first.\n");
+            continue;
+        }
+
+        k_mutex_lock(&target_rpm_mutex, K_FOREVER);
+        target_rpm = rpm_init;
+        k_mutex_unlock(&target_rpm_mutex);
+
+        printk("Target RPM set to %d\n", rpm_init);
+
+
+	}
+}
+
+
+
+// void console_thread(void *p1, void *p2, void *p3)
+// {
+//     char buffer[50];
+
+//     printk("Console ready. Enter commands:\n");
+//     printk("Format:\n");
+//     printk("  D <0-100>   → Set Duty Cycle\n");
+//     printk("  R <1-500>   → Set Target RPM\n");
+//     printk("  RESET       → Enable motor\n");
+
+//     while (1) {
+//         // Wait for user input from UART message queue
+//         k_msgq_get(&uart_msgq, buffer, K_FOREVER);
+//         k_sem_take(&rx_ready_sem, K_FOREVER);
+
+//         // Handle RESET
+//         if (strcmp(buffer, "RESET") == 0) {
+//             k_mutex_lock(&motor_enabled_mutex, K_FOREVER);
+//             motor_enabled = true;
+//             k_mutex_unlock(&motor_enabled_mutex);
+//             printk("Motor reset and enabled.\n");
+//             continue;
+//         }
+
+//         // Check command type (first character)
+//         char cmd;
+//         int value;
+//         if (sscanf(buffer, "%c %d", &cmd, &value) != 2) {
+//             printk("Invalid input format. Use 'D <0-100>' or 'R <1-500>' or 'RESET'.\n");
+//             continue;
+//         }
+
+//         // Duty Cycle Command
+//         if (cmd == 'D' || cmd == 'd') {
+//             if (value < 0 || value > 100) {
+//                 printk("Invalid duty cycle. Must be 0-100.\n");
+//                 continue;
+//             }
+
+//             k_mutex_lock(&motor_enabled_mutex, K_FOREVER);
+//             bool enabled = motor_enabled;
+//             k_mutex_unlock(&motor_enabled_mutex);
+
+//             if (!enabled) {
+//                 printk("Motor disabled! Use RESET to enable.\n");
+//                 continue;
+//             }
+
+//             k_mutex_lock(&brightness_mutex, K_FOREVER);
+//             brightness = 100 - value; // Map user input to PWM logic if needed
+//             k_mutex_unlock(&brightness_mutex);
+
+//             printk("Duty cycle set to %d%%\n", value);
+//         }
+//         // RPM Command
+//         else if (cmd == 'R' || cmd == 'r') {
+//             if (value <= 0 || value > 500) {
+//                 printk("Invalid RPM. Enter 1-500.\n");
+//                 continue;
+//             }
+
+//             k_mutex_lock(&motor_enabled_mutex, K_FOREVER);
+//             bool enabled = motor_enabled;
+//             k_mutex_unlock(&motor_enabled_mutex);
+
+//             if (!enabled) {
+//                 printk("Motor disabled! Use RESET to enable.\n");
+//                 continue;
+//             }
+
+//             k_mutex_lock(&target_rpm_mutex, K_FOREVER);
+//             target_rpm = value;
+//             k_mutex_unlock(&target_rpm_mutex);
+
+//             printk("Target RPM set to %d\n", value);
+//         }
+//         else {
+//             printk("Unknown command '%c'. Use D or R.\n", cmd);
+//         }
+//     }
+// }
+
+void consumer_ticks(void *p1, void *p2, void *p3)
+{
+    uint32_t ticks_time;
+    float measured_rpm = 0;
+    const uint32_t cycles_per_sec = sys_clock_hw_cycles_per_sec();
+    float Kp = 2.5f;
+     float m = 0.5f;  float b = 10.0f;  // placeholder will be replaced after characterization
+
+
+    while (1) {
+        k_msleep(100);
+    
+        if (k_msgq_get(&ticks_msgq, &ticks_time, K_NO_WAIT) == 0 && ticks_time > 0) {
+
+            // measured_rpm = (int)(
+            //     ((uint64_t)PULSE_BATCH * (uint64_t)cycles_per_sec * 60ULL)
+            //     / ((uint64_t)ENCODER_PPR * (uint64_t)elapsed))
+            float time_sec = (float)ticks_time / (float)cycles_per_sec;
+            float f_pulse = 8.0f / time_sec;
+            measured_rpm = (f_pulse * 60.0f) / ppr;
+
+            printk("Measured RPM: %.2f\n", (double)measured_rpm);
+        }
+
+        k_mutex_lock(&target_rpm_mutex, K_FOREVER);
+        int local_target = target_rpm;
+        k_mutex_unlock(&target_rpm_mutex);
+
+        
+        k_mutex_lock(&motor_enabled_mutex, K_FOREVER);
+        bool enabled = motor_enabled;
+        k_mutex_unlock(&motor_enabled_mutex);
+
+        if (!enabled) {
+            k_mutex_lock(&brightness_mutex, K_FOREVER);
+            brightness = 0;
+            k_mutex_unlock(&brightness_mutex);
+            printk(" Motor disabled\n");
+            continue;
+        }
+        ////P-controller
+        float base_pwm = m * local_target + b;
+        float error = local_target - measured_rpm;
+        float pwm = base_pwm + (Kp * error);
+
+        if (pwm < 0) pwm = 0;
+        if (pwm > 100) pwm = 100;
+
+        k_mutex_lock(&brightness_mutex, K_FOREVER);
+        brightness = pwm;
+        k_mutex_unlock(&brightness_mutex);
+
+        printk("Target RPM=%d, Measured=%.2f, Error=%.2f, PWM=%.2f%%\n", local_target, measured_rpm, error, pwm);
+    }
+}
+
+int main(void)
+{
+   int ret;
+	gpio_pin_configure_dt(&in1, GPIO_OUTPUT_ACTIVE);
+	gpio_pin_configure_dt(&in2, GPIO_OUTPUT_ACTIVE);
+
+
+
+	if (!device_is_ready(uart_dev) ||
+	    !pwm_is_ready_dt(&motor) ||
+	    !device_is_ready(btn.port)) {
+		return 0;
+	}
+	ret = gpio_pin_configure_dt(&btn, GPIO_INPUT);
+
+
+	if (ret < 0) {
+		return 0;
+	}
+
+    ret = gpio_pin_interrupt_configure_dt(&btn, GPIO_INT_EDGE_TO_ACTIVE);
+    if (ret < 0) {
+		return 0;
+	}
+
+    gpio_init_callback(&button_cb_data, button_pressed, BIT(btn.pin));
+	gpio_add_callback(btn.port, &button_cb_data);
+
+	//uint32_t pulse = 1000;
+	// k_work_init(&pwm_work, update_pwm_handler);
+
+	uart_irq_callback_set(uart_dev, uart_fifo_callback);
+	uart_irq_rx_enable(uart_dev);
+
+	struct k_thread console_thread_data;
+
+	k_thread_create(&console_thread_data, console_stack,
+                    K_THREAD_STACK_SIZEOF(console_stack),
+                    console_thread, NULL, NULL, NULL,
+                    5, 0, K_NO_WAIT);
+	
+	char printBuff[37];
+
+
+	while (1) {
+
+		if(k_msgq_get(&btn_msgq, printBuff, K_FOREVER) == 0) {
+			printk("%s\n", printBuff);
+
+            k_mutex_lock(&motor_enabled_mutex, K_FOREVER);   // CHANGE: added
+            motor_enabled = false;
+            k_mutex_unlock(&motor_enabled_mutex);            // CHANGE: added
+		}
+
+		
+        int local_en = 0;
+        k_msgq_get(&en_msgq, &local_en, K_NO_WAIT);
+
+		int local_brightness;
+        k_mutex_lock(&brightness_mutex, K_FOREVER);   // CHANGE: added
+        local_brightness = brightness;
+        k_mutex_unlock(&brightness_mutex);            // CHANGE: added
+
+        bool local_enabled;
+        k_mutex_lock(&motor_enabled_mutex, K_FOREVER);   // CHANGE: added
+        local_enabled = motor_enabled;
+        k_mutex_unlock(&motor_enabled_mutex);            // CHANGE: added
+
+		if (local_enabled) {
+            gpio_pin_set_dt(&in1, 0);
+            gpio_pin_set_dt(&in2, 1);
+            pwm_set_pulse_dt(&motor, local_brightness * motor.period / 100);
+        } else {
+            pwm_set_pulse_dt(&motor, 0);
+        }
+    }
+
+
+	return 0;
+}
