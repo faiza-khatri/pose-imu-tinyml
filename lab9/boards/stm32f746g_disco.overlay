@@ -1,3 +1,22 @@
+/ {
+ 
+    gpio_outs {
+        compatible = "gpio-leds";
+        toggle: toggle_gpio {
+            gpios = <&gpioa 8 GPIO_ACTIVE_HIGH>;   /* PA8 — D10 */
+            label = "Toggle GPIO";
+        }; 
+    };
+
+    buttons {
+        compatible = "gpio-keys";
+        my_button: my_button_0 {
+            gpios = <&gpioi 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+            label = "My Button";
+        };
+    };
+};
+
 &i2c1 {
     status = "okay";
     clock-frequency = <I2C_BITRATE_STANDARD>; // 100kHz
