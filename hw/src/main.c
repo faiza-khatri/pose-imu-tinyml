@@ -20,21 +20,26 @@ static char rx_buf[50];
 // struct k_work pwm_work;
 
 int brightness =0;
-int target_rpm;
 
-float end_time;
-float start_time;
-float total_time;
+int64_t end_time;
+int64_t start_time;
+int64_t total_time;
+
+#define ENCODER_PPR          64      /* pulses per rev, motor shaft */
+#define GEAR_RATIO           70      /* gearbox ratio */
+#define PULSES_PER_OUT_REV   (ENCODER_PPR * GEAR_RATIO)  /* = 4480 */
+#define PULSES_COUNTED       16       /* edges counted per ISR batch */
+#define KP               0.3f
+#define PLACEHOLDER_M   2.61f    // duty per RPM
+#define PLACEHOLDER_B   -14.4f  // duty offset
+#define PWM_PERIOD_NS    20000U  /* 50 kHz — adjust to your motor driver */
 
 
-const int PPR = 64;
-const int gear_ratio = 70;
-const int ppr = PPR * gear_ratio;
 
 unsigned char uart;
 static int rx_idx =0;
 volatile bool rx_ready = false;
-int ticks;
+int8_t ticks;
 /*
  * A build error on this line means your board is unsupported.
  * See the sample documentation for information on how to fix this. */
@@ -46,10 +51,12 @@ int ticks;
 K_MSGQ_DEFINE(uart_msgq, 50, 4, 4);
 K_MSGQ_DEFINE(en_msgq, sizeof(int), 1, 4);
 
-K_MSGQ_DEFINE(rpm_msgq, sizeof(int), 1, 4);
-K_MSGQ_DEFINE(ticks_msgq, sizeof(float), 1, 4);
+K_MSGQ_DEFINE(target_rpm_msgq, sizeof(int), 1, 4);
+K_MSGQ_DEFINE(ticks_msgq, sizeof(int64_t), 1, 4);
 
 K_MSGQ_DEFINE(measured_rpm_msgq, sizeof(float), 1, 4);
+
+K_MSGQ_DEFINE(output_msgq, sizeof(float), 1, 4);
 
 K_MSGQ_DEFINE(btn_msgq, 38, 1, 4);
 
@@ -94,42 +101,69 @@ void button_pressed(const struct device *dev, struct gpio_callback *cb,
 
 void ticks_isr(const struct device *dev, struct gpio_callback *cb, uint32_t pins)
 {
-		
-		ticks++;
+	int64_t now = k_uptime_ticks();
 
-		if(ticks==8) { 
+    if (ticks == 0) {
+        start_time = now;
+    }
 
-			end_time = k_cycle_get_32();
-			total_time = end_time - start_time;
-			start_time = end_time;
-			ticks=0;
+    ticks++;
 
-			k_msgq_put(&ticks_msgq, &total_time, K_FOREVER); 
+    if (ticks >= 16) {
+        int64_t elapsed = now - start_time;
 
-
-		}
-
+        k_msgq_put(&ticks_msgq, &elapsed, K_NO_WAIT);
+        ticks = 0;
+        start_time = 0;
+    }
 }
 
 void consumer_ticks() {
-    float time_elapsed;
-    k_msgq_get(&ticks_msgq, &time_elapsed, K_FOREVER);
+    int64_t time_elapsed;
+	float target_rpm = 0;
+	float measured_rpm = 0;
 
-    float f_pulse = 8/time_elapsed;
+	while (1) {
+        if (k_msgq_get(&ticks_msgq, &time_elapsed, K_FOREVER) == 0) {
 
-    float measured_rpm = f_pulse * 60/ppr;
+            /* Convert elapsed ticks to seconds as a double */
+            double elapsed_s = (double)time_elapsed / (double)CONFIG_SYS_CLOCK_TICKS_PER_SEC;
 
-    k_msgq_put(&measured_rpm_msgq, &measured_rpm, K_NO_WAIT);
+			measured_rpm = (float)(((double)PULSES_COUNTED
+                                / (double)PULSES_PER_OUT_REV)
+                                / elapsed_s * 60.0);
+
+			//printk("Measured RPM = %d\n", (int)measured_rpm);
+			k_msgq_purge(&measured_rpm_msgq);
+			k_msgq_put(&measured_rpm_msgq, &measured_rpm, K_NO_WAIT);								
+			int new_target;
+            if (k_msgq_get(&target_rpm_msgq, &new_target, K_NO_WAIT) == 0) {
+                target_rpm = (float)new_target;
+            }
+
+			/* 2. P control */
+			float base_pwm = PLACEHOLDER_M * target_rpm + PLACEHOLDER_B;
+			float error  = target_rpm - measured_rpm;
+			float output = base_pwm + KP * error;
+
+			if (output < 0.0f)   output = 0.0f;
+			if (output > 100.0f) output = 100.0f;  
+
+	// 		printk("target=%.1f measured=%.1f error=%.1f base=%.1f output=%.1f\n",
+    //    (double)target_rpm, (double)measured_rpm, 
+    //    (double)error, (double)base_pwm, (double)output);
 
 
+
+			k_msgq_purge(&output_msgq);
+			k_msgq_put(&output_msgq, &output, K_NO_WAIT);
+			// k_msgq_overwrite(&output_msgq, &output);
+            
+        }
+    }
 }
 
 
-
-// void update_pwm_handler(struct k_work *work){
-// 	brightness =
-// 	pwm_set_pulse_dt(&motor, brightness);
-// }
 
 static void uart_fifo_callback(const struct device *dev, void *user_data)
 {
@@ -148,7 +182,7 @@ static void uart_fifo_callback(const struct device *dev, void *user_data)
 			rx_idx=0;
 			// rx_ready = true;
 			k_msgq_put(&uart_msgq, rx_buf, K_NO_WAIT);
-            k_sem_give(&rx_ready_sem);   // CHANGE: signal after the put, not before
+            k_sem_give(&rx_ready_sem);   
 
 		}
 
@@ -161,58 +195,75 @@ static void uart_fifo_callback(const struct device *dev, void *user_data)
 
 void console_thread(void *p1, void *p2, void *p3)
 {
-	char buffer[50];
-    char duty_cycle[10], uart_rpm[10];
+	char uart_rpm[10];
+	float measured;
 
-	printk("Enter duty cycle (0-100):\n");
+
+	printk("Enter target rpm: \n");
+
+	k_sem_take(&rx_ready_sem, K_FOREVER);
+    k_msgq_get(&uart_msgq, uart_rpm, K_NO_WAIT);
+
+    int rpm = atoi(uart_rpm);
+    if (rpm < 0 || rpm > 150) {
+        printk("Invalid rpm, defaulting to 0\n");
+        rpm = 0;
+    }
+
+    k_msgq_put(&target_rpm_msgq, &rpm, K_FOREVER);
+    printk("Target RPM = %d\n", rpm);
+
 	
 	while(1){
-		k_msgq_get(&uart_msgq, buffer, K_FOREVER);
-        sscanf(buffer, "%9s %9s", duty_cycle, uart_rpm);
-        k_sem_take(&rx_ready_sem, K_FOREVER);
+        // if(k_msgq_get(&measured_rpm_msgq, &measured, K_NO_WAIT)==0)
+        // // 	printk("Measured RPM = %f\n", measured);
 
-		if (strcmp(buffer, "RESET") == 0) {
-            k_mutex_lock(&motor_enabled_mutex, K_FOREVER);   // CHANGE: added
-			motor_enabled = true;
-            k_mutex_unlock(&motor_enabled_mutex);            // CHANGE: added
-			printk("Motor reset. You can now set duty cycle.\n");
-			continue;
-		}
+		// k_sem_take(&rx_ready_sem, K_FOREVER);
+		// k_msgq_get(&uart_msgq, uart_rpm, K_MSEC(2000));
+        // // sscanf(buffer, "%9s %9s", duty_cycle, uart_rpm);
+        
+		// bool reset = strcmp(uart_rpm, "RESET") == 0;
 
-		int duty = atoi(duty_cycle);
-        int rpm = atoi(uart_rpm);
+		// if(reset) {
+		// 	k_mutex_lock(&motor_enabled_mutex, K_FOREVER);
+		// 	motor_enabled = true;
+		// 	k_mutex_unlock(&motor_enabled_mutex);
+		// 	printk("Motor reset. You can now set duty cycle.\n");
+		// 	continue;
 
-		duty = 100 - duty;
+		// } 
+			
+		// // int duty = atoi(duty_cycle);
 
-		if(duty < 0 || duty > 100){
-			printk("invalid duty cycle\n");
-			continue;
-		} 
-        if(rpm < 0 || rpm > 150) {
-            printk("Invalid rpm\n");
-            continue;
+        // int rpm = atoi(uart_rpm);
+
+		// // duty = 100 - duty;
+
+		// // if(duty < 0 || duty > 100){
+		// // 	printk("invalid duty cycle\n");
+		// // 	continue;
+		// // }
+
+        // if(rpm < 0 || rpm > 150) {
+        //     printk("Invalid rpm\n");
+        //     continue;
+        // }
+
+        // k_mutex_lock(&motor_enabled_mutex, K_FOREVER);   // CHANGE: added
+        // bool enabled = motor_enabled;
+        // k_mutex_unlock(&motor_enabled_mutex);            // CHANGE: added
+
+		// if(!enabled){
+		// 	printk("Motor disabled! Press RESET to enable.\n");
+		// 	continue;
+		// }
+
+	    // k_msgq_put(&en_msgq, &duty, K_NO_WAIT);  
+
+	    // if(k_msgq_put(&target_rpm_msgq, &rpm, K_NO_WAIT) == 0)
+		if (k_msgq_get(&measured_rpm_msgq, &measured, K_FOREVER) == 0) {
+            printk("Target rpm = %d, Measured RPM = %d\n", rpm, (int)measured);
         }
-
-        k_mutex_lock(&motor_enabled_mutex, K_FOREVER);   // CHANGE: added
-        bool enabled = motor_enabled;
-        k_mutex_unlock(&motor_enabled_mutex);            // CHANGE: added
-
-		//change brightness here
-		if(!enabled){
-			printk("Motor disabled! Press RESET to enable.\n");
-			continue;
-		}
-
-	    k_msgq_put(&en_msgq, &duty, K_NO_WAIT);  
-	    k_msgq_put(&rpm_msgq, &rpm, K_NO_WAIT);  
-
-		printk("Duty cycle set to %d%%\n", 100-duty);
-        printk("RPM = %d\n", rpm);
-
-        float measured;
-        k_msgq_get(&measured_rpm_msgq, &measured, K_FOREVER);
-        printk("Measured RPM = %f\n", measured);
-
 
 	}
 }
@@ -231,7 +282,8 @@ int main(void)
     ret = gpio_pin_configure_dt(&ena, GPIO_INPUT);
     if(ret < 0) return 0;
 
-    ret = gpio_pin_interrupt_configure_dt(&ena, GPIO_INT_EDGE_TO_ACTIVE);
+	
+	ret = gpio_pin_interrupt_configure_dt(&ena, GPIO_INT_EDGE_TO_ACTIVE);
     if(ret < 0) return 0;
 
 	if (!device_is_ready(uart_dev) ||
@@ -280,24 +332,18 @@ int main(void)
 	k_thread_create(&consumer_thread_data, consumer_stack,
                     K_THREAD_STACK_SIZEOF(consumer_stack),
                     consumer_ticks, NULL, NULL, NULL,
-                    5, 0, K_NO_WAIT);
+                    3, 0, K_NO_WAIT);
 
 	char printBuff[37];
+	float output = 90;
+	int local_pwm = 90;
+
+
 
 
 	while (1) {
 
-
-    // if (uart_poll_in(uart_dev, &uart) == 0) {
-    //     printk("Received: %c\n", uart);
-
-    //     brightness = (uart - '0') * 2000;  // convert ASCII digit
-
-
-    //     k_work_submit(&pwm_work); //this will go in console thread function wahan change brightness acc to duty cycle and submit
-    //}
-
-		if(k_msgq_get(&btn_msgq, printBuff, K_FOREVER) == 0) {
+		if(k_msgq_get(&btn_msgq, printBuff, K_NO_WAIT) == 0) {
 			printk("%s\n", printBuff);
 
             k_mutex_lock(&motor_enabled_mutex, K_FOREVER);   // CHANGE: added
@@ -305,11 +351,14 @@ int main(void)
             k_mutex_unlock(&motor_enabled_mutex);            // CHANGE: added
 		}
 
-        int local_en = 0;
-        k_msgq_get(&en_msgq, &local_en, K_NO_WAIT);
+        k_msgq_get(&en_msgq, &local_pwm, K_NO_WAIT);
 
-        int local_target_rpm = 0;
-        k_msgq_get(&rpm_msgq, &local_target_rpm, K_NO_WAIT);
+        // int local_target_rpm = 0;
+        // k_msgq_get(&target_rpm_msgq, &local_target_rpm, K_NO_WAIT);
+
+		int got_output = k_msgq_get(&output_msgq, &output, K_NO_WAIT);
+		local_pwm = (int)output;
+		// printk("PWM applying: %d (got=%d)\n", local_pwm, got_output);
 
         bool local_enabled;
         k_mutex_lock(&motor_enabled_mutex, K_FOREVER);   // CHANGE: added
@@ -320,12 +369,12 @@ int main(void)
 		if(local_enabled){
 			gpio_pin_set_dt(&in1,0);
 			gpio_pin_set_dt(&in2, 1);
-            pwm_set_pulse_dt(&motor, local_en * motor.period / 100);
+            pwm_set_pulse_dt(&motor, local_pwm * motor.period / 100);
         } else {
             pwm_set_pulse_dt(&motor, 0);
         }
 
-    //    k_sleep(K_MSEC(20));
+       k_sleep(K_MSEC(20));
 
 	}
 	return 0;

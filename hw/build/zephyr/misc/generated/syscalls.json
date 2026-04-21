@@ -257,6 +257,22 @@
     ],
     [
         [
+            "int pwm_enable_dma",
+            "const struct device *dev, uint32_t channel"
+        ],
+        "pwm.h",
+        true
+    ],
+    [
+        [
+            "int pwm_disable_dma",
+            "const struct device *dev, uint32_t channel"
+        ],
+        "pwm.h",
+        true
+    ],
+    [
+        [
             "int pwm_capture_cycles",
             "const struct device *dev, uint32_t channel,\n\t\t\t\t pwm_flags_t flags, uint32_t *period,\n\t\t\t\t uint32_t *pulse, k_timeout_t timeout"
         ],
@@ -1657,6 +1673,118 @@
     ],
     [
         [
+            "int biometric_get_capabilities",
+            "const struct device *dev,\n\t\t\t\t\t struct biometric_capabilities *caps"
+        ],
+        "biometrics.h",
+        false
+    ],
+    [
+        [
+            "int biometric_attr_set",
+            "const struct device *dev, enum biometric_attribute attr,\n\t\t\t\t int32_t val"
+        ],
+        "biometrics.h",
+        false
+    ],
+    [
+        [
+            "int biometric_attr_get",
+            "const struct device *dev, enum biometric_attribute attr,\n\t\t\t\t int32_t *val"
+        ],
+        "biometrics.h",
+        false
+    ],
+    [
+        [
+            "int biometric_enroll_start",
+            "const struct device *dev, uint16_t template_id"
+        ],
+        "biometrics.h",
+        false
+    ],
+    [
+        [
+            "int biometric_enroll_capture",
+            "const struct device *dev, k_timeout_t timeout,\n\t\t\t\t       struct biometric_capture_result *result"
+        ],
+        "biometrics.h",
+        false
+    ],
+    [
+        [
+            "int biometric_enroll_finalize",
+            "const struct device *dev"
+        ],
+        "biometrics.h",
+        false
+    ],
+    [
+        [
+            "int biometric_enroll_abort",
+            "const struct device *dev"
+        ],
+        "biometrics.h",
+        false
+    ],
+    [
+        [
+            "int biometric_template_store",
+            "const struct device *dev, uint16_t id, const uint8_t *data,\n\t\t\t\t       size_t size"
+        ],
+        "biometrics.h",
+        false
+    ],
+    [
+        [
+            "int biometric_template_read",
+            "const struct device *dev, uint16_t id, uint8_t *data,\n\t\t\t\t      size_t size"
+        ],
+        "biometrics.h",
+        false
+    ],
+    [
+        [
+            "int biometric_template_delete",
+            "const struct device *dev, uint16_t id"
+        ],
+        "biometrics.h",
+        false
+    ],
+    [
+        [
+            "int biometric_template_delete_all",
+            "const struct device *dev"
+        ],
+        "biometrics.h",
+        false
+    ],
+    [
+        [
+            "int biometric_template_list",
+            "const struct device *dev, uint16_t *ids, size_t max_count,\n\t\t\t\t      size_t *actual_count"
+        ],
+        "biometrics.h",
+        false
+    ],
+    [
+        [
+            "int biometric_match",
+            "const struct device *dev, enum biometric_match_mode mode,\n\t\t\t      uint16_t template_id, k_timeout_t timeout,\n\t\t\t      struct biometric_match_result *result"
+        ],
+        "biometrics.h",
+        false
+    ],
+    [
+        [
+            "int biometric_led_control",
+            "const struct device *dev, enum biometric_led_state state"
+        ],
+        "biometrics.h",
+        false
+    ],
+    [
+        [
             "int can_get_core_clock",
             "const struct device *dev, uint32_t *rate"
         ],
@@ -1993,7 +2121,23 @@
     ],
     [
         [
+            "uint64_t counter_get_frequency_64",
+            "const struct device *dev"
+        ],
+        "counter.h",
+        false
+    ],
+    [
+        [
             "uint32_t counter_us_to_ticks",
+            "const struct device *dev, uint64_t us"
+        ],
+        "counter.h",
+        false
+    ],
+    [
+        [
+            "uint64_t counter_us_to_ticks_64",
             "const struct device *dev, uint64_t us"
         ],
         "counter.h",
@@ -2009,8 +2153,40 @@
     ],
     [
         [
+            "uint64_t counter_ticks_to_us_64",
+            "const struct device *dev, uint64_t ticks"
+        ],
+        "counter.h",
+        false
+    ],
+    [
+        [
+            "uint32_t counter_ns_to_ticks",
+            "const struct device *dev, uint64_t ns"
+        ],
+        "counter.h",
+        false
+    ],
+    [
+        [
+            "uint64_t counter_ns_to_ticks_64",
+            "const struct device *dev, uint64_t ns"
+        ],
+        "counter.h",
+        false
+    ],
+    [
+        [
             "uint64_t counter_ticks_to_ns",
             "const struct device *dev, uint32_t ticks"
+        ],
+        "counter.h",
+        false
+    ],
+    [
+        [
+            "uint64_t counter_ticks_to_ns_64",
+            "const struct device *dev, uint64_t ticks"
         ],
         "counter.h",
         false
@@ -2049,14 +2225,6 @@
     ],
     [
         [
-            "int counter_get_value_64",
-            "const struct device *dev, uint64_t *ticks"
-        ],
-        "counter.h",
-        false
-    ],
-    [
-        [
             "int counter_reset",
             "const struct device *dev"
         ],
@@ -2065,8 +2233,16 @@
     ],
     [
         [
+            "int counter_set_value",
+            "const struct device *dev, uint32_t ticks"
+        ],
+        "counter.h",
+        false
+    ],
+    [
+        [
             "int counter_set_channel_alarm",
-            "const struct device *dev,\n\t\t\t\t\tuint8_t chan_id,\n\t\t\t\t\tconst struct counter_alarm_cfg *alarm_cfg"
+            "const struct device *dev, uint8_t chan_id,\n\t\t\t\t\tconst struct counter_alarm_cfg *alarm_cfg"
         ],
         "counter.h",
         false
@@ -2074,7 +2250,7 @@
     [
         [
             "int counter_cancel_channel_alarm",
-            "const struct device *dev,\n\t\t\t\t\t   uint8_t chan_id"
+            "const struct device *dev, uint8_t chan_id"
         ],
         "counter.h",
         false
@@ -2082,7 +2258,7 @@
     [
         [
             "int counter_set_top_value",
-            "const struct device *dev,\n\t\t\t\t    const struct counter_top_cfg *cfg"
+            "const struct device *dev, const struct counter_top_cfg *cfg"
         ],
         "counter.h",
         false
@@ -2106,7 +2282,7 @@
     [
         [
             "int counter_set_guard_period",
-            "const struct device *dev,\n\t\t\t\t\tuint32_t ticks,\n\t\t\t\t\tuint32_t flags"
+            "const struct device *dev, uint32_t ticks, uint32_t flags"
         ],
         "counter.h",
         false
@@ -2114,7 +2290,71 @@
     [
         [
             "uint32_t counter_get_guard_period",
-            "const struct device *dev,\n\t\t\t\t\t    uint32_t flags"
+            "const struct device *dev, uint32_t flags"
+        ],
+        "counter.h",
+        false
+    ],
+    [
+        [
+            "uint64_t counter_get_max_top_value_64",
+            "const struct device *dev"
+        ],
+        "counter.h",
+        false
+    ],
+    [
+        [
+            "int counter_set_top_value_64",
+            "const struct device *dev,\n\t\t\t\t       const struct counter_top_cfg_64 *cfg"
+        ],
+        "counter.h",
+        false
+    ],
+    [
+        [
+            "int counter_set_channel_alarm_64",
+            "const struct device *dev, uint8_t chan_id,\n\t\t\t\t\t   const struct counter_alarm_cfg_64 *alarm_cfg"
+        ],
+        "counter.h",
+        false
+    ],
+    [
+        [
+            "uint64_t counter_get_top_value_64",
+            "const struct device *dev"
+        ],
+        "counter.h",
+        false
+    ],
+    [
+        [
+            "int counter_set_guard_period_64",
+            "const struct device *dev, uint64_t ticks, uint32_t flags"
+        ],
+        "counter.h",
+        false
+    ],
+    [
+        [
+            "uint64_t counter_get_guard_period_64",
+            "const struct device *dev, uint32_t flags"
+        ],
+        "counter.h",
+        false
+    ],
+    [
+        [
+            "int counter_get_value_64",
+            "const struct device *dev, uint64_t *ticks"
+        ],
+        "counter.h",
+        false
+    ],
+    [
+        [
+            "int counter_set_value_64",
+            "const struct device *dev, uint64_t ticks"
         ],
         "counter.h",
         false
@@ -3081,6 +3321,22 @@
     ],
     [
         [
+            "int otp_read",
+            "const struct device *dev, off_t offset, void *data, size_t len"
+        ],
+        "otp.h",
+        false
+    ],
+    [
+        [
+            "int otp_program",
+            "const struct device *dev, off_t offset, const void *data, size_t len"
+        ],
+        "otp.h",
+        false
+    ],
+    [
+        [
             "int peci_config",
             "const struct device *dev, uint32_t bitrate"
         ],
@@ -3461,118 +3717,6 @@
             "const struct device *dev,\n\t\t\t  const struct spi_config *config"
         ],
         "spi.h",
-        false
-    ],
-    [
-        [
-            "int stepper_set_reference_position",
-            "const struct device *dev, int32_t value"
-        ],
-        "stepper.h",
-        false
-    ],
-    [
-        [
-            "int stepper_get_actual_position",
-            "const struct device *dev, int32_t *value"
-        ],
-        "stepper.h",
-        false
-    ],
-    [
-        [
-            "int stepper_set_event_callback",
-            "const struct device *dev,\n\t\t\t\t\t stepper_event_callback_t callback, void *user_data"
-        ],
-        "stepper.h",
-        false
-    ],
-    [
-        [
-            "int stepper_set_microstep_interval",
-            "const struct device *dev,\n\t\t\t\t\t     uint64_t microstep_interval_ns"
-        ],
-        "stepper.h",
-        false
-    ],
-    [
-        [
-            "int stepper_move_by",
-            "const struct device *dev, int32_t micro_steps"
-        ],
-        "stepper.h",
-        false
-    ],
-    [
-        [
-            "int stepper_move_to",
-            "const struct device *dev, int32_t micro_steps"
-        ],
-        "stepper.h",
-        false
-    ],
-    [
-        [
-            "int stepper_run",
-            "const struct device *dev, enum stepper_direction direction"
-        ],
-        "stepper.h",
-        false
-    ],
-    [
-        [
-            "int stepper_stop",
-            "const struct device *dev"
-        ],
-        "stepper.h",
-        false
-    ],
-    [
-        [
-            "int stepper_is_moving",
-            "const struct device *dev, bool *is_moving"
-        ],
-        "stepper.h",
-        false
-    ],
-    [
-        [
-            "int stepper_drv_enable",
-            "const struct device *dev"
-        ],
-        "stepper.h",
-        false
-    ],
-    [
-        [
-            "int stepper_drv_disable",
-            "const struct device *dev"
-        ],
-        "stepper.h",
-        false
-    ],
-    [
-        [
-            "int stepper_drv_set_micro_step_res",
-            "const struct device *dev,\n\t\t\t\t\t     enum stepper_drv_micro_step_resolution res"
-        ],
-        "stepper.h",
-        false
-    ],
-    [
-        [
-            "int stepper_drv_get_micro_step_res",
-            "const struct device *dev,\n\t\t\t\t\t     enum stepper_drv_micro_step_resolution *res"
-        ],
-        "stepper.h",
-        false
-    ],
-    [
-        [
-            "int stepper_drv_set_event_cb",
-            "const struct device *dev, stepper_drv_event_cb_t callback,\n\t\t\t\t       void *user_data"
-        ],
-        "stepper.h",
         false
     ],
     [
@@ -4161,6 +4305,118 @@
     ],
     [
         [
+            "int stepper_enable",
+            "const struct device *dev"
+        ],
+        "stepper.h",
+        false
+    ],
+    [
+        [
+            "int stepper_disable",
+            "const struct device *dev"
+        ],
+        "stepper.h",
+        false
+    ],
+    [
+        [
+            "int stepper_set_micro_step_res",
+            "const struct device *dev,\n\t\t\t\t\t     enum stepper_micro_step_resolution res"
+        ],
+        "stepper.h",
+        false
+    ],
+    [
+        [
+            "int stepper_get_micro_step_res",
+            "const struct device *dev,\n\t\t\t\t\t     enum stepper_micro_step_resolution *res"
+        ],
+        "stepper.h",
+        false
+    ],
+    [
+        [
+            "int stepper_set_event_cb",
+            "const struct device *dev, stepper_event_cb_t callback,\n\t\t\t\t       void *user_data"
+        ],
+        "stepper.h",
+        false
+    ],
+    [
+        [
+            "int stepper_ctrl_set_reference_position",
+            "const struct device *dev, const int32_t value"
+        ],
+        "stepper_ctrl.h",
+        false
+    ],
+    [
+        [
+            "int stepper_ctrl_get_actual_position",
+            "const struct device *dev, int32_t *value"
+        ],
+        "stepper_ctrl.h",
+        false
+    ],
+    [
+        [
+            "int stepper_ctrl_set_event_cb",
+            "const struct device *dev,\n\t\t\t\t\tstepper_ctrl_event_callback_t callback, void *user_data"
+        ],
+        "stepper_ctrl.h",
+        false
+    ],
+    [
+        [
+            "int stepper_ctrl_set_microstep_interval",
+            "const struct device *dev,\n\t\t\t\t\t\t  const uint64_t microstep_interval_ns"
+        ],
+        "stepper_ctrl.h",
+        false
+    ],
+    [
+        [
+            "int stepper_ctrl_move_by",
+            "const struct device *dev, const int32_t micro_steps"
+        ],
+        "stepper_ctrl.h",
+        false
+    ],
+    [
+        [
+            "int stepper_ctrl_move_to",
+            "const struct device *dev, const int32_t micro_steps"
+        ],
+        "stepper_ctrl.h",
+        false
+    ],
+    [
+        [
+            "int stepper_ctrl_run",
+            "const struct device *dev,\n\t\t\t       const enum stepper_ctrl_direction direction"
+        ],
+        "stepper_ctrl.h",
+        false
+    ],
+    [
+        [
+            "int stepper_ctrl_stop",
+            "const struct device *dev"
+        ],
+        "stepper_ctrl.h",
+        false
+    ],
+    [
+        [
+            "int stepper_ctrl_is_moving",
+            "const struct device *dev, bool *is_moving"
+        ],
+        "stepper_ctrl.h",
+        false
+    ],
+    [
+        [
             "int bc12_set_role",
             "const struct device *dev, enum bc12_role role"
         ],
@@ -4689,6 +4945,14 @@
     ],
     [
         [
+            "void rtio_sqe_signal",
+            "struct rtio_sqe *sqe"
+        ],
+        "rtio.h",
+        false
+    ],
+    [
+        [
             "int rtio_cqe_get_mempool_buffer",
             "const struct rtio *r, struct rtio_cqe *cqe,\n\t\t\t\t\t  uint8_t **buff, uint32_t *buff_len"
         ],
@@ -4706,14 +4970,6 @@
     [
         [
             "int rtio_sqe_cancel",
-            "struct rtio_sqe *sqe"
-        ],
-        "rtio.h",
-        false
-    ],
-    [
-        [
-            "void rtio_sqe_signal",
             "struct rtio_sqe *sqe"
         ],
         "rtio.h",

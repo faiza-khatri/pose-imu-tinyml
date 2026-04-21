@@ -20,12 +20,13 @@ def extract_features(df, window=20):
     records = []
     for axis in ["accel_x", "accel_y", "accel_z"]:
         signal = df[axis].values
+        global_mean = np.mean(signal)
         for start in range(0, len(signal) - window + 1, window):
             w = signal[start:start + window]
             mu = np.mean(w)
             var = np.var(w)
             # remove mean then count sign changes
-            centered = w - mu
+            centered = w - global_mean
             zcr = np.sum(np.diff(np.sign(centered)) != 0)
             records.append({
                 "axis": axis,
@@ -69,5 +70,5 @@ for row_idx, (fname, df) in enumerate(poses.items()):
         ax.grid(True, alpha=0.3)
 
 plt.tight_layout()
-plt.savefig("pose_features.png", dpi=150)
+plt.savefig("pose_features.svg", dpi=150)
 plt.show()

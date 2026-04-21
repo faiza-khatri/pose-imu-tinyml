@@ -1,2 +1,2 @@
 # Load board Kconfig descriptions.
-osource "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/boards/st/stm32f746g_disco/Kconfig.stm32f746g_disco"
+osource "/home/faiza/zephyrproject/zephyr/boards/st/stm32f746g_disco/Kconfig.stm32f746g_disco"

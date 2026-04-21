@@ -1,1 +1,1 @@
-"mcuboot":"/home/hijab-fatima-siddiqui/zephyrproject/bootloader/mcuboot":"/home/hijab-fatima-siddiqui/zephyrproject/bootloader/mcuboot/boot/zephyr/sysbuild"
+"mcuboot":"/home/faiza/zephyrproject/bootloader/mcuboot":"/home/faiza/zephyrproject/bootloader/mcuboot/boot/zephyr/sysbuild"

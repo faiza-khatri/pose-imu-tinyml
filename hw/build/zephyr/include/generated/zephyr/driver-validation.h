@@ -22,6 +22,8 @@
 
 #define K_SYSCALL_DRIVER_BBRAM(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, bbram, BBRAM)
 
+#define K_SYSCALL_DRIVER_BIOMETRIC(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, biometric, BIOMETRIC)
+
 #define K_SYSCALL_DRIVER_BT_HCI(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, bt_hci, BT_HCI)
 
 #define K_SYSCALL_DRIVER_CAN(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, can, CAN)
@@ -104,6 +106,8 @@
 
 #define K_SYSCALL_DRIVER_OPAMP(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, opamp, OPAMP)
 
+#define K_SYSCALL_DRIVER_OTP(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, otp, OTP)
+
 #define K_SYSCALL_DRIVER_PECI(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, peci, PECI)
 
 #define K_SYSCALL_DRIVER_PS2(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, ps2, PS2)
@@ -124,13 +128,11 @@
 
 #define K_SYSCALL_DRIVER_SPI(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, spi, SPI)
 
-#define K_SYSCALL_DRIVER_STEPPER(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, stepper, STEPPER)
-
-#define K_SYSCALL_DRIVER_STEPPER_DRV(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, stepper_drv, STEPPER_DRV)
-
 #define K_SYSCALL_DRIVER_SYSCON(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, syscon, SYSCON)
 
 #define K_SYSCALL_DRIVER_TEE(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, tee, TEE)
+
+#define K_SYSCALL_DRIVER_UAOL(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, uaol, UAOL)
 
 #define K_SYSCALL_DRIVER_VIDEO(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, video, VIDEO)
 
@@ -139,6 +141,8 @@
 #define K_SYSCALL_DRIVER_W1(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, w1, W1)
 
 #define K_SYSCALL_DRIVER_WDT(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, wdt, WDT)
+
+#define K_SYSCALL_DRIVER_WUC(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, wuc, WUC)
 
 #define K_SYSCALL_DRIVER_CAN_TRANSCEIVER(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, can_transceiver, CAN_TRANSCEIVER)
 
@@ -163,6 +167,10 @@
 #define K_SYSCALL_DRIVER_SENT(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, sent, SENT)
 
 #define K_SYSCALL_DRIVER_SVC(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, svc, SVC)
+
+#define K_SYSCALL_DRIVER_STEPPER(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, stepper, STEPPER)
+
+#define K_SYSCALL_DRIVER_STEPPER_CTRL(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, stepper_ctrl, STEPPER_CTRL)
 
 #define K_SYSCALL_DRIVER_UART(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, uart, UART)
 

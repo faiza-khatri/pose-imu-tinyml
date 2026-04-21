@@ -120,6 +120,54 @@ static inline int pwm_disable_capture(const struct device * dev, uint32_t channe
 #endif
 
 
+extern int z_impl_pwm_enable_dma(const struct device * dev, uint32_t channel);
+
+__pinned_func
+static inline int pwm_enable_dma(const struct device * dev, uint32_t channel)
+{
+#ifdef CONFIG_USERSPACE
+	if (z_syscall_trap()) {
+		union { uintptr_t x; const struct device * val; } parm0 = { .val = dev };
+		union { uintptr_t x; uint32_t val; } parm1 = { .val = channel };
+		return (int) arch_syscall_invoke2(parm0.x, parm1.x, K_SYSCALL_PWM_ENABLE_DMA);
+	}
+#endif
+	compiler_barrier();
+	return z_impl_pwm_enable_dma(dev, channel);
+}
+
+#if defined(CONFIG_TRACING_SYSCALL)
+#ifndef DISABLE_SYSCALL_TRACING
+
+#define pwm_enable_dma(dev, channel) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_PWM_ENABLE_DMA, pwm_enable_dma, dev, channel); 	syscall__retval = pwm_enable_dma(dev, channel); 	sys_port_trace_syscall_exit(K_SYSCALL_PWM_ENABLE_DMA, pwm_enable_dma, dev, channel, syscall__retval); 	syscall__retval; })
+#endif
+#endif
+
+
+extern int z_impl_pwm_disable_dma(const struct device * dev, uint32_t channel);
+
+__pinned_func
+static inline int pwm_disable_dma(const struct device * dev, uint32_t channel)
+{
+#ifdef CONFIG_USERSPACE
+	if (z_syscall_trap()) {
+		union { uintptr_t x; const struct device * val; } parm0 = { .val = dev };
+		union { uintptr_t x; uint32_t val; } parm1 = { .val = channel };
+		return (int) arch_syscall_invoke2(parm0.x, parm1.x, K_SYSCALL_PWM_DISABLE_DMA);
+	}
+#endif
+	compiler_barrier();
+	return z_impl_pwm_disable_dma(dev, channel);
+}
+
+#if defined(CONFIG_TRACING_SYSCALL)
+#ifndef DISABLE_SYSCALL_TRACING
+
+#define pwm_disable_dma(dev, channel) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_PWM_DISABLE_DMA, pwm_disable_dma, dev, channel); 	syscall__retval = pwm_disable_dma(dev, channel); 	sys_port_trace_syscall_exit(K_SYSCALL_PWM_DISABLE_DMA, pwm_disable_dma, dev, channel, syscall__retval); 	syscall__retval; })
+#endif
+#endif
+
+
 extern int z_impl_pwm_capture_cycles(const struct device * dev, uint32_t channel, pwm_flags_t flags, uint32_t * period, uint32_t * pulse, k_timeout_t timeout);
 
 __pinned_func

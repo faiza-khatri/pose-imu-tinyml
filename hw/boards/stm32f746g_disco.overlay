@@ -19,8 +19,17 @@
     buttons {
         compatible = "gpio-keys";
         my_button: my_button_0 {
-            gpios = <&gpioi 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+            gpios = <&gpioi 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
             label = "My Button";
+        };
+
+        encoder_a_node: encoder_a {
+            gpios = <&gpioi 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;  /* PC7 = D0 */
+            label = "Encoder A";
+        };
+        encoder_b_node: encoder_b {
+            gpios = <&gpioc 7 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;  /* PI2 = D8 */
+            label = "Encoder B";
         };
     };
 
@@ -34,14 +43,7 @@
             gpios = <&gpioi 1 GPIO_ACTIVE_HIGH>;   /* PI1 — D13 */
             label = "Motor IN2";
         };
-        encoder_a_node: encoder_a {
-            gpios = <&gpiog 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;  /* PG6 = D2 */
-            label = "Encoder A";
-        };
-        encoder_b_node: encoder_b {
-            gpios = <&gpiog 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;  /* PG7 = D4 */
-            label = "Encoder B";
-        };
+        
     };
 };
 

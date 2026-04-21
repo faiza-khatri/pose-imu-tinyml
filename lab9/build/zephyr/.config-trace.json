@@ -6,8 +6,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      953
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      1018
     ]
   ],
   [
@@ -17,8 +17,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      988
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      1053
     ]
   ],
   [
@@ -28,8 +28,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      993
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      1058
     ]
   ],
   [
@@ -39,8 +39,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      1168
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      1238
     ]
   ],
   [
@@ -50,8 +50,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      1238
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      1308
     ]
   ],
   [
@@ -61,8 +61,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      1383
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      1463
     ]
   ],
   [
@@ -72,8 +72,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      2673
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      2813
     ]
   ],
   [
@@ -83,8 +83,19 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      2703
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      2843
+    ]
+  ],
+  [
+    "CONFIG_DT_HAS_FIXED_LAYOUT_ENABLED",
+    "n",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      2853
     ]
   ],
   [
@@ -94,8 +105,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      2718
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      2858
     ]
   ],
   [
@@ -105,8 +116,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      2733
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      2873
     ]
   ],
   [
@@ -116,8 +127,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      2983
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      3133
     ]
   ],
   [
@@ -127,8 +138,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      2988
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      3138
     ]
   ],
   [
@@ -138,8 +149,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      3843
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      4058
     ]
   ],
   [
@@ -149,8 +160,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      5428
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      5803
     ]
   ],
   [
@@ -160,8 +171,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      11433
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      12173
     ]
   ],
   [
@@ -171,8 +182,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      11833
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      12593
     ]
   ],
   [
@@ -182,8 +193,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      11933
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      12698
     ]
   ],
   [
@@ -193,8 +204,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      11938
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      12703
     ]
   ],
   [
@@ -204,8 +215,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      11943
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      12708
     ]
   ],
   [
@@ -215,8 +226,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      11953
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      12718
     ]
   ],
   [
@@ -226,8 +237,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      11958
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      12723
     ]
   ],
   [
@@ -237,8 +248,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      11973
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      12738
     ]
   ],
   [
@@ -248,8 +259,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      11978
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      12743
     ]
   ],
   [
@@ -259,8 +270,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      11988
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      12753
     ]
   ],
   [
@@ -270,8 +281,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      12008
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      12773
     ]
   ],
   [
@@ -281,8 +292,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      12048
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      12818
     ]
   ],
   [
@@ -292,8 +303,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      12053
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      12823
     ]
   ],
   [
@@ -303,8 +314,19 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      12073
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      12848
+    ]
+  ],
+  [
+    "CONFIG_DT_HAS_ST_STM32_NVM_OTP_ENABLED",
+    "n",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      12853
     ]
   ],
   [
@@ -314,8 +336,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      12098
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      12883
     ]
   ],
   [
@@ -325,8 +347,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      12108
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      12893
     ]
   ],
   [
@@ -336,8 +358,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      12113
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      12898
     ]
   ],
   [
@@ -347,8 +369,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      12128
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      12913
     ]
   ],
   [
@@ -358,8 +380,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      12138
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      12923
     ]
   ],
   [
@@ -369,8 +391,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      12148
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      12933
     ]
   ],
   [
@@ -380,8 +402,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      12163
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      12948
     ]
   ],
   [
@@ -391,8 +413,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      12178
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      12963
     ]
   ],
   [
@@ -402,8 +424,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      12188
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      12973
     ]
   ],
   [
@@ -413,8 +435,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      12193
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      12978
     ]
   ],
   [
@@ -424,8 +446,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      12218
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      13003
     ]
   ],
   [
@@ -435,8 +457,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      12228
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      13013
     ]
   ],
   [
@@ -446,8 +468,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      12238
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      13023
     ]
   ],
   [
@@ -457,8 +479,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      12403
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      13173
     ]
   ],
   [
@@ -468,30 +490,19 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      12413
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      13178
     ]
   ],
   [
-    "CONFIG_DT_HAS_ST_STM32F7_PLL_CLOCK_ENABLED",
+    "CONFIG_DT_HAS_ST_STM32FX_PLL_CLOCK_ENABLED",
     "n",
     "bool",
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      12418
-    ]
-  ],
-  [
-    "CONFIG_DT_HAS_ST_STM32FX_PLLSAI_CLOCK_ENABLED",
-    "n",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      12423
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      13183
     ]
   ],
   [
@@ -501,8 +512,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      13933
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      14788
     ]
   ],
   [
@@ -512,8 +523,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      15128
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      16053
     ]
   ],
   [
@@ -523,8 +534,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.dts",
-      15223
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.dts",
+      16153
     ]
   ],
   [
@@ -544,6 +555,17 @@
     null
   ],
   [
+    "CONFIG_MAIN_STACK_SIZE",
+    "y",
+    "int",
+    "1024",
+    "default",
+    [
+      "/home/faiza/zephyrproject/zephyr/kernel/Kconfig",
+      164
+    ]
+  ],
+  [
     "CONFIG_REGULATOR",
     "y",
     "bool",
@@ -558,19 +580,8 @@
     "1024",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/kernel/Kconfig",
-      611
-    ]
-  ],
-  [
-    "CONFIG_MAIN_STACK_SIZE",
-    "y",
-    "int",
-    "1024",
-    "default",
-    [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/kernel/Kconfig",
-      161
+      "/home/faiza/zephyrproject/zephyr/kernel/Kconfig",
+      607
     ]
   ],
   [
@@ -580,7 +591,7 @@
     "y",
     "assign",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/prj.conf",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/prj.conf",
       4
     ]
   ],
@@ -599,7 +610,7 @@
     "y",
     "assign",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/boards/st/stm32f746g_disco/stm32f746g_disco_defconfig",
+      "/home/faiza/zephyrproject/zephyr/boards/st/stm32f746g_disco/stm32f746g_disco_defconfig",
       9
     ]
   ],
@@ -658,7 +669,7 @@
     "98",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/soc/st/stm32/stm32f7x/Kconfig.defconfig.stm32f746xx",
+      "/home/faiza/zephyrproject/zephyr/soc/st/stm32/stm32f7x/Kconfig.defconfig.stm32f746xx",
       9
     ]
   ],
@@ -669,7 +680,7 @@
     "216000000",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/soc/st/stm32/Kconfig.defconfig",
+      "/home/faiza/zephyrproject/zephyr/soc/st/stm32/Kconfig.defconfig",
       61
     ]
   ],
@@ -680,8 +691,8 @@
     "1024",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/arch/Kconfig",
-      248
+      "/home/faiza/zephyrproject/zephyr/arch/Kconfig",
+      251
     ]
   ],
   [
@@ -691,7 +702,7 @@
     "0x8000000",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/soc/st/stm32/Kconfig.defconfig",
+      "/home/faiza/zephyrproject/zephyr/soc/st/stm32/Kconfig.defconfig",
       105
     ]
   ],
@@ -702,7 +713,7 @@
     "1",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/kernel/Kconfig.smp",
+      "/home/faiza/zephyrproject/zephyr/kernel/Kconfig.smp",
       43
     ]
   ],
@@ -715,13 +726,43 @@
     null
   ],
   [
+    "CONFIG_CACHE_MANAGEMENT",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_DCACHE_LINE_SIZE",
+    "n",
+    "int",
+    "32",
+    "default",
+    [
+      "/home/faiza/zephyrproject/zephyr/arch/arm/core/cortex_m/Kconfig",
+      115
+    ]
+  ],
+  [
+    "CONFIG_ICACHE_LINE_SIZE",
+    "n",
+    "int",
+    "32",
+    "default",
+    [
+      "/home/faiza/zephyrproject/zephyr/arch/arm/core/cortex_m/Kconfig",
+      118
+    ]
+  ],
+  [
     "CONFIG_CLOCK_CONTROL",
     "y",
     "bool",
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/soc/st/stm32/Kconfig.defconfig",
+      "/home/faiza/zephyrproject/zephyr/soc/st/stm32/Kconfig.defconfig",
       18
     ]
   ],
@@ -732,8 +773,8 @@
     "320",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/kernel/Kconfig",
-      175
+      "/home/faiza/zephyrproject/zephyr/kernel/Kconfig",
+      178
     ]
   ],
   [
@@ -743,8 +784,8 @@
     "2048",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/kernel/Kconfig",
-      185
+      "/home/faiza/zephyrproject/zephyr/kernel/Kconfig",
+      188
     ]
   ],
   [
@@ -754,8 +795,8 @@
     "10000",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/kernel/Kconfig",
-      833
+      "/home/faiza/zephyrproject/zephyr/kernel/Kconfig",
+      829
     ]
   ],
   [
@@ -765,8 +806,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/Kconfig.zephyr",
-      757
+      "/home/faiza/zephyrproject/zephyr/Kconfig.zephyr",
+      822
     ]
   ],
   [
@@ -776,8 +817,8 @@
     "0",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/Kconfig.zephyr",
-      134
+      "/home/faiza/zephyrproject/zephyr/Kconfig.zephyr",
+      154
     ]
   ],
   [
@@ -787,8 +828,8 @@
     "__start",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/Kconfig.zephyr",
-      206
+      "/home/faiza/zephyrproject/zephyr/Kconfig.zephyr",
+      226
     ]
   ],
   [
@@ -852,7 +893,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/soc/st/stm32/Kconfig",
+      "/home/faiza/zephyrproject/zephyr/soc/st/stm32/Kconfig",
       37
     ]
   ],
@@ -871,8 +912,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/arch/Kconfig",
-      1077
+      "/home/faiza/zephyrproject/zephyr/arch/Kconfig",
+      1081
     ]
   ],
   [
@@ -882,12 +923,20 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/arch/Kconfig",
-      1070
+      "/home/faiza/zephyrproject/zephyr/arch/Kconfig",
+      1074
     ]
   ],
   [
-    "CONFIG_CACHE_MANAGEMENT",
+    "CONFIG_OTP",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_NVMEM",
     "y",
     "bool",
     null,
@@ -901,8 +950,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/kernel/Kconfig",
-      1094
+      "/home/faiza/zephyrproject/zephyr/kernel/Kconfig",
+      1090
     ]
   ],
   [
@@ -912,7 +961,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/drivers/timer/Kconfig.cortex_m_systick",
+      "/home/faiza/zephyrproject/zephyr/drivers/timer/Kconfig.cortex_m_systick",
       11
     ]
   ],
@@ -923,7 +972,7 @@
     "1",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/soc/st/stm32/Kconfig.defconfig",
+      "/home/faiza/zephyrproject/zephyr/soc/st/stm32/Kconfig.defconfig",
       92
     ]
   ],
@@ -942,7 +991,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/soc/st/stm32/Kconfig.defconfig",
+      "/home/faiza/zephyrproject/zephyr/soc/st/stm32/Kconfig.defconfig",
       127
     ]
   ],
@@ -969,8 +1018,8 @@
     "0",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/kernel/Kconfig",
-      94
+      "/home/faiza/zephyrproject/zephyr/kernel/Kconfig",
+      97
     ]
   ],
   [
@@ -988,7 +1037,7 @@
     "15",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/kernel/Kconfig",
+      "/home/faiza/zephyrproject/zephyr/kernel/Kconfig",
       55
     ]
   ],
@@ -1009,8 +1058,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/arch/Kconfig",
-      525
+      "/home/faiza/zephyrproject/zephyr/arch/Kconfig",
+      529
     ]
   ],
   [
@@ -1028,8 +1077,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/arch/arm/core/cortex_m/Kconfig",
-      325
+      "/home/faiza/zephyrproject/zephyr/arch/arm/core/cortex_m/Kconfig",
+      326
     ]
   ],
   [
@@ -1047,8 +1096,8 @@
     "20",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/kernel/Kconfig",
-      693
+      "/home/faiza/zephyrproject/zephyr/kernel/Kconfig",
+      689
     ]
   ],
   [
@@ -1058,8 +1107,8 @@
     "0",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/Kconfig.zephyr",
-      106
+      "/home/faiza/zephyrproject/zephyr/Kconfig.zephyr",
+      126
     ]
   ],
   [
@@ -1069,8 +1118,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/kernel/Kconfig",
-      869
+      "/home/faiza/zephyrproject/zephyr/kernel/Kconfig",
+      865
     ]
   ],
   [
@@ -1106,13 +1155,21 @@
     null
   ],
   [
+    "CONFIG_CODE_DATA_RELOCATION",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
     "CONFIG_HW_STACK_PROTECTION",
     "y",
     "bool",
     "y",
     "assign",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/boards/st/stm32f746g_disco/stm32f746g_disco_defconfig",
+      "/home/faiza/zephyrproject/zephyr/boards/st/stm32f746g_disco/stm32f746g_disco_defconfig",
       7
     ]
   ],
@@ -1131,9 +1188,17 @@
     "y",
     "assign",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/boards/st/stm32f746g_disco/stm32f746g_disco_defconfig",
+      "/home/faiza/zephyrproject/zephyr/boards/st/stm32f746g_disco/stm32f746g_disco_defconfig",
       16
     ]
+  ],
+  [
+    "CONFIG_SYSTEM_CLOCK_HW_CYCLES_PER_SEC_RUNTIME_UPDATE",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
   ],
   [
     "CONFIG_MFD",
@@ -1142,17 +1207,6 @@
     null,
     "unset",
     null
-  ],
-  [
-    "CONFIG_ICACHE_LINE_SIZE",
-    "n",
-    "int",
-    "32",
-    "default",
-    [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/arch/arm/core/cortex_m/Kconfig",
-      118
-    ]
   ],
   [
     "CONFIG_CODE_DATA_RELOCATION_SRAM",
@@ -1177,28 +1231,9 @@
     "y",
     "assign",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/prj.conf",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/prj.conf",
       6
     ]
-  ],
-  [
-    "CONFIG_DCACHE_LINE_SIZE",
-    "n",
-    "int",
-    "32",
-    "default",
-    [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/arch/arm/core/cortex_m/Kconfig",
-      115
-    ]
-  ],
-  [
-    "CONFIG_CODE_DATA_RELOCATION",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
   ],
   [
     "CONFIG_RESET",
@@ -1217,8 +1252,8 @@
     "4",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/arch/Kconfig",
-      583
+      "/home/faiza/zephyrproject/zephyr/arch/Kconfig",
+      587
     ]
   ],
   [
@@ -1228,7 +1263,7 @@
     "",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.misc",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.misc",
       124
     ]
   ],
@@ -1247,7 +1282,7 @@
     "768",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.processing",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.processing",
       91
     ]
   ],
@@ -1266,7 +1301,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/drivers/serial/Kconfig",
+      "/home/faiza/zephyrproject/zephyr/drivers/serial/Kconfig",
       53
     ]
   ],
@@ -1313,7 +1348,7 @@
     "y",
     "assign",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/boards/st/stm32f746g_disco/stm32f746g_disco_defconfig",
+      "/home/faiza/zephyrproject/zephyr/boards/st/stm32f746g_disco/stm32f746g_disco_defconfig",
       12
     ]
   ],
@@ -1332,7 +1367,7 @@
     "-1",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/lib/libc/common/Kconfig",
+      "/home/faiza/zephyrproject/zephyr/lib/libc/common/Kconfig",
       64
     ]
   ],
@@ -1343,8 +1378,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/arch/Kconfig",
-      572
+      "/home/faiza/zephyrproject/zephyr/arch/Kconfig",
+      576
     ]
   ],
   [
@@ -1362,8 +1397,8 @@
     "0",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/arch/Kconfig",
-      593
+      "/home/faiza/zephyrproject/zephyr/arch/Kconfig",
+      597
     ]
   ],
   [
@@ -1373,8 +1408,8 @@
     "0",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/Kconfig.zephyr",
-      225
+      "/home/faiza/zephyrproject/zephyr/Kconfig.zephyr",
+      245
     ]
   ],
   [
@@ -1384,8 +1419,8 @@
     "4",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/arch/Kconfig",
-      537
+      "/home/faiza/zephyrproject/zephyr/arch/Kconfig",
+      541
     ]
   ],
   [
@@ -1395,8 +1430,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/arch/Kconfig",
-      471
+      "/home/faiza/zephyrproject/zephyr/arch/Kconfig",
+      474
     ]
   ],
   [
@@ -1422,8 +1457,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/kernel/Kconfig",
-      775
+      "/home/faiza/zephyrproject/zephyr/kernel/Kconfig",
+      771
     ]
   ],
   [
@@ -1433,7 +1468,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/kernel/Kconfig",
+      "/home/faiza/zephyrproject/zephyr/kernel/Kconfig",
       14
     ]
   ],
@@ -1452,8 +1487,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/Kconfig.zephyr",
-      318
+      "/home/faiza/zephyrproject/zephyr/Kconfig.zephyr",
+      338
     ]
   ],
   [
@@ -1487,7 +1522,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       5
     ]
   ],
@@ -1498,7 +1533,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       11
     ]
   ],
@@ -1520,7 +1555,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       17
     ]
   ],
@@ -1539,7 +1574,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       23
     ]
   ],
@@ -1558,7 +1593,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       29
     ]
   ],
@@ -1587,7 +1622,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       35
     ]
   ],
@@ -1598,7 +1633,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       39
     ]
   ],
@@ -1609,7 +1644,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       44
     ]
   ],
@@ -1620,7 +1655,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       53
     ]
   ],
@@ -1631,7 +1666,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       57
     ]
   ],
@@ -1642,7 +1677,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       62
     ]
   ],
@@ -1653,7 +1688,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       68
     ]
   ],
@@ -1672,7 +1707,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       77
     ]
   ],
@@ -1683,7 +1718,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       83
     ]
   ],
@@ -1694,7 +1729,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       89
     ]
   ],
@@ -1713,7 +1748,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       98
     ]
   ],
@@ -1724,7 +1759,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       102
     ]
   ],
@@ -1735,7 +1770,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       107
     ]
   ],
@@ -1746,7 +1781,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       114
     ]
   ],
@@ -1757,7 +1792,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       119
     ]
   ],
@@ -1768,7 +1803,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       126
     ]
   ],
@@ -1779,7 +1814,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       129
     ]
   ],
@@ -1790,9 +1825,217 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       134
     ]
+  ],
+  [
+    "CONFIG_REALTEK_BEE_ADC",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_REALTEK_BEE_CAN",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_REALTEK_BEE_CODEC",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_REALTEK_BEE_DMA",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_REALTEK_BEE_GPIO",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_REALTEK_BEE_I2C",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_REALTEK_BEE_I2S",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_REALTEK_BEE_IR",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_REALTEK_BEE_KEYSCAN",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_REALTEK_BEE_MAC_802154",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_REALTEK_BEE_NVIC",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_REALTEK_BEE_PINMUX",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_REALTEK_BEE_AON_QDEC",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_REALTEK_BEE_QDEC",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_REALTEK_BEE_RCC",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_REALTEK_BEE_RTC",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_REALTEK_BEE_SDHC",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_REALTEK_BEE_SPI",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_REALTEK_BEE_TIM",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_REALTEK_BEE_ENHTIM",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_REALTEK_BEE_UART",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_REALTEK_BEE_USB",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_REALTEK_BEE_USING_USB_HAL",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_REALTEK_BEE_AON_WDT",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_REALTEK_BEE_CORE_WDT",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_USE_REALTEK_BEE_OS_INTERFACE",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
   ],
   [
     "CONFIG_ZEPHYR_HAL_RENESAS_MODULE",
@@ -1801,7 +2044,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       141
     ]
   ],
@@ -1812,7 +2055,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       149
     ]
   ],
@@ -1823,7 +2066,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       155
     ]
   ],
@@ -1834,7 +2077,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       164
     ]
   ],
@@ -1845,7 +2088,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       173
     ]
   ],
@@ -1856,7 +2099,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       177
     ]
   ],
@@ -1867,7 +2110,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       185
     ]
   ],
@@ -1886,7 +2129,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       191
     ]
   ],
@@ -1897,7 +2140,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       195
     ]
   ],
@@ -1908,7 +2151,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       200
     ]
   ],
@@ -1919,7 +2162,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       204
     ]
   ],
@@ -1930,7 +2173,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       207
     ]
   ],
@@ -1949,7 +2192,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       212
     ]
   ],
@@ -1960,7 +2203,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       218
     ]
   ],
@@ -1971,7 +2214,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       222
     ]
   ],
@@ -1982,7 +2225,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       225
     ]
   ],
@@ -1993,7 +2236,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       230
     ]
   ],
@@ -2012,7 +2255,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       236
     ]
   ],
@@ -2023,7 +2266,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       242
     ]
   ],
@@ -2034,7 +2277,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       248
     ]
   ],
@@ -2053,7 +2296,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       254
     ]
   ],
@@ -2064,7 +2307,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       260
     ]
   ],
@@ -2091,7 +2334,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       264
     ]
   ],
@@ -2102,7 +2345,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       267
     ]
   ],
@@ -2113,7 +2356,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       272
     ]
   ],
@@ -2132,7 +2375,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       278
     ]
   ],
@@ -2151,7 +2394,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       285
     ]
   ],
@@ -2170,7 +2413,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       290
     ]
   ],
@@ -2189,7 +2432,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       296
     ]
   ],
@@ -2208,8 +2451,19 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
       302
+    ]
+  ],
+  [
+    "CONFIG_ZEPHYR_PSA_ARCH_TESTS_MODULE",
+    "n",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
+      306
     ]
   ],
   [
@@ -2219,8 +2473,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
-      308
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
+      311
     ]
   ],
   [
@@ -2248,8 +2502,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
-      312
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
+      315
     ]
   ],
   [
@@ -2259,8 +2513,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
-      317
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
+      320
     ]
   ],
   [
@@ -2278,8 +2532,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
-      323
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
+      326
     ]
   ],
   [
@@ -2289,8 +2543,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
-      329
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
+      332
     ]
   ],
   [
@@ -2300,8 +2554,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
-      335
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
+      338
     ]
   ],
   [
@@ -2319,8 +2573,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/build/Kconfig/Kconfig.modules",
-      339
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
+      342
     ]
   ],
   [
@@ -2432,7 +2686,7 @@
     "stm32f746g_disco",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/boards/Kconfig",
+      "/home/faiza/zephyrproject/zephyr/boards/Kconfig",
       5
     ]
   ],
@@ -2443,7 +2697,7 @@
     "",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/boards/Kconfig",
+      "/home/faiza/zephyrproject/zephyr/boards/Kconfig",
       14
     ]
   ],
@@ -2454,7 +2708,7 @@
     "stm32f746g_disco/stm32f746xx",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/boards/Kconfig",
+      "/home/faiza/zephyrproject/zephyr/boards/Kconfig",
       24
     ]
   ],
@@ -2473,8 +2727,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/boards/Kconfig.v2",
-      10
+      "/home/faiza/zephyrproject/zephyr/boards/Kconfig.v2",
+      9
     ]
   ],
   [
@@ -2484,8 +2738,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/boards/Kconfig.v2",
-      15
+      "/home/faiza/zephyrproject/zephyr/boards/Kconfig.v2",
+      14
     ]
   ],
   [
@@ -2495,8 +2749,8 @@
     "stm32f746xx",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/boards/Kconfig.v2",
-      21
+      "/home/faiza/zephyrproject/zephyr/boards/Kconfig.v2",
+      20
     ]
   ],
   [
@@ -2506,7 +2760,7 @@
     "stm32f746xx",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/soc/st/stm32/stm32f7x/Kconfig.soc",
+      "/home/faiza/zephyrproject/zephyr/soc/st/stm32/stm32f7x/Kconfig.soc",
       56
     ]
   ],
@@ -2517,7 +2771,7 @@
     "stm32f7x",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/soc/st/stm32/stm32f7x/Kconfig.soc",
+      "/home/faiza/zephyrproject/zephyr/soc/st/stm32/stm32f7x/Kconfig.soc",
       14
     ]
   ],
@@ -2528,7 +2782,7 @@
     "stm32",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/soc/st/stm32/Kconfig.soc",
+      "/home/faiza/zephyrproject/zephyr/soc/st/stm32/Kconfig.soc",
       10
     ]
   ],
@@ -2563,6 +2817,38 @@
     ]
   ],
   [
+    "CONFIG_SOC_RTL8752HJL",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_SOC_RTL8752HMF",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_SOC_RTL8752HKF",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_SOC_RTL8752HJF",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
     "CONFIG_HWINFO",
     "y",
     "bool",
@@ -2585,8 +2871,19 @@
     "49",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/soc/st/stm32/common/Kconfig",
+      "/home/faiza/zephyrproject/zephyr/soc/st/stm32/common/Kconfig",
       37
+    ]
+  ],
+  [
+    "CONFIG_STM32_IOCELL_PRIORITY",
+    "y",
+    "int",
+    "50",
+    "default",
+    [
+      "/home/faiza/zephyrproject/zephyr/soc/st/stm32/common/Kconfig",
+      64
     ]
   ],
   [
@@ -2614,7 +2911,7 @@
     "40",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/drivers/gpio/Kconfig",
+      "/home/faiza/zephyrproject/zephyr/drivers/gpio/Kconfig",
       50
     ]
   ],
@@ -2665,7 +2962,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
       5
     ]
   ],
@@ -2676,7 +2973,7 @@
     "3",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
       36
     ]
   ],
@@ -2687,7 +2984,7 @@
     "arm",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/arch/arm/Kconfig",
+      "/home/faiza/zephyrproject/zephyr/arch/arm/Kconfig",
       10
     ]
   ],
@@ -2726,7 +3023,7 @@
     "128",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/arch/arm/core/mpu/Kconfig",
+      "/home/faiza/zephyrproject/zephyr/arch/arm/core/mpu/Kconfig",
       12
     ]
   ],
@@ -2773,7 +3070,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/arch/arm/core/Kconfig",
+      "/home/faiza/zephyrproject/zephyr/arch/arm/core/Kconfig",
       117
     ]
   ],
@@ -2784,7 +3081,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/arch/arm/core/Kconfig",
+      "/home/faiza/zephyrproject/zephyr/arch/arm/core/Kconfig",
       134
     ]
   ],
@@ -2795,7 +3092,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/arch/arm/core/Kconfig",
+      "/home/faiza/zephyrproject/zephyr/arch/arm/core/Kconfig",
       152
     ]
   ],
@@ -2822,8 +3119,8 @@
     "2",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/arch/arm/core/Kconfig",
-      180
+      "/home/faiza/zephyrproject/zephyr/arch/arm/core/Kconfig",
+      196
     ]
   ],
   [
@@ -2833,8 +3130,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/arch/arm/core/Kconfig",
-      203
+      "/home/faiza/zephyrproject/zephyr/arch/arm/core/Kconfig",
+      219
     ]
   ],
   [
@@ -2844,8 +3141,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/arch/arm/core/Kconfig",
-      271
+      "/home/faiza/zephyrproject/zephyr/arch/arm/core/Kconfig",
+      294
     ]
   ],
   [
@@ -2855,8 +3152,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/arch/arm/core/Kconfig",
-      279
+      "/home/faiza/zephyrproject/zephyr/arch/arm/core/Kconfig",
+      302
     ]
   ],
   [
@@ -2874,8 +3171,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/arch/arm/core/Kconfig",
-      299
+      "/home/faiza/zephyrproject/zephyr/arch/arm/core/Kconfig",
+      322
     ]
   ],
   [
@@ -2885,8 +3182,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/arch/arm/core/Kconfig",
-      307
+      "/home/faiza/zephyrproject/zephyr/arch/arm/core/Kconfig",
+      330
     ]
   ],
   [
@@ -3016,8 +3313,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/arch/arm/core/cortex_m/Kconfig",
-      419
+      "/home/faiza/zephyrproject/zephyr/arch/arm/core/cortex_m/Kconfig",
+      420
     ]
   ],
   [
@@ -3030,6 +3327,14 @@
   ],
   [
     "CONFIG_NULL_POINTER_EXCEPTION_DETECTION_MPU",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_ARM_GCC_FP_WORKAROUND",
     "y",
     "bool",
     null,
@@ -3053,7 +3358,7 @@
     "128",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/arch/arm/core/mpu/Kconfig",
+      "/home/faiza/zephyrproject/zephyr/arch/arm/core/mpu/Kconfig",
       33
     ]
   ],
@@ -3080,7 +3385,7 @@
     "32",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/arch/arm/core/mpu/Kconfig",
+      "/home/faiza/zephyrproject/zephyr/arch/arm/core/mpu/Kconfig",
       65
     ]
   ],
@@ -3137,7 +3442,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/arch/common/Kconfig",
+      "/home/faiza/zephyrproject/zephyr/arch/common/Kconfig",
       29
     ]
   ],
@@ -3148,7 +3453,7 @@
     "y",
     "assign",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/boards/st/stm32f746g_disco/stm32f746g_disco_defconfig",
+      "/home/faiza/zephyrproject/zephyr/boards/st/stm32f746g_disco/stm32f746g_disco_defconfig",
       4
     ]
   ],
@@ -3199,7 +3504,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
       5
     ]
   ],
@@ -3210,7 +3515,7 @@
     "3",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
       36
     ]
   ],
@@ -3221,8 +3526,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/arch/Kconfig",
-      201
+      "/home/faiza/zephyrproject/zephyr/arch/Kconfig",
+      204
     ]
   ],
   [
@@ -3232,8 +3537,8 @@
     "256",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/arch/Kconfig",
-      217
+      "/home/faiza/zephyrproject/zephyr/arch/Kconfig",
+      220
     ]
   ],
   [
@@ -3243,8 +3548,8 @@
     "0x20010000",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/arch/Kconfig",
-      225
+      "/home/faiza/zephyrproject/zephyr/arch/Kconfig",
+      228
     ]
   ],
   [
@@ -3304,8 +3609,8 @@
     "4",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/arch/Kconfig",
-      547
+      "/home/faiza/zephyrproject/zephyr/arch/Kconfig",
+      551
     ]
   ],
   [
@@ -3315,8 +3620,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/arch/Kconfig",
-      555
+      "/home/faiza/zephyrproject/zephyr/arch/Kconfig",
+      559
     ]
   ],
   [
@@ -3342,8 +3647,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/arch/Kconfig",
-      638
+      "/home/faiza/zephyrproject/zephyr/arch/Kconfig",
+      642
     ]
   ],
   [
@@ -3371,7 +3676,7 @@
     "y",
     "select",
     [
-      "CPU_CORTEX_M && ((ARM_MPU && !ARMV6_M_ARMV8_M_BASELINE) || CPU_CORTEX_M_HAS_SPLIM) && ARM"
+      "CPU_CORTEX_M && (ARM_MPU || CPU_CORTEX_M_HAS_SPLIM) && ARM"
     ]
   ],
   [
@@ -3521,7 +3826,7 @@
     "y",
     "select",
     [
-      "CPU_CORTEX_M && ARM"
+      "CPU_CORTEX_M && !USE_SWITCH && ARM"
     ]
   ],
   [
@@ -3621,7 +3926,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
       5
     ]
   ],
@@ -3632,7 +3937,7 @@
     "3",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
       36
     ]
   ],
@@ -3663,7 +3968,7 @@
     "y",
     "assign",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/prj.conf",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/prj.conf",
       5
     ]
   ],
@@ -3682,8 +3987,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/arch/Kconfig",
-      1208
+      "/home/faiza/zephyrproject/zephyr/arch/Kconfig",
+      1212
     ]
   ],
   [
@@ -3693,7 +3998,7 @@
     "y",
     "select",
     [
-      "CPU_CORTEX_M && ARM"
+      "CPU_CORTEX_M && !USE_SWITCH && ARM"
     ]
   ],
   [
@@ -3743,7 +4048,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
       5
     ]
   ],
@@ -3754,7 +4059,7 @@
     "3",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
       36
     ]
   ],
@@ -3765,7 +4070,7 @@
     "16",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/kernel/Kconfig",
+      "/home/faiza/zephyrproject/zephyr/kernel/Kconfig",
       30
     ]
   ],
@@ -3776,7 +4081,7 @@
     "0",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/kernel/Kconfig",
+      "/home/faiza/zephyrproject/zephyr/kernel/Kconfig",
       73
     ]
   ],
@@ -3787,7 +4092,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/kernel/Kconfig",
+      "/home/faiza/zephyrproject/zephyr/kernel/Kconfig",
       79
     ]
   ],
@@ -3798,7 +4103,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/kernel/Kconfig",
+      "/home/faiza/zephyrproject/zephyr/kernel/Kconfig",
       82
     ]
   ],
@@ -3806,10 +4111,10 @@
     "CONFIG_PRIORITY_CEILING",
     "y",
     "int",
-    "-127",
+    "-128",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/kernel/Kconfig",
+      "/home/faiza/zephyrproject/zephyr/kernel/Kconfig",
       86
     ]
   ],
@@ -3848,22 +4153,14 @@
     null
   ],
   [
-    "CONFIG_SCHED_DUMB",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
     "CONFIG_SCHED_SIMPLE",
     "y",
     "bool",
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/kernel/Kconfig",
-      309
+      "/home/faiza/zephyrproject/zephyr/kernel/Kconfig",
+      305
     ]
   ],
   [
@@ -3876,14 +4173,6 @@
   ],
   [
     "CONFIG_SCHED_MULTIQ",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_WAITQ_DUMB",
     "y",
     "bool",
     null,
@@ -3905,8 +4194,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/kernel/Kconfig",
-      369
+      "/home/faiza/zephyrproject/zephyr/kernel/Kconfig",
+      358
     ]
   ],
   [
@@ -3926,8 +4215,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/kernel/Kconfig",
-      406
+      "/home/faiza/zephyrproject/zephyr/kernel/Kconfig",
+      395
     ]
   ],
   [
@@ -3937,9 +4226,17 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/kernel/Kconfig",
-      430
+      "/home/faiza/zephyrproject/zephyr/kernel/Kconfig",
+      419
     ]
+  ],
+  [
+    "CONFIG_NONZERO_SPINLOCK_SIZE",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
   ],
   [
     "CONFIG_BOOT_BANNER",
@@ -3948,8 +4245,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/kernel/Kconfig",
-      459
+      "/home/faiza/zephyrproject/zephyr/kernel/Kconfig",
+      455
     ]
   ],
   [
@@ -3959,8 +4256,8 @@
     "Booting Zephyr OS build",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/kernel/Kconfig",
-      468
+      "/home/faiza/zephyrproject/zephyr/kernel/Kconfig",
+      464
     ]
   ],
   [
@@ -3970,8 +4267,8 @@
     "0",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/kernel/Kconfig",
-      475
+      "/home/faiza/zephyrproject/zephyr/kernel/Kconfig",
+      471
     ]
   ],
   [
@@ -4037,8 +4334,8 @@
     "-1",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/kernel/Kconfig",
-      617
+      "/home/faiza/zephyrproject/zephyr/kernel/Kconfig",
+      613
     ]
   ],
   [
@@ -4056,8 +4353,8 @@
     "0",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/kernel/Kconfig",
-      635
+      "/home/faiza/zephyrproject/zephyr/kernel/Kconfig",
+      631
     ]
   ],
   [
@@ -4087,8 +4384,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/kernel/Kconfig",
-      685
+      "/home/faiza/zephyrproject/zephyr/kernel/Kconfig",
+      681
     ]
   ],
   [
@@ -4098,8 +4395,8 @@
     "0",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/kernel/Kconfig",
-      704
+      "/home/faiza/zephyrproject/zephyr/kernel/Kconfig",
+      700
     ]
   ],
   [
@@ -4149,8 +4446,8 @@
     "10",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/kernel/Kconfig",
-      753
+      "/home/faiza/zephyrproject/zephyr/kernel/Kconfig",
+      749
     ]
   ],
   [
@@ -4168,8 +4465,8 @@
     "0",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/kernel/Kconfig",
-      785
+      "/home/faiza/zephyrproject/zephyr/kernel/Kconfig",
+      781
     ]
   ],
   [
@@ -4207,8 +4504,8 @@
     "365",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/kernel/Kconfig",
-      890
+      "/home/faiza/zephyrproject/zephyr/kernel/Kconfig",
+      886
     ]
   ],
   [
@@ -4228,8 +4525,26 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/kernel/Kconfig.mem_domain",
-      66
+      "/home/faiza/zephyrproject/zephyr/kernel/Kconfig.mem_domain",
+      73
+    ]
+  ],
+  [
+    "CONFIG_USE_SWITCH",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_USE_SWITCH_SUPPORTED",
+    "n",
+    "bool",
+    "y",
+    "select",
+    [
+      "ARMV7_M_ARMV8_M_MAINLINE && CPU_CORTEX_M && ARM"
     ]
   ],
   [
@@ -4267,8 +4582,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/kernel/Kconfig",
-      1124
+      "/home/faiza/zephyrproject/zephyr/kernel/Kconfig",
+      1120
     ]
   ],
   [
@@ -4318,8 +4633,8 @@
     "30",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/kernel/Kconfig.device",
-      51
+      "/home/faiza/zephyrproject/zephyr/kernel/Kconfig.device",
+      50
     ]
   ],
   [
@@ -4329,8 +4644,8 @@
     "35",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/kernel/Kconfig.device",
-      59
+      "/home/faiza/zephyrproject/zephyr/kernel/Kconfig.device",
+      58
     ]
   ],
   [
@@ -4340,8 +4655,8 @@
     "40",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/kernel/Kconfig.device",
-      67
+      "/home/faiza/zephyrproject/zephyr/kernel/Kconfig.device",
+      66
     ]
   ],
   [
@@ -4351,8 +4666,8 @@
     "50",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/kernel/Kconfig.device",
-      73
+      "/home/faiza/zephyrproject/zephyr/kernel/Kconfig.device",
+      72
     ]
   ],
   [
@@ -4362,8 +4677,8 @@
     "90",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/kernel/Kconfig.device",
-      81
+      "/home/faiza/zephyrproject/zephyr/kernel/Kconfig.device",
+      80
     ]
   ],
   [
@@ -4447,6 +4762,14 @@
     null
   ],
   [
+    "CONFIG_BIOMETRICS",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
     "CONFIG_CAN",
     "y",
     "bool",
@@ -4509,7 +4832,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
       5
     ]
   ],
@@ -4520,7 +4843,7 @@
     "3",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
       36
     ]
   ],
@@ -4539,7 +4862,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/drivers/clock_control/Kconfig.stm32",
+      "/home/faiza/zephyrproject/zephyr/drivers/clock_control/Kconfig.stm32",
       11
     ]
   ],
@@ -4550,8 +4873,19 @@
     "25000000",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/drivers/clock_control/Kconfig.stm32",
+      "/home/faiza/zephyrproject/zephyr/drivers/clock_control/Kconfig.stm32",
       27
+    ]
+  ],
+  [
+    "CONFIG_CLOCK_CONTROL_TISCI_PRIORITY",
+    "y",
+    "int",
+    "40",
+    "default",
+    [
+      "/home/faiza/zephyrproject/zephyr/drivers/clock_control/Kconfig.tisci",
+      13
     ]
   ],
   [
@@ -4569,7 +4903,7 @@
     "128",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/drivers/console/Kconfig",
+      "/home/faiza/zephyrproject/zephyr/drivers/console/Kconfig",
       16
     ]
   ],
@@ -4598,7 +4932,7 @@
     "60",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/drivers/console/Kconfig",
+      "/home/faiza/zephyrproject/zephyr/drivers/console/Kconfig",
       37
     ]
   ],
@@ -4609,7 +4943,7 @@
     "y",
     "assign",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/boards/st/stm32f746g_disco/stm32f746g_disco_defconfig",
+      "/home/faiza/zephyrproject/zephyr/boards/st/stm32f746g_disco/stm32f746g_disco_defconfig",
       13
     ]
   ],
@@ -4708,7 +5042,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
       5
     ]
   ],
@@ -4719,7 +5053,7 @@
     "3",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
       36
     ]
   ],
@@ -4844,6 +5178,14 @@
     null
   ],
   [
+    "CONFIG_MDIO",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
     "CONFIG_ARM_SCMI",
     "y",
     "bool",
@@ -4922,7 +5264,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
       5
     ]
   ],
@@ -4933,7 +5275,7 @@
     "3",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
       36
     ]
   ],
@@ -4968,7 +5310,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/drivers/gpio/Kconfig.stm32",
+      "/home/faiza/zephyrproject/zephyr/drivers/gpio/Kconfig.stm32",
       9
     ]
   ],
@@ -5005,7 +5347,7 @@
     "16",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/drivers/i2c/Kconfig",
+      "/home/faiza/zephyrproject/zephyr/drivers/i2c/Kconfig",
       27
     ]
   ],
@@ -5050,13 +5392,21 @@
     null
   ],
   [
+    "CONFIG_I2C_DW_PM_POLICY_STATE_LOCK",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
     "CONFIG_I2C_STM32",
     "y",
     "bool",
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/drivers/i2c/Kconfig.stm32",
+      "/home/faiza/zephyrproject/zephyr/drivers/i2c/Kconfig.stm32",
       6
     ]
   ],
@@ -5067,7 +5417,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/drivers/i2c/Kconfig.stm32",
+      "/home/faiza/zephyrproject/zephyr/drivers/i2c/Kconfig.stm32",
       24
     ]
   ],
@@ -5078,7 +5428,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/drivers/i2c/Kconfig.stm32",
+      "/home/faiza/zephyrproject/zephyr/drivers/i2c/Kconfig.stm32",
       35
     ]
   ],
@@ -5113,7 +5463,7 @@
     "500",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/drivers/i2c/Kconfig.stm32",
+      "/home/faiza/zephyrproject/zephyr/drivers/i2c/Kconfig.stm32",
       71
     ]
   ],
@@ -5124,7 +5474,7 @@
     "50",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/drivers/i2c/Kconfig",
+      "/home/faiza/zephyrproject/zephyr/drivers/i2c/Kconfig",
       183
     ]
   ],
@@ -5183,7 +5533,7 @@
     "4",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
       35
     ]
   ],
@@ -5210,8 +5560,8 @@
     "40",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/drivers/interrupt_controller/Kconfig",
-      51
+      "/home/faiza/zephyrproject/zephyr/drivers/interrupt_controller/Kconfig",
+      52
     ]
   ],
   [
@@ -5261,7 +5611,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
       5
     ]
   ],
@@ -5272,7 +5622,7 @@
     "3",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
       36
     ]
   ],
@@ -5283,7 +5633,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/drivers/interrupt_controller/Kconfig.stm32",
+      "/home/faiza/zephyrproject/zephyr/drivers/interrupt_controller/Kconfig.stm32",
       11
     ]
   ],
@@ -5294,7 +5644,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/drivers/interrupt_controller/Kconfig.stm32",
+      "/home/faiza/zephyrproject/zephyr/drivers/interrupt_controller/Kconfig.stm32",
       18
     ]
   ],
@@ -5332,14 +5682,6 @@
   ],
   [
     "CONFIG_MBOX",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_MDIO",
     "y",
     "bool",
     null,
@@ -5468,7 +5810,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
       5
     ]
   ],
@@ -5479,7 +5821,7 @@
     "3",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
       36
     ]
   ],
@@ -5522,7 +5864,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/drivers/pinctrl/Kconfig.stm32",
+      "/home/faiza/zephyrproject/zephyr/drivers/pinctrl/Kconfig.stm32",
       6
     ]
   ],
@@ -5533,7 +5875,7 @@
     "2",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/drivers/pinctrl/Kconfig.stm32",
+      "/home/faiza/zephyrproject/zephyr/drivers/pinctrl/Kconfig.stm32",
       13
     ]
   ],
@@ -5584,7 +5926,7 @@
     "35",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/drivers/reset/Kconfig",
+      "/home/faiza/zephyrproject/zephyr/drivers/reset/Kconfig",
       21
     ]
   ],
@@ -5595,7 +5937,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/drivers/reset/Kconfig.stm32",
+      "/home/faiza/zephyrproject/zephyr/drivers/reset/Kconfig.stm32",
       6
     ]
   ],
@@ -5630,7 +5972,7 @@
     "y",
     "assign",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/prj.conf",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/prj.conf",
       2
     ]
   ],
@@ -5689,7 +6031,7 @@
     "4",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
       35
     ]
   ],
@@ -5700,7 +6042,7 @@
     "90",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/drivers/sensor/Kconfig",
+      "/home/faiza/zephyrproject/zephyr/drivers/sensor/Kconfig",
       20
     ]
   ],
@@ -5721,13 +6063,35 @@
     null
   ],
   [
+    "CONFIG_ADE7978_SHUNT_RESISTOR",
+    "y",
+    "int",
+    "200",
+    "default",
+    [
+      "/home/faiza/zephyrproject/zephyr/drivers/sensor/adi/ade7978/Kconfig",
+      15
+    ]
+  ],
+  [
+    "CONFIG_ADE7978_VOLTAGE_DIVIDER",
+    "y",
+    "int",
+    "1131",
+    "default",
+    [
+      "/home/faiza/zephyrproject/zephyr/drivers/sensor/adi/ade7978/Kconfig",
+      21
+    ]
+  ],
+  [
     "CONFIG_MPU9250",
     "y",
     "bool",
     "y",
     "assign",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/prj.conf",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/prj.conf",
       3
     ]
   ],
@@ -5746,7 +6110,7 @@
     "n",
     "assign",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/hw2/lab9/prj.conf",
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/prj.conf",
       9
     ]
   ],
@@ -5785,7 +6149,7 @@
     "50",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/drivers/serial/Kconfig",
+      "/home/faiza/zephyrproject/zephyr/drivers/serial/Kconfig",
       36
     ]
   ],
@@ -5836,7 +6200,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
       5
     ]
   ],
@@ -5847,7 +6211,7 @@
     "3",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
       36
     ]
   ],
@@ -5906,7 +6270,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/drivers/serial/Kconfig.stm32",
+      "/home/faiza/zephyrproject/zephyr/drivers/serial/Kconfig.stm32",
       8
     ]
   ],
@@ -5959,8 +6323,8 @@
     "0",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/drivers/timer/Kconfig",
-      35
+      "/home/faiza/zephyrproject/zephyr/drivers/timer/Kconfig",
+      55
     ]
   ],
   [
@@ -6000,7 +6364,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/drivers/timer/Kconfig.cortex_m_systick",
+      "/home/faiza/zephyrproject/zephyr/drivers/timer/Kconfig.cortex_m_systick",
       33
     ]
   ],
@@ -6010,6 +6374,14 @@
     "bool",
     "y",
     "default",
+    null
+  ],
+  [
+    "CONFIG_UAOL",
+    "y",
+    "bool",
+    null,
+    "unset",
     null
   ],
   [
@@ -6051,6 +6423,68 @@
     null,
     "unset",
     null
+  ],
+  [
+    "CONFIG_STM32_USB_COMMON_LOG_LEVEL_OFF",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_STM32_USB_COMMON_LOG_LEVEL_ERR",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_STM32_USB_COMMON_LOG_LEVEL_WRN",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_STM32_USB_COMMON_LOG_LEVEL_INF",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_STM32_USB_COMMON_LOG_LEVEL_DBG",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_STM32_USB_COMMON_LOG_LEVEL_DEFAULT",
+    "y",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
+      5
+    ]
+  ],
+  [
+    "CONFIG_STM32_USB_COMMON_LOG_LEVEL",
+    "n",
+    "int",
+    "3",
+    "default",
+    [
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
+      36
+    ]
   ],
   [
     "CONFIG_USBC_TCPC_DRIVER",
@@ -6109,6 +6543,14 @@
     null
   ],
   [
+    "CONFIG_WUC",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
     "CONFIG_TEE",
     "y",
     "bool",
@@ -6158,7 +6600,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/lib/libc/Kconfig",
+      "/home/faiza/zephyrproject/zephyr/lib/libc/Kconfig",
       42
     ]
   ],
@@ -6169,7 +6611,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/lib/libc/Kconfig",
+      "/home/faiza/zephyrproject/zephyr/lib/libc/Kconfig",
       48
     ]
   ],
@@ -6180,7 +6622,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/lib/libc/Kconfig",
+      "/home/faiza/zephyrproject/zephyr/lib/libc/Kconfig",
       58
     ]
   ],
@@ -6199,7 +6641,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/lib/libc/Kconfig",
+      "/home/faiza/zephyrproject/zephyr/lib/libc/Kconfig",
       81
     ]
   ],
@@ -6282,7 +6724,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/lib/libc/common/Kconfig",
+      "/home/faiza/zephyrproject/zephyr/lib/libc/common/Kconfig",
       88
     ]
   ],
@@ -6293,7 +6735,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/lib/libc/common/Kconfig",
+      "/home/faiza/zephyrproject/zephyr/lib/libc/common/Kconfig",
       97
     ]
   ],
@@ -6320,7 +6762,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/lib/libc/picolibc/Kconfig",
+      "/home/faiza/zephyrproject/zephyr/lib/libc/picolibc/Kconfig",
       8
     ]
   ],
@@ -6339,7 +6781,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/lib/libc/Kconfig",
+      "/home/faiza/zephyrproject/zephyr/lib/libc/Kconfig",
       173
     ]
   ],
@@ -6379,6 +6821,14 @@
     null
   ],
   [
+    "CONFIG_SYS_HEAP_VALIDATE",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
     "CONFIG_SYS_HEAP_STRESS",
     "y",
     "bool",
@@ -6401,8 +6851,8 @@
     "3",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/lib/heap/Kconfig",
-      36
+      "/home/faiza/zephyrproject/zephyr/lib/heap/Kconfig",
+      35
     ]
   ],
   [
@@ -6420,8 +6870,8 @@
     "0",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/lib/heap/Kconfig",
-      57
+      "/home/faiza/zephyrproject/zephyr/lib/heap/Kconfig",
+      56
     ]
   ],
   [
@@ -6433,14 +6883,130 @@
     null
   ],
   [
+    "CONFIG_SYS_HEAP_HARDENING_NONE",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_SYS_HEAP_HARDENING_BASIC",
+    "y",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/faiza/zephyrproject/zephyr/lib/heap/Kconfig",
+      83
+    ]
+  ],
+  [
+    "CONFIG_SYS_HEAP_HARDENING_MODERATE",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_SYS_HEAP_HARDENING_FULL",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_SYS_HEAP_HARDENING_EXTREME",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_SYS_HEAP_HARDENING_LEVEL",
+    "n",
+    "int",
+    "1",
+    "default",
+    [
+      "/home/faiza/zephyrproject/zephyr/lib/heap/Kconfig",
+      148
+    ]
+  ],
+  [
+    "CONFIG_SYS_HEAP_LOG_LEVEL_OFF",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_SYS_HEAP_LOG_LEVEL_ERR",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_SYS_HEAP_LOG_LEVEL_WRN",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_SYS_HEAP_LOG_LEVEL_INF",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_SYS_HEAP_LOG_LEVEL_DBG",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_SYS_HEAP_LOG_LEVEL_DEFAULT",
+    "y",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
+      5
+    ]
+  ],
+  [
+    "CONFIG_SYS_HEAP_LOG_LEVEL",
+    "n",
+    "int",
+    "3",
+    "default",
+    [
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
+      36
+    ]
+  ],
+  [
     "CONFIG_SYS_HEAP_SMALL_ONLY",
     "y",
     "bool",
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/lib/heap/Kconfig",
-      84
+      "/home/faiza/zephyrproject/zephyr/lib/heap/Kconfig",
+      163
     ]
   ],
   [
@@ -6548,7 +7114,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/lib/os/Kconfig.cbprintf",
+      "/home/faiza/zephyrproject/zephyr/lib/os/Kconfig.cbprintf",
       6
     ]
   ],
@@ -6567,7 +7133,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/lib/os/Kconfig.cbprintf",
+      "/home/faiza/zephyrproject/zephyr/lib/os/Kconfig.cbprintf",
       29
     ]
   ],
@@ -6586,7 +7152,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/lib/os/Kconfig.cbprintf",
+      "/home/faiza/zephyrproject/zephyr/lib/os/Kconfig.cbprintf",
       68
     ]
   ],
@@ -6653,7 +7219,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
       5
     ]
   ],
@@ -6664,7 +7230,7 @@
     "3",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
       36
     ]
   ],
@@ -6683,7 +7249,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/lib/os/Kconfig.cbprintf",
+      "/home/faiza/zephyrproject/zephyr/lib/os/Kconfig.cbprintf",
       170
     ]
   ],
@@ -6750,7 +7316,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
       5
     ]
   ],
@@ -6761,7 +7327,7 @@
     "3",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
       36
     ]
   ],
@@ -6796,7 +7362,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/lib/posix/Kconfig.profile",
+      "/home/faiza/zephyrproject/zephyr/lib/posix/Kconfig.profile",
       29
     ]
   ],
@@ -6885,7 +7451,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/lib/runtime/Kconfig",
+      "/home/faiza/zephyrproject/zephyr/lib/runtime/Kconfig",
       13
     ]
   ],
@@ -6980,7 +7546,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/lib/utils/Kconfig",
+      "/home/faiza/zephyrproject/zephyr/lib/utils/Kconfig",
       103
     ]
   ],
@@ -7115,7 +7681,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/debug/Kconfig",
+      "/home/faiza/zephyrproject/zephyr/subsys/debug/Kconfig",
       240
     ]
   ],
@@ -7214,7 +7780,7 @@
     "0",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/debug/Kconfig",
+      "/home/faiza/zephyrproject/zephyr/subsys/debug/Kconfig",
       384
     ]
   ],
@@ -7260,14 +7826,6 @@
   ],
   [
     "CONFIG_FILE_SYSTEM",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
-    "CONFIG_ZMS",
     "y",
     "bool",
     null,
@@ -7323,6 +7881,14 @@
     null
   ],
   [
+    "CONFIG_ZMS",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
     "CONFIG_LLEXT",
     "y",
     "bool",
@@ -7345,7 +7911,7 @@
     "0",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig",
       18
     ]
   ],
@@ -7356,7 +7922,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.mode",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.mode",
       9
     ]
   ],
@@ -7415,7 +7981,7 @@
     "10000",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.mode",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.mode",
       84
     ]
   ],
@@ -7434,8 +8000,8 @@
     "3",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.filtering",
-      15
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.filtering",
+      39
     ]
   ],
   [
@@ -7445,8 +8011,8 @@
     "0",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.filtering",
-      30
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.filtering",
+      54
     ]
   ],
   [
@@ -7456,8 +8022,8 @@
     "4",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.filtering",
-      47
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.filtering",
+      71
     ]
   ],
   [
@@ -7467,7 +8033,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.processing",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.processing",
       10
     ]
   ],
@@ -7478,7 +8044,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.processing",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.processing",
       19
     ]
   ],
@@ -7497,7 +8063,7 @@
     "10",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.processing",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.processing",
       44
     ]
   ],
@@ -7508,7 +8074,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.processing",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.processing",
       55
     ]
   ],
@@ -7519,7 +8085,7 @@
     "0",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.processing",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.processing",
       66
     ]
   ],
@@ -7530,7 +8096,7 @@
     "1000",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.processing",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.processing",
       73
     ]
   ],
@@ -7549,7 +8115,7 @@
     "1024",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.processing",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.processing",
       123
     ]
   ],
@@ -7560,7 +8126,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.processing",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.processing",
       152
     ]
   ],
@@ -7619,12 +8185,20 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.formatting",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.formatting",
       20
     ]
   ],
   [
     "CONFIG_LOG_MIPI_SYST_ENABLE",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_LOG_DOMAIN_NAME_PREFIX",
     "y",
     "bool",
     null,
@@ -7654,8 +8228,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.formatting",
-      137
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.formatting",
+      142
     ]
   ],
   [
@@ -7665,8 +8239,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.formatting",
-      143
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.formatting",
+      148
     ]
   ],
   [
@@ -7676,8 +8250,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.formatting",
-      150
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.formatting",
+      155
     ]
   ],
   [
@@ -7703,8 +8277,8 @@
     "0",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.formatting",
-      166
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.formatting",
+      171
     ]
   ],
   [
@@ -7724,8 +8298,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.formatting",
-      187
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.formatting",
+      192
     ]
   ],
   [
@@ -7735,8 +8309,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.formatting",
-      194
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.formatting",
+      199
     ]
   ],
   [
@@ -7810,7 +8384,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/backends/Kconfig.uart",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/backends/Kconfig.uart",
       7
     ]
   ],
@@ -7821,7 +8395,7 @@
     "1",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/backends/Kconfig.uart",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/backends/Kconfig.uart",
       22
     ]
   ],
@@ -7832,7 +8406,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/backends/Kconfig.uart",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/backends/Kconfig.uart",
       33
     ]
   ],
@@ -7843,7 +8417,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_format_config",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_format_config",
       6
     ]
   ],
@@ -7870,7 +8444,7 @@
     "0",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_format_config",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_format_config",
       42
     ]
   ],
@@ -7889,7 +8463,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.misc",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.misc",
       21
     ]
   ],
@@ -7900,7 +8474,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.misc",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.misc",
       31
     ]
   ],
@@ -7943,7 +8517,7 @@
     "1000",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig.misc",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig.misc",
       115
     ]
   ],
@@ -7954,7 +8528,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig",
       54
     ]
   ],
@@ -7965,7 +8539,7 @@
     "5000",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/logging/Kconfig",
+      "/home/faiza/zephyrproject/zephyr/subsys/logging/Kconfig",
       65
     ]
   ],
@@ -7986,7 +8560,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/mem_mgmt/Kconfig",
+      "/home/faiza/zephyrproject/zephyr/subsys/mem_mgmt/Kconfig",
       6
     ]
   ],
@@ -8039,14 +8613,6 @@
     null
   ],
   [
-    "CONFIG_NVMEM",
-    "y",
-    "bool",
-    null,
-    "unset",
-    null
-  ],
-  [
     "CONFIG_PM_POLICY_LATENCY_STANDALONE",
     "y",
     "bool",
@@ -8085,7 +8651,7 @@
     "123456789",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/random/Kconfig",
+      "/home/faiza/zephyrproject/zephyr/subsys/random/Kconfig",
       33
     ]
   ],
@@ -8232,7 +8798,7 @@
     "",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/subsys/testsuite/Kconfig.coverage",
+      "/home/faiza/zephyrproject/zephyr/subsys/testsuite/Kconfig.coverage",
       96
     ]
   ],
@@ -8307,7 +8873,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyr-sdk-0.17.4/cmake/zephyr/Kconfig",
+      "/home/faiza/zephyr-sdk-0.17.4/cmake/zephyr/Kconfig",
       4
     ]
   ],
@@ -8318,7 +8884,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyr-sdk-0.17.4/cmake/zephyr/Kconfig",
+      "/home/faiza/zephyr-sdk-0.17.4/cmake/zephyr/Kconfig",
       10
     ]
   ],
@@ -8329,7 +8895,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyr-sdk-0.17.4/cmake/zephyr/Kconfig",
+      "/home/faiza/zephyr-sdk-0.17.4/cmake/zephyr/Kconfig",
       14
     ]
   ],
@@ -8348,7 +8914,7 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/Kconfig.zephyr",
+      "/home/faiza/zephyrproject/zephyr/Kconfig.zephyr",
       62
     ]
   ],
@@ -8367,8 +8933,8 @@
     "0",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/Kconfig.zephyr",
-      119
+      "/home/faiza/zephyrproject/zephyr/Kconfig.zephyr",
+      139
     ]
   ],
   [
@@ -8378,8 +8944,8 @@
     "0",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/Kconfig.zephyr",
-      147
+      "/home/faiza/zephyrproject/zephyr/Kconfig.zephyr",
+      167
     ]
   ],
   [
@@ -8389,8 +8955,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/Kconfig.zephyr",
-      158
+      "/home/faiza/zephyrproject/zephyr/Kconfig.zephyr",
+      178
     ]
   ],
   [
@@ -8400,8 +8966,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/Kconfig.zephyr",
-      162
+      "/home/faiza/zephyrproject/zephyr/Kconfig.zephyr",
+      182
     ]
   ],
   [
@@ -8427,8 +8993,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/Kconfig.zephyr",
-      212
+      "/home/faiza/zephyrproject/zephyr/Kconfig.zephyr",
+      232
     ]
   ],
   [
@@ -8454,8 +9020,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/Kconfig.zephyr",
-      273
+      "/home/faiza/zephyrproject/zephyr/Kconfig.zephyr",
+      293
     ]
   ],
   [
@@ -8465,8 +9031,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/Kconfig.zephyr",
-      286
+      "/home/faiza/zephyrproject/zephyr/Kconfig.zephyr",
+      306
     ]
   ],
   [
@@ -8476,8 +9042,8 @@
     "0xE015E015",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/Kconfig.zephyr",
-      302
+      "/home/faiza/zephyrproject/zephyr/Kconfig.zephyr",
+      322
     ]
   ],
   [
@@ -8487,8 +9053,8 @@
     "4",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/Kconfig.zephyr",
-      332
+      "/home/faiza/zephyrproject/zephyr/Kconfig.zephyr",
+      352
     ]
   ],
   [
@@ -8498,8 +9064,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/Kconfig.zephyr",
-      338
+      "/home/faiza/zephyrproject/zephyr/Kconfig.zephyr",
+      358
     ]
   ],
   [
@@ -8541,8 +9107,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/Kconfig.zephyr",
-      385
+      "/home/faiza/zephyrproject/zephyr/Kconfig.zephyr",
+      405
     ]
   ],
   [
@@ -8594,8 +9160,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/Kconfig.zephyr",
-      486
+      "/home/faiza/zephyrproject/zephyr/Kconfig.zephyr",
+      506
     ]
   ],
   [
@@ -8661,8 +9227,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/Kconfig.zephyr",
-      563
+      "/home/faiza/zephyrproject/zephyr/Kconfig.zephyr",
+      583
     ]
   ],
   [
@@ -8672,8 +9238,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/Kconfig.zephyr",
-      571
+      "/home/faiza/zephyrproject/zephyr/Kconfig.zephyr",
+      591
     ]
   ],
   [
@@ -8691,8 +9257,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/Kconfig.zephyr",
-      578
+      "/home/faiza/zephyrproject/zephyr/Kconfig.zephyr",
+      598
     ]
   ],
   [
@@ -8726,9 +9292,55 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/Kconfig.zephyr",
-      627
+      "/home/faiza/zephyrproject/zephyr/Kconfig.zephyr",
+      647
     ]
+  ],
+  [
+    "CONFIG_TOOLCHAIN_SUPPORTS_VARIABLE_CLEANUP_ATTRIBUTE",
+    "n",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/faiza/zephyrproject/zephyr/Kconfig.zephyr",
+      654
+    ]
+  ],
+  [
+    "CONFIG_SCOPE_CLEANUP_HELPERS",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_COMPILER_CODEGEN_VLIW_AUTO",
+    "y",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/faiza/zephyrproject/zephyr/Kconfig.zephyr",
+      670
+    ]
+  ],
+  [
+    "CONFIG_COMPILER_CODEGEN_VLIW_ENABLED",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_COMPILER_CODEGEN_VLIW_DISABLED",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
   ],
   [
     "CONFIG_ASSERT_ON_ERRORS",
@@ -8753,8 +9365,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/Kconfig.zephyr",
-      636
+      "/home/faiza/zephyrproject/zephyr/Kconfig.zephyr",
+      701
     ]
   ],
   [
@@ -8764,8 +9376,8 @@
     "zephyr",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/Kconfig.zephyr",
-      660
+      "/home/faiza/zephyrproject/zephyr/Kconfig.zephyr",
+      725
     ]
   ],
   [
@@ -8775,8 +9387,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/Kconfig.zephyr",
-      666
+      "/home/faiza/zephyrproject/zephyr/Kconfig.zephyr",
+      731
     ]
   ],
   [
@@ -8794,8 +9406,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/Kconfig.zephyr",
-      708
+      "/home/faiza/zephyrproject/zephyr/Kconfig.zephyr",
+      773
     ]
   ],
   [
@@ -8813,8 +9425,8 @@
     "0xFF",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/Kconfig.zephyr",
-      729
+      "/home/faiza/zephyrproject/zephyr/Kconfig.zephyr",
+      794
     ]
   ],
   [
@@ -8920,8 +9532,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/Kconfig.zephyr",
-      974
+      "/home/faiza/zephyrproject/zephyr/Kconfig.zephyr",
+      1039
     ]
   ],
   [
@@ -8931,8 +9543,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/Kconfig.zephyr",
-      988
+      "/home/faiza/zephyrproject/zephyr/Kconfig.zephyr",
+      1053
     ]
   ],
   [
@@ -8950,8 +9562,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/Kconfig.zephyr",
-      1020
+      "/home/faiza/zephyrproject/zephyr/Kconfig.zephyr",
+      1085
     ]
   ],
   [
@@ -8969,8 +9581,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/Kconfig.zephyr",
-      1056
+      "/home/faiza/zephyrproject/zephyr/Kconfig.zephyr",
+      1121
     ]
   ],
   [
@@ -8996,8 +9608,8 @@
     "y",
     "default",
     [
-      "/home/hijab-fatima-siddiqui/zephyrproject/zephyr/Kconfig.zephyr",
-      1126
+      "/home/faiza/zephyrproject/zephyr/Kconfig.zephyr",
+      1191
     ]
   ]
 ]

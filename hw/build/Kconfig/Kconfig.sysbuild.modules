@@ -157,6 +157,9 @@ config ZEPHYR_PERCEPIO_MODULE
 config ZEPHYR_PICOLIBC_MODULE
    bool
    default y
+config ZEPHYR_PSA_ARCH_TESTS_MODULE
+   bool
+   default y
 config ZEPHYR_SEGGER_MODULE
    bool
    default y

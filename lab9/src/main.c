@@ -33,7 +33,6 @@ static struct k_work_delayable debounce_work;
 
 static void debounce_handler(struct k_work *work)
 {
-    /* Read the actual pin level now that it has settled */
     int val = gpio_pin_get_dt(&btn);
     if (val < 0) {
         return;
@@ -46,7 +45,7 @@ static void debounce_handler(struct k_work *work)
         } else {
             k_timer_stop(&my_timer);
         }
-        printf("Button pressed\n");
+       // printf("Button pressed\n");
     }
 }
 
