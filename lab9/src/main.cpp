@@ -11,7 +11,6 @@
 #include "main_functions.h"
 
 
-// in main.cpp, add these includes
 #include <tensorflow/lite/micro/micro_interpreter.h>
 #include <tensorflow/lite/micro/micro_log.h>
 #include <tensorflow/lite/schema/schema_generated.h>
@@ -40,8 +39,12 @@ struct sample_window {
 // queue carries sample windows, can carry 4 sample windows at a time
 K_MSGQ_DEFINE(windows_msgq, sizeof(struct sample_window), 4, 1);
 
-// sesnor_value is zephyr specific: value can be obtained using the formula val1 + val2 * 10^(-6)
-struct sensor_value accel[3];
+K_THREAD_STACK_DEFINE(producer_stack, 4096);
+K_THREAD_STACK_DEFINE(consumer_stack, 8192);
+static struct k_thread producer_data;
+static struct k_thread consumer_data;
+
+
 
 // struct k_timer my_timer;
 int counter =0;
@@ -49,14 +52,10 @@ int counter =0;
 static struct k_work_delayable debounce_work;
 
 K_SEM_DEFINE(sample_sem, 0, 1);
-K_SEM_DEFINE(start_sem, 0, 1);  // add this near your other semaphores
 
 // when timer triggered
 void my_timer_handler(struct k_timer *dummy)
 {
-	// instead of submitting to a work queue
-    // k_work_submit(&my_work);
-
 	// timer now signals a producer thread
 	k_sem_give(&sample_sem);
 
@@ -93,7 +92,9 @@ void button_pressed(const struct device *dev, struct gpio_callback *cb,
 
 
 void producer_thread(void *a, void *b, void *c) {
-	k_sem_take(&start_sem, K_FOREVER);  // wait until main releases
+	// sesnor_value is zephyr specific: value can be obtained using the formula val1 + val2 * 10^(-6)
+	struct sensor_value accel[3];
+
 	struct sample_window sw = {0};
     while (1) {
         k_sem_take(&sample_sem, K_FOREVER); // block until told to sample
@@ -112,50 +113,17 @@ void producer_thread(void *a, void *b, void *c) {
 		}
         memcpy(sw.windows[0], accel, sizeof(accel));
 		k_msgq_put(&windows_msgq, &sw, K_NO_WAIT);
-
-		// if (rc == 0) {
-		// 				counter++;
-
-		// 	printf("%d,%lld,%d.%06d,%d.%06d,%d.%06d\n", 
-		// 		counter,
-		// 		uptime_ms,
-		// 		accel[0].val1, abs(accel[0].val2), 
-		// 		accel[1].val1, abs(accel[1].val2), 
-		// 		accel[2].val1, abs(accel[2].val2));
-		// } else {
-		// 	printf("sample fetch/get failed: %d\n", rc);
-		// }
-
-        // push to a message queue instead of printf-ing directly
-        // k_msgq_put(&accel_msgq, &accel, K_NO_WAIT);
     }
 }
 
-K_THREAD_DEFINE(producer, 4096, producer_thread, NULL, NULL, NULL, 5, 0, 0);
 
 void consumer_thread(void *a, void *b, void *c) {
-	k_sem_take(&start_sem, K_FOREVER);  // wait until main releases
 	struct sample_window sw;
 	struct sensor_value xyz[3];
 
 	
 	while(1) {
 		k_msgq_get(&windows_msgq, &sw, K_FOREVER); // dont want to miss any samples
-
-		// printf("Starting new window\n");
-
-		// for(int i=0; i<20; i++) {
-		// 	int64_t uptime_ms = k_uptime_get();
-
-		// 	xyz[0] = sw.windows[i][0];
-		// 	xyz[1] = sw.windows[i][1];
-		// 	xyz[2] = sw.windows[i][2];
-		// 	printf("%lld, %d.%06d,%d.%06d,%d.%06d\n", 
-		// 		uptime_ms,
-		// 		xyz[0].val1, abs(xyz[0].val2), 
-		// 		xyz[1].val1, abs(xyz[1].val2), 
-		// 		xyz[2].val1, abs(xyz[2].val2));
-		// }
 
 		// guard against failed setup
         if (input == nullptr || output == nullptr || interpreter == nullptr) {
@@ -164,7 +132,7 @@ void consumer_thread(void *a, void *b, void *c) {
         }
 
 		// give the window to the model
-		// before they were giving one input. now we will give 60 (20*3)
+		// before we were giving one input. now we will give 60 (20*3)
 		for (int i = 0; i < 20; i++) {
 			for (int j = 0; j < 3; j++) {
 				// sensor_value to float (val1 + val2/1000000.0)
@@ -183,7 +151,6 @@ void consumer_thread(void *a, void *b, void *c) {
 			}
 		}
 
-		/* Run inference, and report any error */
 		TfLiteStatus invoke_status = interpreter->Invoke();
 		if (invoke_status != kTfLiteOk) {
 			MicroPrintf("Invoke failed\n");
@@ -202,19 +169,16 @@ void consumer_thread(void *a, void *b, void *c) {
 				maxScore = score;
 				maxIdx = i;
 			}
-			// printf("class %d: %f\n", i, score);
+			printf("Pose %d: %f, ", i+1, score);
 		}
 
-		printf("Predicted pose: %s (score: %f)\n", poses[maxIdx], maxScore);
+		// printf("Predicted pose: %s (score: %f)\n", poses[maxIdx], maxScore);
+		printf("\n");
 
-		// printf()
 
 	}
 	
 }
-
-K_THREAD_DEFINE(consumer, 8192, consumer_thread, NULL, NULL, NULL, 7, 0, 0);
-
 
 
 int main(void)
@@ -260,7 +224,10 @@ int main(void)
         return 0;
     }
 
-	k_sem_give(&start_sem);  // release producer
-	k_sem_give(&start_sem);  // release consumer
+	k_thread_create(&producer_data, producer_stack, K_THREAD_STACK_SIZEOF(producer_stack),
+                	producer_thread, NULL, NULL, NULL, 5, 0, K_NO_WAIT);
+
+	k_thread_create(&consumer_data, consumer_stack, K_THREAD_STACK_SIZEOF(consumer_stack),
+					consumer_thread, NULL, NULL, NULL, 7, 0, K_NO_WAIT);
 
 }
