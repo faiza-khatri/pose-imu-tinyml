@@ -1,0 +1,5 @@
+source "Kconfig.zephyr"
+
+config USE_CNN_MODEL
+    bool "Use CNN model instead of dense model"
+    default n

@@ -20,7 +20,13 @@
 
 #include <tensorflow/lite/micro/micro_mutable_op_resolver.h>
 #include "constants.h"
-#include "dense_quantized_model.h"
+// #include "dense_quantized_model.h"
+#ifdef CONFIG_USE_CNN_MODEL
+    #include "../models/cnn/cnn_quantized_model.h"
+#else
+    #include "../models/dense/dense_quantized_model.h"
+#endif
+
 #include "output_handler.hpp"
 #include <tensorflow/lite/micro/micro_log.h>
 #include <tensorflow/lite/micro/micro_interpreter.h>
@@ -32,7 +38,13 @@
 namespace {
 	const tflite::Model *model = nullptr;
 	int inference_count = 0;
-	constexpr int kTensorArenaSize = 60 * 1024; // 60KB
+	// constexpr int kTensorArenaSize = 60 * 1024; // 60KB
+
+	#ifdef CONFIG_USE_CNN_MODEL
+		constexpr int kTensorArenaSize = 100 * 1024;
+	#else
+		constexpr int kTensorArenaSize = 60 * 1024;
+	#endif
 	// constexpr int kTensorArenaSize = 2000;
 	uint8_t tensor_arena[kTensorArenaSize];
 }  /* namespace */
@@ -48,7 +60,12 @@ void setup(void)
 	 * copying or parsing, it's a very lightweight operation.
 	 */
 	MicroPrintf("setup: starting");
-	model = tflite::GetModel(dense_quantized_model);
+	// model = tflite::GetModel(dense_quantized_model);
+	#ifdef CONFIG_USE_CNN_MODEL
+		model = tflite::GetModel(cnn_quantized_model);
+	#else
+		model = tflite::GetModel(dense_quantized_model);
+	#endif
 
 	    MicroPrintf("setup: model loaded");
 
@@ -64,11 +81,25 @@ void setup(void)
 	/* This pulls in the operation implementations we need.
 	 * NOLINTNEXTLINE(runtime-global-variables)
 	 */
-	static tflite::MicroMutableOpResolver <3> resolver;
-	resolver.AddFullyConnected();
-	resolver.AddReshape();
-	resolver.AddSoftmax();
-	// resolver.AddTanh();                                  // add this
+	// static tflite::MicroMutableOpResolver <3> resolver;
+	// resolver.AddFullyConnected();
+	// resolver.AddReshape();
+	// resolver.AddSoftmax();
+	// // resolver.AddTanh();                                  // add this
+
+	#ifdef CONFIG_USE_CNN_MODEL
+		static tflite::MicroMutableOpResolver<5> resolver;
+		resolver.AddConv2D();
+		resolver.AddMaxPool2D();
+		resolver.AddFullyConnected();
+		resolver.AddReshape();
+		resolver.AddSoftmax();
+	#else
+		static tflite::MicroMutableOpResolver<3> resolver;
+		resolver.AddFullyConnected();
+		resolver.AddReshape();
+		resolver.AddSoftmax();
+	#endif
 
 	    MicroPrintf("setup: resolver ok");
 
