@@ -1,4 +1,0 @@
-west:
-  command: /home/faiza/zephyrproject/.venv/bin/west build -p always -b stm32f746g_disco
-  topdir: /home/faiza/zephyrproject
-  version: 1.5.0
