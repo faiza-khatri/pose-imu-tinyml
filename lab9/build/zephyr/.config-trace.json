@@ -1508,6 +1508,25 @@
     null
   ],
   [
+    "CONFIG_TENSORFLOW_LITE_MICRO",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_ZEPHYR_TFLITE_MICRO_MODULE",
+    "n",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
+      5
+    ]
+  ],
+  [
     "CONFIG_ACPI",
     "y",
     "bool",
@@ -1523,7 +1542,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      5
+      11
     ]
   ],
   [
@@ -1534,7 +1553,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      11
+      17
     ]
   ],
   [
@@ -1556,7 +1575,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      17
+      23
     ]
   ],
   [
@@ -1575,7 +1594,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      23
+      29
     ]
   ],
   [
@@ -1594,7 +1613,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      29
+      35
     ]
   ],
   [
@@ -1623,7 +1642,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      35
+      41
     ]
   ],
   [
@@ -1634,7 +1653,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      39
+      45
     ]
   ],
   [
@@ -1645,7 +1664,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      44
+      50
     ]
   ],
   [
@@ -1656,7 +1675,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      53
+      59
     ]
   ],
   [
@@ -1667,7 +1686,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      57
+      63
     ]
   ],
   [
@@ -1678,7 +1697,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      62
+      68
     ]
   ],
   [
@@ -1689,7 +1708,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      68
+      74
     ]
   ],
   [
@@ -1708,7 +1727,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      77
+      83
     ]
   ],
   [
@@ -1719,7 +1738,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      83
+      89
     ]
   ],
   [
@@ -1730,7 +1749,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      89
+      95
     ]
   ],
   [
@@ -1749,7 +1768,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      98
+      104
     ]
   ],
   [
@@ -1760,7 +1779,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      102
+      108
     ]
   ],
   [
@@ -1771,7 +1790,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      107
+      113
     ]
   ],
   [
@@ -1782,7 +1801,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      114
+      120
     ]
   ],
   [
@@ -1793,7 +1812,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      119
+      125
     ]
   ],
   [
@@ -1804,7 +1823,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      126
+      132
     ]
   ],
   [
@@ -1815,7 +1834,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      129
+      135
     ]
   ],
   [
@@ -1826,7 +1845,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      134
+      140
     ]
   ],
   [
@@ -2045,7 +2064,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      141
+      147
     ]
   ],
   [
@@ -2056,7 +2075,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      149
+      155
     ]
   ],
   [
@@ -2067,7 +2086,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      155
+      161
     ]
   ],
   [
@@ -2078,7 +2097,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      164
+      170
     ]
   ],
   [
@@ -2089,7 +2108,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      173
+      179
     ]
   ],
   [
@@ -2100,7 +2119,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      177
+      183
     ]
   ],
   [
@@ -2111,7 +2130,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      185
+      191
     ]
   ],
   [
@@ -2130,7 +2149,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      191
+      197
     ]
   ],
   [
@@ -2141,7 +2160,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      195
+      201
     ]
   ],
   [
@@ -2152,7 +2171,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      200
+      206
     ]
   ],
   [
@@ -2163,7 +2182,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      204
+      210
     ]
   ],
   [
@@ -2174,7 +2193,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      207
+      213
     ]
   ],
   [
@@ -2193,7 +2212,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      212
+      218
     ]
   ],
   [
@@ -2204,7 +2223,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      218
+      224
     ]
   ],
   [
@@ -2215,7 +2234,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      222
+      228
     ]
   ],
   [
@@ -2226,7 +2245,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      225
+      231
     ]
   ],
   [
@@ -2237,7 +2256,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      230
+      236
     ]
   ],
   [
@@ -2256,7 +2275,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      236
+      242
     ]
   ],
   [
@@ -2267,7 +2286,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      242
+      248
     ]
   ],
   [
@@ -2278,7 +2297,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      248
+      254
     ]
   ],
   [
@@ -2297,7 +2316,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      254
+      260
     ]
   ],
   [
@@ -2308,7 +2327,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      260
+      266
     ]
   ],
   [
@@ -2335,7 +2354,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      264
+      270
     ]
   ],
   [
@@ -2346,7 +2365,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      267
+      273
     ]
   ],
   [
@@ -2357,7 +2376,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      272
+      278
     ]
   ],
   [
@@ -2376,7 +2395,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      278
+      284
     ]
   ],
   [
@@ -2395,7 +2414,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      285
+      291
     ]
   ],
   [
@@ -2414,7 +2433,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      290
+      296
     ]
   ],
   [
@@ -2433,7 +2452,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      296
+      302
     ]
   ],
   [
@@ -2452,7 +2471,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      302
+      308
     ]
   ],
   [
@@ -2463,7 +2482,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      306
+      312
     ]
   ],
   [
@@ -2474,7 +2493,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      311
+      317
     ]
   ],
   [
@@ -2503,7 +2522,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      315
+      321
     ]
   ],
   [
@@ -2514,7 +2533,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      320
+      326
     ]
   ],
   [
@@ -2533,7 +2552,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      326
+      332
     ]
   ],
   [
@@ -2544,7 +2563,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      332
+      338
     ]
   ],
   [
@@ -2555,7 +2574,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      338
+      344
     ]
   ],
   [
@@ -2574,7 +2593,7 @@
     "default",
     [
       "/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/Kconfig/Kconfig.modules",
-      342
+      348
     ]
   ],
   [

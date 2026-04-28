@@ -289,6 +289,8 @@
 /home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/zephyr/drivers/timer/CMakeFiles/drivers__timer.dir
 /home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/zephyr/drivers/timer/CMakeFiles/edit_cache.dir
 /home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/zephyr/drivers/timer/CMakeFiles/rebuild_cache.dir
+/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/modules/tflite-micro/CMakeFiles/edit_cache.dir
+/home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/modules/tflite-micro/CMakeFiles/rebuild_cache.dir
 /home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/modules/acpica/CMakeFiles/edit_cache.dir
 /home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/modules/acpica/CMakeFiles/rebuild_cache.dir
 /home/faiza/zephyrproject/zephyr/myProjects/Embedded-Systems-HW/lab9/build/modules/cmsis/CMakeFiles/edit_cache.dir

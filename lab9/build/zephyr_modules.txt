@@ -1,3 +1,4 @@
+"tflite-micro":"/home/faiza/zephyrproject/optional/modules/lib/tflite-micro":"${ZEPHYR_TFLITE_MICRO_CMAKE_DIR}"
 "acpica":"/home/faiza/zephyrproject/modules/lib/acpica":"${ZEPHYR_ACPICA_CMAKE_DIR}"
 "cmsis":"/home/faiza/zephyrproject/modules/hal/cmsis":"${ZEPHYR_CMSIS_CMAKE_DIR}"
 "cmsis-dsp":"/home/faiza/zephyrproject/modules/lib/cmsis-dsp":"${ZEPHYR_CMSIS_DSP_CMAKE_DIR}"

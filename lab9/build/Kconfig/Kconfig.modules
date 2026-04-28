@@ -1,3 +1,9 @@
+menu "tflite-micro (/home/faiza/zephyrproject/optional/modules/lib/tflite-micro)"
+osource "$(ZEPHYR_TFLITE_MICRO_KCONFIG)"
+config ZEPHYR_TFLITE_MICRO_MODULE
+	bool
+	default y
+endmenu
 menu "acpica (/home/faiza/zephyrproject/modules/lib/acpica)"
 osource "$(ZEPHYR_ACPICA_KCONFIG)"
 config ZEPHYR_ACPICA_MODULE

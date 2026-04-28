@@ -1,4 +1,5 @@
 set(kconfig_env_dirs)
+list(APPEND kconfig_env_dirs ZEPHYR_TFLITE_MICRO_MODULE_DIR=/home/faiza/zephyrproject/optional/modules/lib/tflite-micro)
 list(APPEND kconfig_env_dirs ZEPHYR_ACPICA_MODULE_DIR=/home/faiza/zephyrproject/modules/lib/acpica)
 list(APPEND kconfig_env_dirs ZEPHYR_CMSIS_MODULE_DIR=/home/faiza/zephyrproject/modules/hal/cmsis)
 list(APPEND kconfig_env_dirs ZEPHYR_CMSIS_DSP_MODULE_DIR=/home/faiza/zephyrproject/modules/lib/cmsis-dsp)
