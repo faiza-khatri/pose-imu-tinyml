@@ -5,7 +5,20 @@
 #include <stdio.h>
 #include <zephyr/drivers/i2c.h>
 #include <zephyr/drivers/gpio.h>    
+#include <math.h>
+#include <string.h>
 
+#include "main_functions.h"
+
+
+// in main.cpp, add these includes
+#include <tensorflow/lite/micro/micro_interpreter.h>
+#include <tensorflow/lite/micro/micro_log.h>
+#include <tensorflow/lite/schema/schema_generated.h>
+
+extern TfLiteTensor *input;
+extern TfLiteTensor *output;
+extern tflite::MicroInterpreter *interpreter;
 
 #define MY_GPIO_NODE DT_NODELABEL(toggle)
 #define MY_GPIO_NODE_BUTTON DT_NODELABEL(my_button)
@@ -30,14 +43,26 @@ K_MSGQ_DEFINE(windows_msgq, sizeof(struct sample_window), 4, 1);
 // sesnor_value is zephyr specific: value can be obtained using the formula val1 + val2 * 10^(-6)
 struct sensor_value accel[3];
 
-struct k_timer my_timer;
+// struct k_timer my_timer;
 int counter =0;
 
 static struct k_work_delayable debounce_work;
 
 K_SEM_DEFINE(sample_sem, 0, 1);
+K_SEM_DEFINE(start_sem, 0, 1);  // add this near your other semaphores
 
+// when timer triggered
+void my_timer_handler(struct k_timer *dummy)
+{
+	// instead of submitting to a work queue
+    // k_work_submit(&my_work);
 
+	// timer now signals a producer thread
+	k_sem_give(&sample_sem);
+
+}
+
+K_TIMER_DEFINE(my_timer, my_timer_handler, NULL);
 
 static void debounce_handler(struct k_work *work)
 {
@@ -65,20 +90,10 @@ void button_pressed(const struct device *dev, struct gpio_callback *cb,
             }
 
 
-// when timer triggered
-void my_timer_handler(struct k_timer *dummy)
-{
-	// instead of submitting to a work queue
-    // k_work_submit(&my_work);
 
-	// timer now signals a producer thread
-	k_sem_give(&sample_sem);
-
-}
-
-K_TIMER_DEFINE(my_timer, my_timer_handler, NULL);
 
 void producer_thread(void *a, void *b, void *c) {
+	k_sem_take(&start_sem, K_FOREVER);  // wait until main releases
 	struct sample_window sw = {0};
     while (1) {
         k_sem_take(&sample_sem, K_FOREVER); // block until told to sample
@@ -116,10 +131,10 @@ void producer_thread(void *a, void *b, void *c) {
     }
 }
 
-K_THREAD_DEFINE(producer, 1024, producer_thread, NULL, NULL, NULL, 5, 0, 0);
+K_THREAD_DEFINE(producer, 4096, producer_thread, NULL, NULL, NULL, 5, 0, 0);
 
 void consumer_thread(void *a, void *b, void *c) {
-
+	k_sem_take(&start_sem, K_FOREVER);  // wait until main releases
 	struct sample_window sw;
 	struct sensor_value xyz[3];
 
@@ -127,30 +142,88 @@ void consumer_thread(void *a, void *b, void *c) {
 	while(1) {
 		k_msgq_get(&windows_msgq, &sw, K_FOREVER); // dont want to miss any samples
 
-		printf("Starting new window\n");
+		// printf("Starting new window\n");
 
-		for(int i=0; i<20; i++) {
-			int64_t uptime_ms = k_uptime_get();
+		// for(int i=0; i<20; i++) {
+		// 	int64_t uptime_ms = k_uptime_get();
 
-			xyz[0] = sw.windows[i][0];
-			xyz[1] = sw.windows[i][1];
-			xyz[2] = sw.windows[i][2];
-			printf("%lld, %d.%06d,%d.%06d,%d.%06d\n", 
-				uptime_ms,
-				xyz[0].val1, abs(xyz[0].val2), 
-				xyz[1].val1, abs(xyz[1].val2), 
-				xyz[2].val1, abs(xyz[2].val2));
+		// 	xyz[0] = sw.windows[i][0];
+		// 	xyz[1] = sw.windows[i][1];
+		// 	xyz[2] = sw.windows[i][2];
+		// 	printf("%lld, %d.%06d,%d.%06d,%d.%06d\n", 
+		// 		uptime_ms,
+		// 		xyz[0].val1, abs(xyz[0].val2), 
+		// 		xyz[1].val1, abs(xyz[1].val2), 
+		// 		xyz[2].val1, abs(xyz[2].val2));
+		// }
+
+		// guard against failed setup
+        if (input == nullptr || output == nullptr || interpreter == nullptr) {
+            printk("TFLite not initialized\n");
+            continue;
+        }
+
+		// give the window to the model
+		// before they were giving one input. now we will give 60 (20*3)
+		for (int i = 0; i < 20; i++) {
+			for (int j = 0; j < 3; j++) {
+				// sensor_value to float (val1 + val2/1000000.0)
+				float raw = sw.windows[i][j].val1 + 
+							sw.windows[i][j].val2 / 1000000.0f;
+				
+				// apply same normalization as training
+				float X_min = -9.8f;
+				float X_max =  9.8f;
+				float normalized = 2.0f * (raw - X_min) / (X_max - X_min) - 1.0f;
+				
+				// then quantize the normalized value
+				int8_t quantized = (int8_t)round(normalized / input->params.scale)
+								+ input->params.zero_point;
+				input->data.int8[i * 3 + j] = quantized;
+			}
 		}
+
+		/* Run inference, and report any error */
+		TfLiteStatus invoke_status = interpreter->Invoke();
+		if (invoke_status != kTfLiteOk) {
+			MicroPrintf("Invoke failed\n");
+			return;
+		}
+
+
+		// obtain the score for each and convert to float
+		const char* poses[] = {"Pose 1", "Pose 2", "Pose 3", "Pose 4", "Pose 5"};
+		float maxScore = 0;
+		int maxIdx = 0;
+		for (int i = 0; i < 5; i++) {
+			float score = (output->data.int8[i] - output->params.zero_point) 
+						* output->params.scale;
+			if(score > maxScore) {
+				maxScore = score;
+				maxIdx = i;
+			}
+			// printf("class %d: %f\n", i, score);
+		}
+
+		printf("Predicted pose: %s (score: %f)\n", poses[maxIdx], maxScore);
+
+		// printf()
+
 	}
 	
 }
 
-K_THREAD_DEFINE(consumer, 1024, consumer_thread, NULL, NULL, NULL, 7, 0, 0);
+K_THREAD_DEFINE(consumer, 8192, consumer_thread, NULL, NULL, NULL, 7, 0, 0);
 
 
 
 int main(void)
 {	
+	// from main_functions
+	// setting up model, allocating tensors
+	setup();
+
+	
 	k_work_init_delayable(&debounce_work, debounce_handler);
 	int ret = gpio_pin_configure_dt(&btn, GPIO_INPUT);
 
@@ -186,4 +259,8 @@ int main(void)
         printk("Device is not ready or not found\n");
         return 0;
     }
+
+	k_sem_give(&start_sem);  // release producer
+	k_sem_give(&start_sem);  // release consumer
+
 }
