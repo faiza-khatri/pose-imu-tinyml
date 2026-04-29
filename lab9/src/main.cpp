@@ -162,7 +162,7 @@ void consumer_thread(void *a, void *b, void *c) {
 		uint32_t t_end = k_cycle_get_32(); //end timer
 		uint32_t cycles = t_end - t_start; 
 		uint32_t freq = sys_clock_hw_cycles_per_sec();
-		uint32_t latency_us= (uint32_t)(((uint64_t)cycles * 1000000U) / freq);
+		uint32_t latency_ms= (uint32_t)(((uint64_t)cycles * 1000U) / freq);
 		
 		// obtain the score for each and convert to float
 		const char* poses[] = {"Pose 1", "Pose 2", "Pose 3", "Pose 4", "Pose 5"};
@@ -178,7 +178,7 @@ void consumer_thread(void *a, void *b, void *c) {
 			printf("Pose %d: %f, ", i+1, score);
 		}
 		printf("\n");
-		printf("Predicted Pose: %s | Score: %f | Latency: %u us\n", poses[maxIdx], maxScore, latency_us);
+		printf("Predicted Pose: %s | Score: %f | Latency: %u ms\n", poses[maxIdx], maxScore, latency_ms);
 		printf("\n");
 
 
@@ -242,7 +242,7 @@ int main(void)
 	uint32_t freq = sys_clock_hw_cycles_per_sec();
 	uint32_t full_latency_ms= (uint32_t)(((uint64_t)cycles * 1000U) / freq);
 
-	printk('\nEnd-to-End Latency: %d\n', full_latency_ms);
+	printk("\nEnd-to-End Latency: %u ms\n", full_latency_ms);
 
 
 
