@@ -151,13 +151,19 @@ void consumer_thread(void *a, void *b, void *c) {
 			}
 		}
 
+		uint32_t t_start = k_cycle_get_32(); //start timer
+		
 		TfLiteStatus invoke_status = interpreter->Invoke();
 		if (invoke_status != kTfLiteOk) {
 			MicroPrintf("Invoke failed\n");
 			return;
 		}
-
-
+		
+		uint32_t t_end = k_cycle_get_32(); //end timer
+		uint32_t cycles = t_end - t_start; 
+		uint32_t freq = sys_clock_hw_cycles_per_sec();
+		uint32_t latency_us= (uint32_t)(((uint64_t)cycles * 1000000U) / freq);
+		
 		// obtain the score for each and convert to float
 		const char* poses[] = {"Pose 1", "Pose 2", "Pose 3", "Pose 4", "Pose 5"};
 		float maxScore = 0;
@@ -172,7 +178,7 @@ void consumer_thread(void *a, void *b, void *c) {
 			printf("Pose %d: %f, ", i+1, score);
 		}
 
-		// printf("Predicted pose: %s (score: %f)\n", poses[maxIdx], maxScore);
+		// printf("Predicted Pose: %s | Score: %f | Latency: %u us\n", poses[maxIdx], maxScore, latency_us);
 		printf("\n");
 
 
