@@ -132,6 +132,12 @@ void setup(void)
 	/* Keep track of how many inferences we have performed. */
 	inference_count = 0;
 
+		uint32_t t_end_full = k_cycle_get_32(); //end timer end-to-end
+		uint32_t cycles_full = t_end_full - t_start_full; 
+		uint32_t freq_full = sys_clock_hw_cycles_per_sec();
+		uint32_t full_latency_ms= (uint32_t)(((uint64_t)cycles_full * 1000U) / freq_full);
+
+		printf("\nSetup Latency: %u ms\n", full_latency_ms);
 	    MicroPrintf("setup: complete");
 }
 
