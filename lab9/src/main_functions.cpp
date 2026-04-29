@@ -52,6 +52,7 @@ namespace {
 TfLiteTensor *input = nullptr;
 TfLiteTensor *output = nullptr;
 tflite::MicroInterpreter *interpreter = nullptr;
+uint32_t t_start_full;
 
 /* The name of this function is important for Arduino compatibility. */
 void setup(void)
@@ -59,6 +60,8 @@ void setup(void)
 	/* Map the model into a usable data structure. This doesn't involve any
 	 * copying or parsing, it's a very lightweight operation.
 	 */
+	t_start_full = k_cycle_get_32(); //start end-to-end timer
+
 	MicroPrintf("setup: starting");
 	// model = tflite::GetModel(dense_quantized_model);
 	#ifdef CONFIG_USE_CNN_MODEL
