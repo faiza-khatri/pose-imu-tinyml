@@ -19,6 +19,8 @@
 #include "main_functions.h"
 
 #include <tensorflow/lite/micro/micro_mutable_op_resolver.h>
+#include <zephyr/kernel.h>
+
 #include "constants.h"
 // #include "dense_quantized_model.h"
 #ifdef CONFIG_USE_CNN_MODEL
@@ -52,7 +54,6 @@ namespace {
 TfLiteTensor *input = nullptr;
 TfLiteTensor *output = nullptr;
 tflite::MicroInterpreter *interpreter = nullptr;
-uint32_t t_start_full;
 
 /* The name of this function is important for Arduino compatibility. */
 void setup(void)
