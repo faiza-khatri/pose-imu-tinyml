@@ -183,6 +183,15 @@ void consumer_thread(void *a, void *b, void *c) {
 
 
 	}
+
+	uint32_t t_end_full = k_cycle_get_32(); //end timer end-to-end
+	uint32_t cycles = t_end_full - t_start_full; 
+	uint32_t freq_full = sys_clock_hw_cycles_per_sec();
+	uint32_t full_latency_ms= (uint32_t)(((uint64_t)cycles * 1000U) / freq_full);
+
+	printf("\nEnd-to-End Latency: %u ms\n", full_latency_ms);
+
+
 	
 }
 
@@ -190,7 +199,6 @@ void consumer_thread(void *a, void *b, void *c) {
 int main(void)
 {	
 	// from main_functions
-	uint32_t t_start = k_cycle_get_32(); //start end-to-end timer
 	// setting up model, allocating tensors
 	setup();
 
@@ -235,14 +243,7 @@ int main(void)
                 	producer_thread, NULL, NULL, NULL, 5, 0, K_NO_WAIT);
 
 	k_thread_create(&consumer_data, consumer_stack, K_THREAD_STACK_SIZEOF(consumer_stack),
-					consumer_thread, NULL, NULL, NULL, 7, 0, K_NO_WAIT);
-
-	uint32_t t_end = k_cycle_get_32(); //end timer end-to-end
-	uint32_t cycles = t_end - t_start; 
-	uint32_t freq = sys_clock_hw_cycles_per_sec();
-	uint32_t full_latency_ms= (uint32_t)(((uint64_t)cycles * 1000U) / freq);
-
-	printk("\nEnd-to-End Latency: %u ms\n", full_latency_ms);
+					consumer_thread, NULL, NULL, NULL, 7, 0, K_NO_WAIT);	
 
 
 
