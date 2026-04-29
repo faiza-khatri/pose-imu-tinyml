@@ -18,6 +18,8 @@
 extern TfLiteTensor *input;
 extern TfLiteTensor *output;
 extern tflite::MicroInterpreter *interpreter;
+extern uint32_t t_start_full;
+
 
 #define MY_GPIO_NODE DT_NODELABEL(toggle)
 #define MY_GPIO_NODE_BUTTON DT_NODELABEL(my_button)

@@ -54,6 +54,7 @@ namespace {
 TfLiteTensor *input = nullptr;
 TfLiteTensor *output = nullptr;
 tflite::MicroInterpreter *interpreter = nullptr;
+extern uint32_t t_start_full;
 
 /* The name of this function is important for Arduino compatibility. */
 void setup(void)
