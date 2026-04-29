@@ -177,8 +177,8 @@ void consumer_thread(void *a, void *b, void *c) {
 			}
 			printf("Pose %d: %f, ", i+1, score);
 		}
-
-		// printf("Predicted Pose: %s | Score: %f | Latency: %u us\n", poses[maxIdx], maxScore, latency_us);
+		printf("\n");
+		printf("Predicted Pose: %s | Score: %f | Latency: %u us\n", poses[maxIdx], maxScore, latency_us);
 		printf("\n");
 
 
