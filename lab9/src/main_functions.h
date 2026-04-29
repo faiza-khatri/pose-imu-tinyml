@@ -18,7 +18,7 @@
 #define TENSORFLOW_LITE_MICRO_EXAMPLES_HELLO_WORLD_MAIN_FUNCTIONS_H_
 #include <cstdint>
 
-uint32_t t_start_full;
+extern uint32_t t_start_full;
 
 
 /* Expose a C friendly interface for main functions. */
